@@ -1,0 +1,576 @@
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.asignacionprivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.4\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.5\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Documents\Visual Studio 2015\Projects\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\seguridad copia de seguridad\seguridad\seguridad\bin\Debug\Conexion.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\bin\Debug\Conexion.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.Form_login.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad3\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\VERSION 2.1\Seguridad Version 3 (trabaja sobre esta zorra)\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad5\Seguridad Version 5\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Usuario\OneDrive\UMG\OCTAVO CICLO\DDS\PROYECTO 2\SEGURIDAD\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\Chrix\OneDrive\UNIFICACION 1.6\Seguridad Version 5 (trabaja sobre este ahora)\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Seguridad\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Novena entrega\seguridad con estandarizacion\Seguridad version 7 final\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\ottog\Desktop\Seguridad version 7\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\System.Net.Http.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\System.Net.Http.xml
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\bin\Debug\es\System.Net.Http.resources.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\Dlls\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\System.Net.Http.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\stdole.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\System.Net.Http.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\System.Net.Http.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.pdb
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.dll.licenses
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Data.v15.2.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Utils.v15.2.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Data.v15.2.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\Users\Chrix\Desktop\9o semestre\IS\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\seguridad.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\seguridad.pdb
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportSource.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.Shared.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.Windows.Forms.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Data.v15.2.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Printing.v15.2.Core.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Utils.v15.2.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraEditors.v15.2.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraLayout.v15.2.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraTreeList.v15.2.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\FlashControlV71.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\MySql.Data.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\System.Net.Http.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Sparkline.v15.2.Core.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ShockwaveFlashObjects.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\stdole.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Data.v15.2.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Printing.v15.2.Core.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Utils.v15.2.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraEditors.v15.2.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraLayout.v15.2.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.XtraTreeList.v15.2.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\System.Net.Http.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\DevExpress.Sparkline.v15.2.Core.xml
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.Data.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.Data.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.Data.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.Data.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.Utils.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.Utils.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.Utils.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.Utils.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.XtraEditors.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.XtraEditors.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraEditors.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraEditors.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.XtraLayout.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.XtraLayout.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraLayout.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraLayout.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.XtraTreeList.v15.2.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\System.Net.Http.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\bin\Debug\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.csprojResolveAssemblyReference.cache
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.agregarapp.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.CambioPass.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.FormAsignacionPerfil.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.FormAsignarPermisosUsuario.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.FormDeshabilitarUsuario.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.FormEliminarPerfil.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.FormReporte.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPerfil.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_EditarPrivilegios.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Form_infouser.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Historial.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Modificar_aplicacion.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.Properties.Resources.resources
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.csproj.GenerateResource.Cache
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.dll.licenses
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.dll
+C:\ProyectoCRM\seguridad\seguridad\seguridad\obj\Debug\seguridad.pdb
