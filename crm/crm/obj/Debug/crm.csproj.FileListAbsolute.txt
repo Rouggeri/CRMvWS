@@ -789,3 +789,6 @@ C:\Users\salaz\Documents\GitHub\ProyectoCRM\crm\crm\obj\Debug\crm.frm_marca.reso
 C:\ProyectoCRM\crm\crm\obj\Debug\crm.frm_categoria.resources
 C:\ProyectoCRM\crm\crm\obj\Debug\crm.frm_existencia.resources
 C:\ProyectoCRM\crm\crm\obj\Debug\crm.frm_marca.resources
+C:\CRMvWS\crm\crm\bin\Debug\crm.exe.config
+C:\CRMvWS\crm\crm\obj\Debug\crm.exe
+C:\CRMvWS\crm\crm\obj\Debug\crm.pdb

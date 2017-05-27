@@ -89,15 +89,24 @@ namespace crm
           
 
             WindowState = FormWindowState.Maximized;
-            pcb_foto.Image = Image.FromFile("andre.jpg");
+            //pcb_foto.Image = Image.FromFile("andre.jpg");
 
-            // carga de combobox de usuarios de la empresa
-            DataTable empleados = new DataTable();
-            empleados = CapaDatos.cargar_empleados();
-            cmb_usuarios.DataSource = empleados;
-            cmb_usuarios.DisplayMember = "nombres";
-            cmb_usuarios.ValueMember = "id_empleado";
+            //// carga de combobox de usuarios de la empresa
+            //DataTable empleados = new DataTable();
+            //empleados = CapaDatos.cargar_empleados();
+            //cmb_usuarios.DataSource = empleados;
+            //cmb_usuarios.DisplayMember = "nombres";
+            //cmb_usuarios.ValueMember = "id_empleado";
 
+            // Carga de combobox con empleados de HRM
+            ServiceReference1.Service1Client olis = new ServiceReference1.Service1Client();
+
+            DataSet dt = olis.ObtenerCobrador();
+            cmb_usuarios.DataSource = dt.Tables[0];
+            cmb_usuarios.DisplayMember = "nombre_emp";
+            cmb_usuarios.ValueMember = "id_empleado_pk";
+
+            //Fin de  Carga de combobox con empleados de HRM
 
 
             // -----------------------------------------------
@@ -257,14 +266,25 @@ namespace crm
 
                 else
                 {
+                    //DataTable datos_usuario = new DataTable();
+                    //datos_usuario = CapaDatos.consultar_empleado_especifico(var_id_usuario);
+                    //DataRow fila = datos_usuario.Rows[0];
+                    //lbl_nombres.Text = fila["nombres"].ToString();
+                    //lbl_apellidos.Text = fila["apellidos"].ToString();
+                    //lbl_email.Text = fila["correo"].ToString();
+                    //pcb_foto.ImageLocation = fila["foto"].ToString();
                     
-                    DataTable datos_usuario = new DataTable();
-                    datos_usuario = CapaDatos.consultar_empleado_especifico(var_id_usuario);
-                    DataRow fila = datos_usuario.Rows[0];
+                    // Obtener datos personales de empleados de HRM
+                    ServiceReference1.Service1Client olis = new ServiceReference1.Service1Client();
+
+                    DataSet dt = olis.ObtenerCobradorEspecifico(var_id_usuario);
+                    DataRow fila = dt.Tables[0];
                     lbl_nombres.Text = fila["nombres"].ToString();
                     lbl_apellidos.Text = fila["apellidos"].ToString();
                     lbl_email.Text = fila["correo"].ToString();
                     pcb_foto.ImageLocation = fila["foto"].ToString();
+
+                    //Fin Obtener datos personales de empleados de HRM
 
                     // ---------------------------------------------------- CARGA DE CASOS EN PESTAÑA DE CASOS ------------------------------------------
 
