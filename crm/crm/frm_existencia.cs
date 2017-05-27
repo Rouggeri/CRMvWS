@@ -16,11 +16,7 @@ namespace crm
         public frm_existencia()
         {
             InitializeComponent();
-            //llenar_encabezado();
-            llenarprod();
-            llenarbod();
-            llenarprov();
-            txt_ingreso.Enabled = false;
+        
         }
 
         public void llenar_encabezado()
@@ -89,7 +85,11 @@ namespace crm
         private void frm_existencia_Load(object sender, EventArgs e)
         {
             txt_ingreso.Text = Convert.ToString(DateTime.Today);
-           
+            //llenar_encabezado();
+            llenarprod();
+            llenarbod();
+            llenarprov();
+            txt_ingreso.Enabled = false;
         }
 
         private void groupControl1_Paint(object sender, PaintEventArgs e)

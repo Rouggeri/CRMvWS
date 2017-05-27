@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoPrecio));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_ultimo = new System.Windows.Forms.Button();
             this.btn_guardar = new System.Windows.Forms.Button();
@@ -49,7 +50,12 @@
             this.dgv_bien = new System.Windows.Forms.DataGridView();
             this.cbo_catalogo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.cbo_marca = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbo_categoria = new System.Windows.Forms.ComboBox();
+            this.check_marca = new System.Windows.Forms.CheckBox();
+            this.check_categoria = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bien)).BeginInit();
@@ -83,6 +89,18 @@
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Navegador";
+            // 
+            // button2
+            // 
+            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(644, 19);
+            this.button2.Name = "button2";
+            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.button2.Size = new System.Drawing.Size(65, 65);
+            this.button2.TabIndex = 43;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_nuevo
             // 
@@ -315,17 +333,63 @@
             this.label3.TabIndex = 194;
             this.label3.Text = "Tipo de catalogo";
             // 
-            // button2
+            // cbo_marca
             // 
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(644, 19);
-            this.button2.Name = "button2";
-            this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(65, 65);
-            this.button2.TabIndex = 43;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.cbo_marca.FormattingEnabled = true;
+            this.cbo_marca.Location = new System.Drawing.Point(348, 213);
+            this.cbo_marca.Name = "cbo_marca";
+            this.cbo_marca.Size = new System.Drawing.Size(121, 21);
+            this.cbo_marca.TabIndex = 196;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(344, 189);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 21);
+            this.label2.TabIndex = 197;
+            this.label2.Text = "Marca:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(344, 244);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 21);
+            this.label4.TabIndex = 198;
+            this.label4.Text = "Categoria:";
+            // 
+            // cbo_categoria
+            // 
+            this.cbo_categoria.FormattingEnabled = true;
+            this.cbo_categoria.Location = new System.Drawing.Point(348, 268);
+            this.cbo_categoria.Name = "cbo_categoria";
+            this.cbo_categoria.Size = new System.Drawing.Size(121, 21);
+            this.cbo_categoria.TabIndex = 199;
+            // 
+            // check_marca
+            // 
+            this.check_marca.AutoSize = true;
+            this.check_marca.Location = new System.Drawing.Point(354, 146);
+            this.check_marca.Name = "check_marca";
+            this.check_marca.Size = new System.Drawing.Size(56, 17);
+            this.check_marca.TabIndex = 200;
+            this.check_marca.Text = "Marca";
+            this.check_marca.UseVisualStyleBackColor = true;
+            this.check_marca.CheckedChanged += new System.EventHandler(this.check_marca_CheckedChanged);
+            // 
+            // check_categoria
+            // 
+            this.check_categoria.AutoSize = true;
+            this.check_categoria.Location = new System.Drawing.Point(354, 169);
+            this.check_categoria.Name = "check_categoria";
+            this.check_categoria.Size = new System.Drawing.Size(71, 17);
+            this.check_categoria.TabIndex = 201;
+            this.check_categoria.Text = "Categoria";
+            this.check_categoria.UseVisualStyleBackColor = true;
+            this.check_categoria.CheckedChanged += new System.EventHandler(this.check_categoria_CheckedChanged);
             // 
             // frmListadoPrecio
             // 
@@ -333,6 +397,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(855, 419);
+            this.Controls.Add(this.check_categoria);
+            this.Controls.Add(this.check_marca);
+            this.Controls.Add(this.cbo_categoria);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.cbo_marca);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbo_catalogo);
             this.Controls.Add(this.button5);
@@ -377,5 +447,11 @@
         private System.Windows.Forms.ComboBox cbo_catalogo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox cbo_marca;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cbo_categoria;
+        private System.Windows.Forms.CheckBox check_marca;
+        private System.Windows.Forms.CheckBox check_categoria;
     }
 }

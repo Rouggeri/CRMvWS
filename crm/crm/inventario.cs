@@ -17,10 +17,7 @@ namespace crm
         public inventario()
         {
             InitializeComponent();
-            llenarmarca();
-            llenarcbo();
-            limpiar();
-            deshabilitar();
+           
         }
 
        
@@ -139,7 +136,10 @@ namespace crm
 
         private void inventario_Load(object sender, EventArgs e)
         {
-
+            llenarmarca();
+            llenarcbo();
+            limpiar();
+            deshabilitar();
         }
 
         private void label3_Click(object sender, EventArgs e)
