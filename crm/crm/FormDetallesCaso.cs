@@ -40,8 +40,22 @@ namespace crm
                 string estado_caso = row[1].ToString();
                 string descripcion = row[2].ToString();
                 string empleado = row[3].ToString();
-            
-
+                string id_empleado = row[4].ToString();
+            //--------------------------------------
+            string empleado_ws ="--";
+            ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+                DataSet ds = srv.ObtenerEmpleados();
+                DataTable dt_empleadas = new DataTable();
+                dt_empleadas = ds.Tables[0];
+                foreach (DataRow roww in dt_empleadas.Rows)
+                 {
+                  if(roww[0].ToString() == id_empleado)
+                    {
+                    empleado_ws = roww[6].ToString();
+                    }
+                 }
+            lbl_encargado.Text = empleado_ws;  
+            //-----------------------------------------------------
             if (!String.IsNullOrEmpty(persona))
             {
                 lbl_cliente.Text = persona;
@@ -58,7 +72,7 @@ namespace crm
 
             lbl_categoria.Text = categoria;
             label5.Text = descripcion;
-            lbl_encargado.Text = empleado;
+           // lbl_encargado.Text = empleado;
 
             rtxt_notas.ForeColor = Color.Gray;
             rtxt_notas.Text = "Agrege una nota acerca de " + titulo; ;
@@ -82,6 +96,7 @@ namespace crm
                 dgv_tareas.Columns[6].Visible = false;
                 dgv_tareas.Columns[7].Visible = false;
                 dgv_tareas.Columns[8].Visible = false;
+                dgv_tareas.Columns[3].Visible = false;
 
                 dgv_tareas.Columns[0].Width = 115;
                 dgv_tareas.Columns[1].Width = 70;

@@ -80,14 +80,24 @@ namespace crm
                 //cmb_responsable.DisplayMember = "nombres";
 
                 //LLENAR EMPLEADOS
-                DataTable dt_empleados = OpBD.SeleccionarEmpleados();
+                //DataTable dt_empleados = OpBD.SeleccionarEmpleados();
+                //DataRow row_emp = dt_empleados.NewRow();
+                //row_emp[0] = 0;
+                //row_emp[1] = "<Ninguno>";
+                //dt_empleados.Rows.InsertAt(row_emp, 0);
+                //cmb_responsable.DataSource = dt_empleados;
+                //cmb_responsable.ValueMember = "id_empleado";
+                //cmb_responsable.DisplayMember = "Empleado";
+                ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+                DataSet ds = srv.ObtenerEmpleados();
+                DataTable dt_empleados = ds.Tables[0];
                 DataRow row_emp = dt_empleados.NewRow();
                 row_emp[0] = 0;
-                row_emp[1] = "<Ninguno>";
+                row_emp[6] = "<Ninguno>";
                 dt_empleados.Rows.InsertAt(row_emp, 0);
                 cmb_responsable.DataSource = dt_empleados;
-                cmb_responsable.ValueMember = "id_empleado";
-                cmb_responsable.DisplayMember = "Empleado";
+                cmb_responsable.ValueMember = "id_empleado_pk";
+                cmb_responsable.DisplayMember = "NOMBRE";
 
                 //// Cargar GridView de casos
                 //DataTable dt_casos = new DataTable();
@@ -110,11 +120,11 @@ namespace crm
                 //gridView1.Columns["fecha_limite"].Caption = "Fecha limite";
                 //gridView1.Columns["nombre_caso"].Caption = "Categoria";
                 //gridView1.Columns["estado_caso"].Caption = "Estado";
-                
+
 
                 //gridView1.Columns["id_cat_caso"].Visible = false;
 
-                 if(actualizar == true)
+                if (actualizar == true)
 
                 {
 

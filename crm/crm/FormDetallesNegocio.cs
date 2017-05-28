@@ -42,7 +42,21 @@ namespace crm
             string id_empleado = row[3].ToString();
             string nombre_empleado = row[4].ToString();
             string estado = row[5].ToString();
-
+//-----------------------------------------------------------------
+            string empleado_ws = "--";
+            ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+            DataSet ds = srv.ObtenerEmpleados();
+            DataTable dt_empleadas = new DataTable();
+            dt_empleadas = ds.Tables[0];
+            foreach (DataRow roww in dt_empleadas.Rows)
+            {
+                if (roww[0].ToString() == id_empleado)
+                {
+                    empleado_ws = roww[6].ToString();
+                }
+            }
+            lbl_encargado.Text = empleado_ws;
+//--------------------------------------------------------
             groupControl1.Text = titulo;
             if(!String.IsNullOrEmpty(nombre_persona))
             {
@@ -82,7 +96,7 @@ namespace crm
             
 
 
-            lbl_encargado.Text = nombre_empleado;
+           // lbl_encargado.Text = nombre_empleado;
             lbl_estado.Text = estado;
             if(estado == "Perdida")
             {
@@ -122,6 +136,7 @@ namespace crm
                 dgv_tareas.Columns[6].Visible = false;
                 dgv_tareas.Columns[7].Visible = false;
                 dgv_tareas.Columns[8].Visible = false;
+                dgv_tareas.Columns[3].Visible = false;
 
                 dgv_tareas.Columns[0].Width = 115;
                 dgv_tareas.Columns[1].Width = 70;

@@ -28,18 +28,28 @@ namespace crm
             //dateNavigator1.EditValue;
 
             //LLENAR EMPLEADOS
-            DataTable dt_empleados = OpBD.SeleccionarEmpleados();
-            if (dt_empleados != null)
-            {
-                DataRow row_emp = dt_empleados.NewRow();
-                row_emp[0] = 0;
-                row_emp[1] = "<Ninguno>";
-                dt_empleados.Rows.InsertAt(row_emp, 0);
-                cbo_empleado.DataSource = dt_empleados;
-                cbo_empleado.ValueMember = "id_empleado";
-                cbo_empleado.DisplayMember = "Empleado";
-            }
+            //DataTable dt_empleados = OpBD.SeleccionarEmpleados();
+            //if (dt_empleados != null)
+            //{
+            //    DataRow row_emp = dt_empleados.NewRow();
+            //    row_emp[0] = 0;
+            //    row_emp[1] = "<Ninguno>";
+            //    dt_empleados.Rows.InsertAt(row_emp, 0);
+            //    cbo_empleado.DataSource = dt_empleados;
+            //    cbo_empleado.ValueMember = "id_empleado";
+            //    cbo_empleado.DisplayMember = "Empleado";
+            //}
 
+            ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+            DataSet ds = srv.ObtenerEmpleados();
+            DataTable dt_empleados = ds.Tables[0];
+            DataRow row_emp = dt_empleados.NewRow();
+            row_emp[0] = 0;
+            row_emp[6] = "<Ninguno>";
+            dt_empleados.Rows.InsertAt(row_emp, 0);
+            cbo_empleado.DataSource = dt_empleados;
+            cbo_empleado.ValueMember = "id_empleado_pk";
+            cbo_empleado.DisplayMember = "NOMBRE";
             //---------------------------------------------
             //Tipos
             DataTable dt_tipos = OpBD.SeleccionarTipoTarea();

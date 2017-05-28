@@ -45,18 +45,28 @@ namespace crm
                 cbo_cat.ValueMember = "id_cat";
                 cbo_cat.DisplayMember = "nombre_cat";
                 //LLENAR EMPLEADOS
-                DataTable dt_empleados = OpBD.SeleccionarEmpleados();
+                //DataTable dt_empleados = OpBD.SeleccionarEmpleados();
+                //DataRow row_emp = dt_empleados.NewRow();
+                //row_emp[0] = 0;
+                //row_emp[1] = "<Ninguno>";
+                //dt_empleados.Rows.InsertAt(row_emp, 0);
+                //cbo_empleado.DataSource = dt_empleados;
+                //cbo_empleado.ValueMember = "id_empleado";
+                //cbo_empleado.DisplayMember = "Empleado";
+
+                ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+                DataSet ds = srv.ObtenerEmpleados();
+                DataTable dt_empleados = ds.Tables[0];
                 DataRow row_emp = dt_empleados.NewRow();
                 row_emp[0] = 0;
-                row_emp[1] = "<Ninguno>";
+                row_emp[6] = "<Ninguno>";
                 dt_empleados.Rows.InsertAt(row_emp, 0);
                 cbo_empleado.DataSource = dt_empleados;
-                cbo_empleado.ValueMember = "id_empleado";
-                cbo_empleado.DisplayMember = "Empleado";
+                cbo_empleado.ValueMember = "id_empleado_pk";
+                cbo_empleado.DisplayMember = "NOMBRE";
 
 
-
-                if(btn_guardar.Text == "Actualizar")
+                if (btn_guardar.Text == "Actualizar")
                 {
                     txt_titulo.Text = titulo_e;
 
