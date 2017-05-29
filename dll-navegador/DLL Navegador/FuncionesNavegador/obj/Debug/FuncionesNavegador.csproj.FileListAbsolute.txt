@@ -1,0 +1,88 @@
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Documents\Visual Studio 2015\Projects\FuncionesNavegador - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\Cristian\Desktop\asis12\Objeto\FuncionesNavegador-copia-copia\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.Form1.resources
+C:\Users\javie\Desktop\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.csproj.GenerateResource.Cache
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\mscorlib.dll
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\MySql.Data.xml
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\es\mscorlib.resources.dll
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\normidna.nlp
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\normnfc.nlp
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\normnfd.nlp
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\normnfkc.nlp
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\bin\Debug\normnfkd.nlp
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+D:\Universidad\8vo semestre\diseño de sistemas\nav 0.1\FuncionesNavegador - copia - copia\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\Cristian\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Quinta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Sexta entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Septima Entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\javie\Documents\GitHub\Hotel-San-Carlos\Grupo1\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.xml
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
+C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb
