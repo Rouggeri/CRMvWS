@@ -92,11 +92,24 @@ namespace crm
             pcb_foto.Image = Image.FromFile("andre.jpg");
 
             // carga de combobox de usuarios de la empresa
-            DataTable empleados = new DataTable();
-            empleados = CapaDatos.cargar_empleados();
-            cmb_usuarios.DataSource = empleados;
-            cmb_usuarios.DisplayMember = "nombres";
-            cmb_usuarios.ValueMember = "id_empleado";
+            //DataTable empleados = new DataTable();
+            //empleados = CapaDatos.cargar_empleados();
+            //cmb_usuarios.DataSource = empleados;
+            //cmb_usuarios.DisplayMember = "nombres";
+            //cmb_usuarios.ValueMember = "id_empleado";
+
+            ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+            DataSet ds = srv.ObtenerEmpleados();
+            DataTable dt_empleados = ds.Tables[0];
+            DataRow row_emp = dt_empleados.NewRow();
+            row_emp[0] = 0;
+            row_emp[6] = "<Ninguno>";
+            dt_empleados.Rows.InsertAt(row_emp, 0);
+            cmb_usuarios.DataSource = dt_empleados;
+            cmb_usuarios.ValueMember = "id_empleado_pk";
+            cmb_usuarios.DisplayMember = "NOMBRE";
+
+
 
 
 
@@ -258,13 +271,14 @@ namespace crm
                 else
                 {
                     
-                    DataTable datos_usuario = new DataTable();
-                    datos_usuario = CapaDatos.consultar_empleado_especifico(var_id_usuario);
-                    DataRow fila = datos_usuario.Rows[0];
-                    lbl_nombres.Text = fila["nombres"].ToString();
-                    lbl_apellidos.Text = fila["apellidos"].ToString();
-                    lbl_email.Text = fila["correo"].ToString();
-                    pcb_foto.ImageLocation = fila["foto"].ToString();
+                    //DataTable datos_usuario = new DataTable();
+                    //datos_usuario = CapaDatos.consultar_empleado_especifico(var_id_usuario);
+                    //DataRow fila = datos_usuario.Rows[0];
+                    //lbl_nombres.Text = fila["nombres"].ToString();
+                    //lbl_apellidos.Text = fila["apellidos"].ToString();
+                    //lbl_email.Text = fila["correo"].ToString();
+                    //pcb_foto.ImageLocation = fila["foto"].ToString();
+
 
                     // ---------------------------------------------------- CARGA DE CASOS EN PESTAÑA DE CASOS ------------------------------------------
 

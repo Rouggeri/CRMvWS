@@ -343,5 +343,10 @@ namespace crm
                 txt_valor.Text = valor.ToString("#,###.##");
             }
         }
+
+        private void cbo_perem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -75,7 +75,7 @@
     <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FuncionesNavegador">
-      <HintPath>..\..\..\Users\Chrix\Desktop\8vo semestre\Dlls\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
+      <HintPath>..\..\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
