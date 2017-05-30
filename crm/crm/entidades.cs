@@ -83,19 +83,21 @@ namespace crm
             public string codigo { get; set; }       //ATRIBUTOS DEL OBJETO PERSONA
             public Int32 cantidad { get; set; }
             public Int32 producto { get; set; }
+            public Int32 marca { get; set; }
             public Int32 bodega { get; set; }
             public string ingreso { get; set; }
             public Int32 proveedor { get; set; }
 
             public Existencia() { }                   //CONSTRUCTOR VACIO
 
-            public Existencia(string codigo, Int32 cantidad, Int32 producto, Int32 bodega, string ingreso, Int32 proveedor)      //CONSTRUCTOR CON PARAMETROS
+            public Existencia(string codigo, Int32 cantidad, Int32 producto, Int32 bodega, string ingreso, Int32 proveedor, Int32 marca)      //CONSTRUCTOR CON PARAMETROS
             {
                 this.codigo = codigo;
                 this.cantidad = cantidad;
                 this.producto = producto;
                 this.bodega = bodega;
                 this.ingreso = ingreso;
+                this.marca = marca;
             }
         } //class existencia
 
@@ -177,5 +179,68 @@ namespace crm
                 this.telefono = telefono;
             }
         }
+
+        public class Compra
+        {
+            public string codigo { get; set; }       //ATRIBUTOS DEL OBJETO PRODUCTO
+            public Int32 producto { get; set; }
+            public Int32 proveedor { get; set; }
+            public Int32 marca { get; set; }
+            public Int32 cantidad { get; set; }
+            public String fecha { get; set; }
+            
+
+            public Compra() { }                   //CONSTRUCTOR VACIO
+
+            public Compra(string codigo, Int32 producto, Int32 marca,Int32 proveedor, Int32 cantidad, String fecha)      //CONSTRUCTOR CON PARAMETROS
+            {
+                this.codigo = codigo;
+                this.producto = producto;
+                this.marca = marca;
+                this.proveedor = proveedor;
+                this.cantidad = cantidad;
+                this.fecha = fecha;
+            }
+        } //class producto
+
+        public class Tprecio
+        {
+            public string codigo { get; set; }       //ATRIBUTOS DEL OBJETO PRODUCTO
+            public String tipo { get; set; }
+           
+
+            public Tprecio() { }                   //CONSTRUCTOR VACIO
+
+            public Tprecio(string codigo, string tipo)      //CONSTRUCTOR CON PARAMETROS
+            {
+                this.codigo = codigo;
+                this.tipo = tipo;
+            }
+        } //class producto
+
+        public class Orden
+        {
+            public string codigo { get; set; }       //ATRIBUTOS DEL OBJETO PRODUCTO
+            public Int32 producto { get; set; }
+            public Int32 marca { get; set; }
+            public Int32 proveedor { get; set; }
+            public Int32 cantidad { get; set; }
+            public string fecha { get; set; }
+
+            public Orden() { }                   //CONSTRUCTOR VACIO
+
+            public Orden(string codigo, Int32 producto, Int32 marca, Int32 proveedor, Int32 cantidad, string fecha)      //CONSTRUCTOR CON PARAMETROS
+            {
+                this.codigo = codigo;
+                this.producto = producto;
+                this.marca = marca;
+                this.proveedor = proveedor;
+                this.cantidad = cantidad;
+                this.fecha = fecha;
+            }
+        } //class producto
+
+      
+
     }
 }

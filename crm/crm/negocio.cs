@@ -80,14 +80,14 @@ namespace crm
 
         public void InsertarExistencia(Existencia existencia)
         {
-            if (String.IsNullOrWhiteSpace(Convert.ToString(existencia.cantidad)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.producto)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.bodega)) || string.IsNullOrWhiteSpace(existencia.ingreso) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.proveedor)))
+            if (String.IsNullOrWhiteSpace(Convert.ToString(existencia.cantidad)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.producto)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.bodega)) || string.IsNullOrWhiteSpace(existencia.ingreso) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.proveedor)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.marca)))
             {
                 MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
             }
             else
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
-                cdatos.insertarexistencia(existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor);
+                cdatos.insertarexistencia(existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor, existencia.marca);
             }
         }
 
@@ -101,6 +101,32 @@ namespace crm
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
                 cdatos.insertarmarca(marca.nombre, marca.porcentaje);
+            }
+        }
+
+        public void InsertarCompra(Compra compra)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(compra.producto)) || string.IsNullOrWhiteSpace(Convert.ToString(compra.marca)) || string.IsNullOrWhiteSpace(Convert.ToString(compra.proveedor)) || string.IsNullOrWhiteSpace(Convert.ToString(compra.cantidad)) || string.IsNullOrWhiteSpace(compra.fecha))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarcompra(compra.producto, compra.marca, compra.proveedor, compra.cantidad, compra.fecha);
+            }
+        }
+
+        public void InsertarCatalogo(Tprecio catalogo)
+        {
+            if (string.IsNullOrWhiteSpace(catalogo.tipo))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarcatalogo(catalogo.tipo);
             }
         }
 
@@ -142,6 +168,16 @@ namespace crm
         public System.Data.DataTable consultamarca()
         {
             return datos.ObtenerMarca();              //se llama la funcion ObtenerCat
+        }
+
+        public System.Data.DataTable consultacomp()
+        {
+            return datos.ObtenerCompra();              //se llama la funcion ObtenerCat
+        }
+
+        public System.Data.DataTable consultacatalogo()
+        {
+            return datos.ObtenerCatalogo();              //se llama la funcion ObtenerCat
         }
 
         public void InsertarAbono(Abono abono)

@@ -120,6 +120,9 @@
     <Compile Include="CapaDatos.cs" />
     <Compile Include="CapaDatosPersonas.cs" />
     <Compile Include="CapaNegociod.cs" />
+    <Compile Include="Clsopbien.cs" />
+    <Compile Include="Clsopexis.cs" />
+    <Compile Include="Clsoporden.cs" />
     <Compile Include="cls_grafica_pie.cs" />
     <Compile Include="cls_nombre_mes.cs" />
     <Compile Include="Conexion.cs" />
@@ -235,6 +238,24 @@
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmbuscexistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbuscexistencia.Designer.cs">
+      <DependentUpon>frmbuscexistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmbuscorden.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbuscorden.Designer.cs">
+      <DependentUpon>frmbuscorden.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmbuscproducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbuscproducto.Designer.cs">
+      <DependentUpon>frmbuscproducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListadoPrecio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +309,12 @@
     </Compile>
     <Compile Include="frm_cliente.Designer.cs">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_compra.Designer.cs">
+      <DependentUpon>frm_compra.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_configurar_idioma.cs">
       <SubType>Form</SubType>
@@ -520,6 +547,15 @@
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmbuscexistencia.resx">
+      <DependentUpon>frmbuscexistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbuscorden.resx">
+      <DependentUpon>frmbuscorden.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbuscproducto.resx">
+      <DependentUpon>frmbuscproducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListadoPrecio.resx">
       <DependentUpon>frmListadoPrecio.cs</DependentUpon>
     </EmbeddedResource>
@@ -546,6 +582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_cliente.resx">
       <DependentUpon>frm_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_compra.resx">
+      <DependentUpon>frm_compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_configurar_idioma.en.resx">
       <DependentUpon>frm_configurar_idioma.cs</DependentUpon>
