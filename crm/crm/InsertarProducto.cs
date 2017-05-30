@@ -26,7 +26,7 @@ namespace proyectoUOne
                 double tempo = precioP * 0.20;
                 double tempo2 = precioP - tempo;
                 
-                nuevo.InsertarProducto(txt_descripcion.Text, Convert.ToDouble(txt_precioUnidad.Text), tempo2);
+                //nuevo.InsertarProducto(txt_descripcion.Text, Convert.ToDouble(txt_precioUnidad.Text), tempo2);
                 MessageBox.Show("Se Inserto Correctamente");
                 txt_descripcion.Text = "";
                 txt_precioUnidad.Text = "";

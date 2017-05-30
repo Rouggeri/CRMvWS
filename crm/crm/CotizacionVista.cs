@@ -47,7 +47,6 @@ namespace proyectoUOne
             Modificacion.Enabled = true;
 
             string CodigoC = this.dgv_CotizacionVista.CurrentRow.Cells[0].Value.ToString();
-
             string clienteC = this.dgv_CotizacionVista.CurrentRow.Cells[1].Value.ToString();
             string correoC = this.dgv_CotizacionVista.CurrentRow.Cells[2].Value.ToString();
             string fechaInicioC = this.dgv_CotizacionVista.CurrentRow.Cells[3].Value.ToString();
@@ -76,7 +75,7 @@ namespace proyectoUOne
                 if (!String.IsNullOrEmpty(abir.codigoC) && !String.IsNullOrEmpty(abir.nitC) && !String.IsNullOrEmpty(abir.nombreC) &&
                             !String.IsNullOrEmpty(abir.apellidoC) && !String.IsNullOrEmpty(abir.direccionC) && !String.IsNullOrEmpty(abir.telefonoC))
                 {
-                    //txt_codigoTemporal.Text = abir.codigoC;
+                    txt_codigoTemporal.Text = abir.codigoC;
                     txtCliente.Text = abir.nombreC;
                     txtTelefono.Text = abir.apellidoC;
                     //this.Close();
@@ -99,14 +98,9 @@ namespace proyectoUOne
                 dtpFechaT.Format = DateTimePickerFormat.Custom;
                 dtpFechaT.CustomFormat = "yyyy-MM-dd";
                 CapaDatos db = new CapaDatos();
-
                 string id_cotizacionO = txt_codigoTemporal.Text;
-                string nombreT = txtCliente.Text;
-                string TelefonoT = txtTelefono.Text;
-                string fechaInn = dtpFechaI.Text;
-                string fechaTerr = dtpFechaT.Text;
 
-                db.ActualziarCotizacionEncabezado(nombreT, TelefonoT, dtpFechaI.Text.Trim(), dtpFechaT.Text.Trim(), id_cotizacionO);
+                db.ActualziarCotizacionEncabezado(dtpFechaI.Text.Trim(), dtpFechaT.Text.Trim(), txt_codigoTemporal.Text, id_cotizacionO);
                 MessageBox.Show("correcto");
 
             }

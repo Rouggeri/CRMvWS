@@ -14,16 +14,20 @@ namespace proyectoUOne
 
     public partial class Factura : Form
     {
+        public string globalCodigo;
+        CapaDatos capa = new CapaDatos();
         public int variable_temporal;
         public Factura()
         {
             try
             {
                 InitializeComponent();
-                //llenarCotizacion();
+                llenarCotizacion();
                 cmb_cotizaciones.Enabled = false;
                 llenarTipoPago();
                 dgv_facturaDetalle.DataSource = null;
+                llenarEmpleado();
+                columnas();
             }
             catch
             {
@@ -31,63 +35,78 @@ namespace proyectoUOne
             }
         }
 
-        public void llenarCotizacion()
-        {
+        //Metodo para llenar combobox Empleado - Vendedor
+        private void llenarEmpleado() {
             try
             {
-                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-                string query = "select id_cotizacion from cotizacion_encabezado WHERE estadoCotizacion='ESPERA';";
-                OdbcCommand cmd = new OdbcCommand(query, con);
-                OdbcDataAdapter da1 = new OdbcDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da1.Fill(dt);
-                cmb_cotizaciones.ValueMember = "id_cotizacion";
-                cmb_cotizaciones.DisplayMember = "id_cotizacion";
-                cmb_cotizaciones.DataSource = dt;
+                crm.ServiceReference1.Service1Client srv = new crm.ServiceReference1.Service1Client();
+                DataSet ds = srv.ObtenerEmpleados();
+                DataTable dt_empleados = ds.Tables[0];
+                DataRow row_emp = dt_empleados.NewRow();
+                row_emp[0] = 0;
+                row_emp[6] = "<Ninguno>";
+                dt_empleados.Rows.InsertAt(row_emp, 0);
+                cmb_empleado.DataSource = dt_empleados;
+                cmb_empleado.ValueMember = "id_empleado_pk";
+                cmb_empleado.DisplayMember = "NOMBRE";
             }
             catch
             {
-                MessageBox.Show("Error al llenar combobox codigo cotizacion");
+                MessageBox.Show("No existe ningun empleado...");
             }
-
         }
 
+        //Metodo para llenar Detalle y encabezado por Cotizacion
+        public void LLamado() {
+            try
+            {
+                llenarCotizacion();
+                if (cmb_cotizaciones.Items.Count <= 0)
+                {
+                    MessageBox.Show("No hay detalle sin Encabezado");
+                }
+                else
+                {
+                    cargardetalle();
+                    total();
+                }
+            }
+            catch {
+                MessageBox.Show("Error de try catch - pero se pudo");
+            }
+        }
 
-        //cargar datagridview a traves del codigo cotizacion
-        public void cargardetalle()
+        //Metodo para llenar combobox Cotizaciones Encabezado
+        private void llenarCotizacion()
         {
             try
             {
-                columnas();
-                int tempo = Convert.ToInt32(cmb_cotizaciones.SelectedValue.ToString());
-                DataTable dt;
-                dt = CapaDatos.ConsultadetalleCotizacion(tempo);
-                double suma = 0;
-                foreach (DataRow row in dt.Rows)
-                {
-                    int codigoD = Convert.ToInt32(row[0].ToString().Trim());
-                    DataTable dt2 = CapaDatos.CargarGridAutoIncrement("select descripcion from producto_m where id_producto = " + codigoD + ";");
-                    DataRow rowi = dt2.Rows[0];
-                    string ronald = Convert.ToString(rowi[0]);
-                    int cantidadD = Convert.ToInt32(row[1].ToString().Trim());
-                    DataTable dt5 = CapaDatos.CargarGridAutoIncrement("select precio_unidad from producto_m where id_producto = " + codigoD + ";");
-                    DataRow dete = dt5.Rows[0];
-                    string caris = Convert.ToString(dete[0]);
-                    double final = Convert.ToDouble(caris);
-
-                    double subtotalD = Convert.ToDouble(row[2].ToString().Trim());
-                    //dgv_facturaDetalle.Rows.Insert(0, codigo_facturaM, codigoD, cantidadD, subtotalD);
-                    dgv_facturaDetalle.Rows.Add(codigoD, ronald, cantidadD, final, subtotalD);
-                    //suma += Convert.ToDouble(row.Cells[].Value);
-                    suma += Convert.ToDouble(row[2].ToString().Trim());
-                }
-                txt_total.Text = Convert.ToString(suma);
-
+                DataTable cotizacion = new DataTable();
+                cotizacion = capa.CargarCotizacion();
+                cmb_cotizaciones.DataSource = cotizacion;
+                cmb_cotizaciones.ValueMember = "id_cotizacion";
+                cmb_cotizaciones.DisplayMember = "id_cotizacion";
             }
             catch
             {
-                MessageBox.Show("error al llamdo de cotizacion detalle");
+                MessageBox.Show("No hay cotizaciones registradas...");
             }
+        }
+
+        //Cargar datagridview a traves del codigo cotizacion
+        public void cargardetalle()
+        {
+            /*try
+            {*/   
+            string tempo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
+            DataTable dt = CapaDatos.CargarDetalleCotiza(tempo);
+            dgv_facturaDetalle.DataSource = dt;
+
+            /*}
+            catch
+            {
+                MessageBox.Show("No hay Cotizacion en base de datos");
+            }*/
 
         }
 
@@ -101,37 +120,50 @@ namespace proyectoUOne
                 dtp_fecha.CustomFormat = "yyyy-MM-dd";
 
                 if (!String.IsNullOrEmpty(txt_nombre.Text.Trim()) && !String.IsNullOrEmpty(txt_apellido.Text.Trim()) &&
-                    !String.IsNullOrEmpty(txt_direccion.Text.Trim()) && !String.IsNullOrEmpty(txt_telefono.Text.Trim()) &&
-                    cmb_pago.SelectedIndex != -1)
+                                         cmb_pago.SelectedIndex != -1)
                 {
                     CapaDatos db = new CapaDatos();
                     //Manejo db = new Manejo();
-                    string temp = cmb_pago.SelectedItem.ToString();
-                    double temp1 = Convert.ToDouble(txt_total.Text.Trim());
-                    int temp3 = Convert.ToInt32(txt_temporal.Text.Trim());
-                    db.GuardarFacturaEncabezado(dtp_fecha.Text.Trim(), temp, temp1, temp3);
+                    string formaPago = cmb_pago.SelectedItem.ToString();
+                    double sumaTotal = Convert.ToDouble(txt_total.Text.Trim());
+                    int IdCliente = Convert.ToInt32(txt_temporal.Text.Trim());
+                    string empleados = Convert.ToString(cmb_empleado.SelectedValue.ToString());
+                    db.GuardarFacturaEncabezado(dtp_fecha.Text.Trim(), formaPago, sumaTotal, IdCliente, empleados);
 
+                    int codigoAutoIncrement = CapaDatos.ConsultaUatoIncrementFactura();
                     CapaDatos v = new CapaDatos();
-                    DataTable dt1 = CapaDatos.CargarGridAutoIncrement("select AUTO_INCREMENT from information_schema.TABLES where TABLE_SCHEMA='crmbd' and TABLE_NAME='factura_encabezado';");
+                    /*DataTable dt1 = CapaDatos.CargarGridAutoIncrement("select AUTO_INCREMENT from information_schema.TABLES where TABLE_SCHEMA='prueba' and TABLE_NAME='factura_encabezado';");
                     DataRow rows = dt1.Rows[0];
-                    int id_req = Convert.ToInt32(rows[0]);
+                    int codigoObtenido = Convert.ToInt32(rows[0]);*/
 
                     foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
                     {
-                        int codigo_facturaM = id_req - 1;
+                        int codigo_facturaM = codigoAutoIncrement - 1;
                         int codigo_productoM = Convert.ToInt32(row.Cells[0].Value);
-                        int cantidadM = Convert.ToInt32(row.Cells[3].Value);
+                        int cantidadM = Convert.ToInt32(row.Cells[2].Value);
+                        double precioM = Convert.ToDouble(row.Cells[3].Value);
                         double subtotalM = Convert.ToDouble(row.Cells[4].Value);
-                        v.insertar_detalle_factura(codigo_facturaM, codigo_productoM, cantidadM, subtotalM);
+                        v.insertar_detalle_factura(codigo_facturaM, codigo_productoM, cantidadM, precioM, subtotalM);
                     } //termina mi foreach      
-
-                            
                 }
                 if (chb_habilita.Checked) {
                         CapaDatos nuevo = new CapaDatos();
                         string temporales = cmb_cotizaciones.SelectedValue.ToString();
                         nuevo.ActualizaEstadoPedidoCotizacion(temporales);
-                    }  
+                    }
+
+                BuscarProducto abir = new BuscarProducto();              
+                Factura fac = new Factura();
+                CapaDatos nuev = new CapaDatos();
+                string IdProducto = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
+                string IdMarca = abir.dgv_productosVista.CurrentRow.Cells[5].Value.ToString();
+                string IdCompra = abir.dgv_productosVista.CurrentRow.Cells[6].Value.ToString();
+                string ExistenciaVieja = Convert.ToString(abir.cmb_existencia.SelectedValue.ToString());
+                string Venta = Convert.ToString(abir.txt_cantidad.Text);
+                int ventaF = Convert.ToInt32(Venta);
+                int Existencia = Convert.ToInt32(ExistenciaVieja);
+                int existenciaNueva = Existencia - ventaF;
+                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);
             }
             catch
             {
@@ -148,14 +180,12 @@ namespace proyectoUOne
                 abir.ShowDialog();
                 
                 if (!String.IsNullOrEmpty(abir.codigoC) && !String.IsNullOrEmpty(abir.nitC) && !String.IsNullOrEmpty(abir.nombreC) &&
-                            !String.IsNullOrEmpty(abir.apellidoC) && !String.IsNullOrEmpty(abir.direccionC) && !String.IsNullOrEmpty(abir.telefonoC))
+                            !String.IsNullOrEmpty(abir.apellidoC))
                 {
                     txt_temporal.Text = abir.codigoC;
                     txt_nit.Text = abir.nitC;
                     txt_nombre.Text = abir.nombreC;
                     txt_apellido.Text = abir.apellidoC;
-                    txt_direccion.Text = abir.direccionC;
-                    txt_telefono.Text = abir.telefonoC;
                     txt_tipo.Text = abir.tipo;
                     //this.Close();
                     //this.Show();
@@ -178,27 +208,89 @@ namespace proyectoUOne
             //llenarCotizacion();
         }
 
+        //Metodod de total cotizacion
+        public void total() {
+                if (cmb_cotizaciones.Items.Count <= 0)
+                {
+                    MessageBox.Show("No hay totales");
+                }
+                else
+                {
+            string envia = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
+            double recibe = CapaDatos.ConsultaTotal(envia);
+            string recibeConvert = Convert.ToString(recibe);
+            txt_total.Text = recibeConvert;
+                }
+        }
+
+        public string codigoFi;
+        public string nombreFi;
+        public string apellidoFi;
+        public string nitFi;
+        //Metodo para cargar cliente por medio cotizacion
+        public void ClientesCotizacion() {
+            try
+            {
+                string codigoFac = globalCodigo;
+                DataTable cliente = new DataTable();
+                DataGridView contiene = new DataGridView();
+                cliente = CapaDatos.ConsultaClientePaFactura(codigoFac);
+                contiene.DataSource = cliente;
+
+                DataRow rows = cliente.Rows[0];
+                DataRow rows2 = cliente.Rows[0];
+                DataRow rows3 = cliente.Rows[0];
+                DataRow rows4 = cliente.Rows[0];
+
+                string codigoOss = Convert.ToString(rows[0]);
+                string nombress = Convert.ToString(rows2[1]);
+                string apellidoss = Convert.ToString(rows3[2]);
+                string nitss = Convert.ToString(rows4[3]);
+
+                txt_temporal.Text = codigoOss;
+                txt_nombre.Text = nombress;
+                txt_apellido.Text = apellidoss;
+                txt_nit.Text = nitss;
+            }
+            catch {
+                MessageBox.Show("Errro de Llamado");
+            }
+        }
+
+        // Limpiar datos de Cliente
+        public void LimpiarCliente() {
+            txt_temporal.Text = "";
+            txt_nombre.Text = "";
+            txt_apellido.Text = "";
+            txt_nit.Text = "";
+        }
+
         //Condicion de checkBox
-        private void chb_habilita_CheckedChanged(object sender, EventArgs e)
+        public void chb_habilita_CheckedChanged(object sender, EventArgs e)
         {
             try
             {
                 Factura non = new Factura();
                 if (chb_habilita.Checked)
                 {
-                    llenarCotizacion();
-                    eliminarCOlumndas();
+                eliminarCOlumndas();
+                    //llenarCotizacion();
                     cmb_cotizaciones.Enabled = true;
-                    cargardetalle();
+                    //cargardetalle();
+                    LLamado();
+                    ClientesCotizacion();
+                    btn_agregarProducto.Enabled = false;
                     non.Refresh();
                 }
                 if (!chb_habilita.Checked)
                 {
                     eliminarCOlumndas();
+                    LimpiarCliente();
                     dgv_facturaDetalle.DataSource = null;
                     cmb_cotizaciones.Enabled = false;
                     columnas();
                     txt_total.Text = "";
+                    btn_agregarProducto.Enabled = true;
                 }
             }
             catch
@@ -206,9 +298,15 @@ namespace proyectoUOne
                 MessageBox.Show("Error al abrir");
             }
         }
+        public void FuncionCodigo() {
+                string enviaCodigo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
+                int codigoRecibe = CapaDatos.ConsultacodigoClienteCotizacion(enviaCodigo);
+                globalCodigo = Convert.ToString(codigoRecibe);
+        }
 
-        private void Factura_Load(object sender, EventArgs e)
+        public void Factura_Load(object sender, EventArgs e)
         {
+            FuncionCodigo();
             dgv_facturaDetalle.DataSource = null;
         }
 
@@ -281,7 +379,7 @@ namespace proyectoUOne
             }
             catch
             {
-                MessageBox.Show("Errorr al llenar combo manualmente");
+                MessageBox.Show("Error al llenar combo manualmente");
             }
         }
 
@@ -289,6 +387,9 @@ namespace proyectoUOne
         {
             eliminarCOlumndas();
             cargardetalle();
+            total();
+            FuncionCodigo();
+            ClientesCotizacion();
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -337,45 +438,39 @@ namespace proyectoUOne
             this.Close();
         }
 
-        private void btn_agregarProducto_Click(object sender, EventArgs e)
+        public void btn_agregarProducto_Click(object sender, EventArgs e)
         {
-            try
-            {
+            /*try
+            {*/
                 BuscarProducto abir = new BuscarProducto();
+                string temporales = txt_tipo.Text; //ORDER BY nombre ASC               
+                abir.txt_ratos.Text = temporales;
                 //this.Hide();
                 abir.ShowDialog();
 
-            Factura fac = new Factura();
-            CapaDatos nuev = new CapaDatos();
-            string codigoP = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
-            string decripcionP = abir.dgv_productosVista.CurrentRow.Cells[1].Value.ToString();
-            string precioUP = abir.dgv_productosVista.CurrentRow.Cells[2].Value.ToString();
-                string precioMayor = abir.dgv_productosVista.CurrentRow.Cells[3].Value.ToString();
-            double temporal1 = Convert.ToDouble(abir.txt_cantidad.Text);
-                string decidido = "";
-                int primero = Convert.ToInt32(txt_tipo.Text);
-                 if (primero == 1) {
-                    decidido = precioUP;
-                }
-                if (primero == 2) {
-                    decidido = precioMayor;
-                }
-          int temporal2 = Convert.ToInt32(decidido);
-            double subtot = temporal1 * temporal2;
+                Factura fac = new Factura();
+                CapaDatos nuev = new CapaDatos();
+                string codigoP = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
+                string decripcionP = abir.dgv_productosVista.CurrentRow.Cells[1].Value.ToString();
+                string precioUP = abir.dgv_productosVista.CurrentRow.Cells[2].Value.ToString();
+                double cantidadP = Convert.ToDouble(abir.txt_cantidad.Text);
+                double PrecioPP = Convert.ToDouble(precioUP);            
+                double subtot = PrecioPP * cantidadP;
                 string SubtotalP = Convert.ToString(subtot);
-              
 
-              
-              
-
-            if (!String.IsNullOrEmpty(codigoP) && !String.IsNullOrEmpty(decripcionP) && !String.IsNullOrEmpty(precioUP) &&
-                                            !String.IsNullOrEmpty(SubtotalP) )
-                                {
-
-
-                    dgv_facturaDetalle.Rows.Add(codigoP, decripcionP, abir.txt_cantidad.Text, decidido, SubtotalP);
+                if (!String.IsNullOrEmpty(codigoP) && !String.IsNullOrEmpty(decripcionP) && !String.IsNullOrEmpty(precioUP) &&
+                                                !String.IsNullOrEmpty(SubtotalP))
+                {
+                string cantidadD = Convert.ToString(abir.cmb_existencia.SelectedValue.ToString());
+                int cantidadOri = Convert.ToInt32(cantidadD);
+                int cantidadPuesta = Convert.ToInt32(abir.txt_cantidad.Text);
+                if(cantidadOri < cantidadPuesta)
+                {
+                    MessageBox.Show("Existencia Baja");
+                }if (cantidadPuesta <= cantidadOri)
+                {
+                    dgv_facturaDetalle.Rows.Add(codigoP, decripcionP,  abir.txt_cantidad.Text, precioUP, SubtotalP);
                     //dgv_facturaDetalle.Rows.Insert(0, cmb_codigo.SelectedValue.ToString(), cmb_descripcion.SelectedValue.ToString(), txt_cantidad.Text, cmb_prueba.SelectedValue.ToString(), subtotall);
-
                     int suma = 0;
                     foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
                     {
@@ -384,15 +479,41 @@ namespace proyectoUOne
                     }
                     txt_total.Text = Convert.ToString(suma);
                     abir.txt_cantidad.Text = "";
+                }
+                    
                     //this.Close();
                 }
                 //this.Show();
-                
-            }
-            catch
+            /*}
+            catch {
+                MessageBox.Show("No se agrego ningun producto");
+            }*/
+        }
+
+        private void dgv_facturaDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            try
             {
-                MessageBox.Show("Error al cargar formulario");
+                DialogResult result = MessageBox.Show("Desea Eliminar la Fila? ", " Message of Option Delete ", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    dgv_facturaDetalle.Rows.RemoveAt(dgv_facturaDetalle.CurrentRow.Index);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Fila Vacia U Otro Error");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClientesCotizacion();
         }
     }
 }

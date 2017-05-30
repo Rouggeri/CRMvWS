@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cotizacion));
             this.dgvCotizacion = new System.Windows.Forms.DataGridView();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,14 +59,9 @@
             this.btn_siguiente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.ClienteData = new DevExpress.XtraEditors.GroupControl();
+            this.txt_tipo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_buscarCliente = new System.Windows.Forms.Button();
-            this.txt_tipo = new System.Windows.Forms.TextBox();
-            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCotizacion)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteData)).BeginInit();
@@ -79,11 +79,36 @@
             this.cantidad,
             this.Precio,
             this.Subtotal});
-            this.dgvCotizacion.Location = new System.Drawing.Point(22, 306);
+            this.dgvCotizacion.Location = new System.Drawing.Point(22, 258);
             this.dgvCotizacion.Name = "dgvCotizacion";
             this.dgvCotizacion.Size = new System.Drawing.Size(630, 275);
             this.dgvCotizacion.TabIndex = 0;
             this.dgvCotizacion.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCotizacion_CellMouseDoubleClick);
+            // 
+            // codigo
+            // 
+            this.codigo.HeaderText = "codigo";
+            this.codigo.Name = "codigo";
+            // 
+            // descripcion
+            // 
+            this.descripcion.HeaderText = "descripcion";
+            this.descripcion.Name = "descripcion";
+            // 
+            // cantidad
+            // 
+            this.cantidad.HeaderText = "cantidad";
+            this.cantidad.Name = "cantidad";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Subtotal
+            // 
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.Name = "Subtotal";
             // 
             // label1
             // 
@@ -101,9 +126,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(52, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Telefono";
+            this.label2.Text = "Apellido";
             // 
             // label3
             // 
@@ -143,7 +168,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(398, 169);
+            this.label8.Location = new System.Drawing.Point(388, 113);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 16;
@@ -152,7 +177,7 @@
             // txt_total
             // 
             this.txt_total.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.Location = new System.Drawing.Point(478, 161);
+            this.txt_total.Location = new System.Drawing.Point(468, 105);
             this.txt_total.Name = "txt_total";
             this.txt_total.ReadOnly = true;
             this.txt_total.Size = new System.Drawing.Size(134, 21);
@@ -226,6 +251,7 @@
             this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
             this.btn_cancelar.TabIndex = 176;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_ultimo
             // 
@@ -340,6 +366,7 @@
             this.btn_editar.Size = new System.Drawing.Size(58, 59);
             this.btn_editar.TabIndex = 5;
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // btn_eliminar
             // 
@@ -377,7 +404,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(149, 129);
+            this.button1.Location = new System.Drawing.Point(149, 99);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(91, 27);
             this.button1.TabIndex = 192;
@@ -408,15 +435,24 @@
             this.ClienteData.Controls.Add(this.label3);
             this.ClienteData.Location = new System.Drawing.Point(22, 113);
             this.ClienteData.Name = "ClienteData";
-            this.ClienteData.Size = new System.Drawing.Size(630, 187);
+            this.ClienteData.Size = new System.Drawing.Size(630, 139);
             this.ClienteData.TabIndex = 193;
             this.ClienteData.Text = "Client Data";
+            this.ClienteData.Paint += new System.Windows.Forms.PaintEventHandler(this.ClienteData_Paint);
+            // 
+            // txt_tipo
+            // 
+            this.txt_tipo.Location = new System.Drawing.Point(519, 55);
+            this.txt_tipo.Name = "txt_tipo";
+            this.txt_tipo.Size = new System.Drawing.Size(21, 21);
+            this.txt_tipo.TabIndex = 205;
+            this.txt_tipo.Visible = false;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 143);
+            this.label4.Location = new System.Drawing.Point(26, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 13);
             this.label4.TabIndex = 204;
@@ -432,45 +468,12 @@
             this.btn_buscarCliente.UseVisualStyleBackColor = true;
             this.btn_buscarCliente.Click += new System.EventHandler(this.btn_buscarCliente_Click);
             // 
-            // txt_tipo
-            // 
-            this.txt_tipo.Location = new System.Drawing.Point(534, 55);
-            this.txt_tipo.Name = "txt_tipo";
-            this.txt_tipo.Size = new System.Drawing.Size(57, 21);
-            this.txt_tipo.TabIndex = 205;
-            this.txt_tipo.Visible = false;
-            // 
-            // codigo
-            // 
-            this.codigo.HeaderText = "codigo";
-            this.codigo.Name = "codigo";
-            // 
-            // descripcion
-            // 
-            this.descripcion.HeaderText = "descripcion";
-            this.descripcion.Name = "descripcion";
-            // 
-            // cantidad
-            // 
-            this.cantidad.HeaderText = "cantidad";
-            this.cantidad.Name = "cantidad";
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            // 
-            // Subtotal
-            // 
-            this.Subtotal.HeaderText = "Subtotal";
-            this.Subtotal.Name = "Subtotal";
-            // 
             // Cotizacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(684, 588);
+            this.ClientSize = new System.Drawing.Size(684, 543);
             this.Controls.Add(this.ClienteData);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvCotizacion);
