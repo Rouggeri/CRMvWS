@@ -873,5 +873,11 @@ namespace crm
             frm_marca m = new frm_marca();
             m.Show();
         }
+
+        private void tipoDePrecioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_tprecio t = new frm_tprecio();
+            t.Show();
+        }
     }
 }

@@ -1181,3 +1181,4 @@ C:\CRMvWS\crm\crm\bin\Debug\ru\DevExpress.Xpo.v15.2.resources.dll
 C:\CRMvWS\crm\crm\obj\Debug\en\crm.resources.dll
 C:\CRMvWS\crm\crm\obj\Debug\crm.exe
 C:\CRMvWS\crm\crm\obj\Debug\crm.pdb
+C:\CRMvWS\crm\crm\obj\Debug\crm.frm_tprecio.resources
