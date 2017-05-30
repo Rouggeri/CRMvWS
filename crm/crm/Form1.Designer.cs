@@ -60,6 +60,7 @@
             this.listaDePrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ingresoCategoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mantenimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.empresaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +80,7 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoDePrecioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -282,7 +283,8 @@
             this.listaDePrecioToolStripMenuItem,
             this.ordenDeCompraToolStripMenuItem,
             this.ingresoCategoriaToolStripMenuItem,
-            this.marcaToolStripMenuItem});
+            this.marcaToolStripMenuItem,
+            this.tipoDePrecioToolStripMenuItem});
             resources.ApplyResources(this.productosToolStripMenuItem, "productosToolStripMenuItem");
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Tag = "5";
@@ -321,6 +323,13 @@
             resources.ApplyResources(this.ingresoCategoriaToolStripMenuItem, "ingresoCategoriaToolStripMenuItem");
             this.ingresoCategoriaToolStripMenuItem.Tag = "120";
             this.ingresoCategoriaToolStripMenuItem.Click += new System.EventHandler(this.ingresoCategoriaToolStripMenuItem_Click);
+            // 
+            // marcaToolStripMenuItem
+            // 
+            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            resources.ApplyResources(this.marcaToolStripMenuItem, "marcaToolStripMenuItem");
+            this.marcaToolStripMenuItem.Tag = "121";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // mantenimientosToolStripMenuItem
             // 
@@ -452,12 +461,12 @@
             resources.ApplyResources(this.empleadoToolStripMenuItem, "empleadoToolStripMenuItem");
             this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
-            // marcaToolStripMenuItem
+            // tipoDePrecioToolStripMenuItem
             // 
-            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            resources.ApplyResources(this.marcaToolStripMenuItem, "marcaToolStripMenuItem");
-            this.marcaToolStripMenuItem.Tag = "121";
-            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
+            this.tipoDePrecioToolStripMenuItem.Name = "tipoDePrecioToolStripMenuItem";
+            resources.ApplyResources(this.tipoDePrecioToolStripMenuItem, "tipoDePrecioToolStripMenuItem");
+            this.tipoDePrecioToolStripMenuItem.Tag = "123";
+            this.tipoDePrecioToolStripMenuItem.Click += new System.EventHandler(this.tipoDePrecioToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -529,6 +538,7 @@
         private System.Windows.Forms.ToolStripMenuItem ordenDeCompraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ingresoCategoriaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoDePrecioToolStripMenuItem;
     }
 }
 
