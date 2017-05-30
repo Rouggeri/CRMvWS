@@ -31,25 +31,24 @@ namespace proyectoUOne
             abrir.Show();
         }
 
-        private void dgv_buscarCliente_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
+        public void dgv_buscarCliente_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             try
             {
                 Factura vista = new Factura();
                 //Ponemos los valores del datagridview en variables globales publicas
-                codigoC = this.dgv_buscarCliente.CurrentRow.Cells[0].Value.ToString();
-                nitC = this.dgv_buscarCliente.CurrentRow.Cells[1].Value.ToString();
-                nombreC = this.dgv_buscarCliente.CurrentRow.Cells[2].Value.ToString();
-                apellidoC = this.dgv_buscarCliente.CurrentRow.Cells[3].Value.ToString();
-                direccionC = this.dgv_buscarCliente.CurrentRow.Cells[4].Value.ToString();
-                telefonoC = this.dgv_buscarCliente.CurrentRow.Cells[5].Value.ToString();
-                tipo = this.dgv_buscarCliente.CurrentRow.Cells[7].Value.ToString();
+                codigoC = this.dgv_buscarCliente.CurrentRow.Cells[0].Value.ToString();              
+                nombreC = this.dgv_buscarCliente.CurrentRow.Cells[1].Value.ToString();
+                apellidoC = this.dgv_buscarCliente.CurrentRow.Cells[2].Value.ToString();
+                direccionC = this.dgv_buscarCliente.CurrentRow.Cells[3].Value.ToString();
+                telefonoC = this.dgv_buscarCliente.CurrentRow.Cells[4].Value.ToString();
+                tipo = this.dgv_buscarCliente.CurrentRow.Cells[5].Value.ToString();
+                nitC = this.dgv_buscarCliente.CurrentRow.Cells[6].Value.ToString();
                 //Despues se llamara desde otro formulario las variables globales decalaradas aqui
 
                 if (!String.IsNullOrEmpty(codigoC) && !String.IsNullOrEmpty(nitC) && !String.IsNullOrEmpty(nombreC) &&
                     !String.IsNullOrEmpty(apellidoC) && !String.IsNullOrEmpty(direccionC) && !String.IsNullOrEmpty(telefonoC))
-                {
-                    
+                {                  
                     this.Close();
                 }
                 else {

@@ -38,10 +38,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_facturaDetalle = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txt_direccion = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_nit = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -67,46 +63,52 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btn_agregarProducto = new System.Windows.Forms.Button();
             this.txt_tipo = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmb_empleado = new System.Windows.Forms.ComboBox();
+            this.ClienteData = new DevExpress.XtraEditors.GroupControl();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_facturaDetalle)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteData)).BeginInit();
+            this.ClienteData.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_total
             // 
-            this.txt_total.Location = new System.Drawing.Point(470, 217);
+            this.txt_total.Location = new System.Drawing.Point(100, 107);
             this.txt_total.Name = "txt_total";
             this.txt_total.ReadOnly = true;
-            this.txt_total.Size = new System.Drawing.Size(131, 20);
+            this.txt_total.Size = new System.Drawing.Size(131, 21);
             this.txt_total.TabIndex = 37;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(430, 224);
+            this.label8.Location = new System.Drawing.Point(5, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
+            this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 36;
             this.label8.Text = "Total:";
             // 
             // dtp_fecha
             // 
-            this.dtp_fecha.Location = new System.Drawing.Point(58, 174);
+            this.dtp_fecha.Location = new System.Drawing.Point(404, 107);
             this.dtp_fecha.Name = "dtp_fecha";
-            this.dtp_fecha.Size = new System.Drawing.Size(200, 20);
+            this.dtp_fecha.Size = new System.Drawing.Size(188, 21);
             this.dtp_fecha.TabIndex = 29;
             // 
             // txt_apellido
             // 
-            this.txt_apellido.Location = new System.Drawing.Point(407, 122);
+            this.txt_apellido.Location = new System.Drawing.Point(404, 54);
             this.txt_apellido.Name = "txt_apellido";
             this.txt_apellido.ReadOnly = true;
-            this.txt_apellido.Size = new System.Drawing.Size(214, 20);
+            this.txt_apellido.Size = new System.Drawing.Size(188, 21);
             this.txt_apellido.TabIndex = 27;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(352, 125);
+            this.label4.Location = new System.Drawing.Point(331, 59);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 26;
@@ -114,25 +116,25 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(58, 122);
+            this.txt_nombre.Location = new System.Drawing.Point(391, 29);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.ReadOnly = true;
-            this.txt_nombre.Size = new System.Drawing.Size(250, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(181, 21);
             this.txt_nombre.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(8, 180);
+            this.label3.Location = new System.Drawing.Point(331, 113);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.Size = new System.Drawing.Size(36, 13);
             this.label3.TabIndex = 24;
             this.label3.Text = "Fecha";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 129);
+            this.label1.Location = new System.Drawing.Point(329, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 13);
             this.label1.TabIndex = 22;
@@ -143,76 +145,43 @@
             this.dgv_facturaDetalle.AllowUserToAddRows = false;
             this.dgv_facturaDetalle.AllowUserToOrderColumns = true;
             this.dgv_facturaDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_facturaDetalle.Location = new System.Drawing.Point(29, 257);
+            this.dgv_facturaDetalle.Location = new System.Drawing.Point(29, 256);
             this.dgv_facturaDetalle.Name = "dgv_facturaDetalle";
-            this.dgv_facturaDetalle.Size = new System.Drawing.Size(630, 273);
+            this.dgv_facturaDetalle.Size = new System.Drawing.Size(630, 243);
             this.dgv_facturaDetalle.TabIndex = 21;
+            this.dgv_facturaDetalle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_facturaDetalle_CellContentClick);
             this.dgv_facturaDetalle.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_facturaDetalle_CellMouseDoubleClick);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 39;
-            this.label9.Text = "Direccion";
-            // 
-            // txt_direccion
-            // 
-            this.txt_direccion.Location = new System.Drawing.Point(58, 148);
-            this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.ReadOnly = true;
-            this.txt_direccion.Size = new System.Drawing.Size(234, 20);
-            this.txt_direccion.TabIndex = 40;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(352, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 13);
-            this.label10.TabIndex = 41;
-            this.label10.Text = "Telefono";
-            // 
-            // txt_telefono
-            // 
-            this.txt_telefono.Location = new System.Drawing.Point(407, 152);
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.ReadOnly = true;
-            this.txt_telefono.Size = new System.Drawing.Size(178, 20);
-            this.txt_telefono.TabIndex = 42;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(301, 92);
+            this.label11.Location = new System.Drawing.Point(331, 83);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(25, 13);
+            this.label11.Size = new System.Drawing.Size(24, 13);
             this.label11.TabIndex = 43;
             this.label11.Text = "NIT";
             // 
             // txt_nit
             // 
-            this.txt_nit.Location = new System.Drawing.Point(332, 85);
+            this.txt_nit.Location = new System.Drawing.Point(391, 80);
             this.txt_nit.Name = "txt_nit";
             this.txt_nit.ReadOnly = true;
-            this.txt_nit.Size = new System.Drawing.Size(183, 20);
+            this.txt_nit.Size = new System.Drawing.Size(183, 21);
             this.txt_nit.TabIndex = 44;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 92);
+            this.label12.Location = new System.Drawing.Point(5, 32);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 13);
+            this.label12.Size = new System.Drawing.Size(91, 13);
             this.label12.TabIndex = 46;
             this.label12.Text = "Buscar Cotizacion";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(358, 182);
+            this.label14.Location = new System.Drawing.Point(332, 139);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(35, 13);
             this.label14.TabIndex = 49;
@@ -222,7 +191,7 @@
             // 
             this.cmb_pago.DisplayMember = "Seleccione:::";
             this.cmb_pago.FormattingEnabled = true;
-            this.cmb_pago.Location = new System.Drawing.Point(407, 179);
+            this.cmb_pago.Location = new System.Drawing.Point(397, 132);
             this.cmb_pago.Name = "cmb_pago";
             this.cmb_pago.Size = new System.Drawing.Size(154, 21);
             this.cmb_pago.TabIndex = 50;
@@ -411,6 +380,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(58, 59);
             this.btn_eliminar.TabIndex = 6;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_siguiente
             // 
@@ -430,9 +400,9 @@
             // 
             // btn_buscarCliente
             // 
-            this.btn_buscarCliente.Location = new System.Drawing.Point(532, 85);
+            this.btn_buscarCliente.Location = new System.Drawing.Point(100, 54);
             this.btn_buscarCliente.Name = "btn_buscarCliente";
-            this.btn_buscarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscarCliente.Size = new System.Drawing.Size(100, 23);
             this.btn_buscarCliente.TabIndex = 191;
             this.btn_buscarCliente.Text = "buscar::";
             this.btn_buscarCliente.UseVisualStyleBackColor = true;
@@ -440,16 +410,16 @@
             // 
             // txt_temporal
             // 
-            this.txt_temporal.Location = new System.Drawing.Point(566, 178);
+            this.txt_temporal.Location = new System.Drawing.Point(557, 132);
             this.txt_temporal.Name = "txt_temporal";
-            this.txt_temporal.Size = new System.Drawing.Size(10, 20);
+            this.txt_temporal.Size = new System.Drawing.Size(10, 21);
             this.txt_temporal.TabIndex = 192;
             this.txt_temporal.Visible = false;
             // 
             // cmb_prueba
             // 
             this.cmb_prueba.FormattingEnabled = true;
-            this.cmb_prueba.Location = new System.Drawing.Point(582, 177);
+            this.cmb_prueba.Location = new System.Drawing.Point(573, 131);
             this.cmb_prueba.Name = "cmb_prueba";
             this.cmb_prueba.Size = new System.Drawing.Size(19, 21);
             this.cmb_prueba.TabIndex = 193;
@@ -461,7 +431,7 @@
             this.cmb_cotizaciones.FormattingEnabled = true;
             this.cmb_cotizaciones.Items.AddRange(new object[] {
             "Ninguno..."});
-            this.cmb_cotizaciones.Location = new System.Drawing.Point(107, 87);
+            this.cmb_cotizaciones.Location = new System.Drawing.Point(100, 27);
             this.cmb_cotizaciones.Name = "cmb_cotizaciones";
             this.cmb_cotizaciones.Size = new System.Drawing.Size(137, 21);
             this.cmb_cotizaciones.TabIndex = 194;
@@ -472,7 +442,7 @@
             // chb_habilita
             // 
             this.chb_habilita.AutoSize = true;
-            this.chb_habilita.Location = new System.Drawing.Point(251, 92);
+            this.chb_habilita.Location = new System.Drawing.Point(244, 32);
             this.chb_habilita.Name = "chb_habilita";
             this.chb_habilita.Size = new System.Drawing.Size(15, 14);
             this.chb_habilita.TabIndex = 197;
@@ -482,15 +452,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 224);
+            this.label2.Location = new System.Drawing.Point(11, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(96, 13);
             this.label2.TabIndex = 204;
             this.label2.Text = "Agregar Producto:";
             // 
             // btn_agregarProducto
             // 
-            this.btn_agregarProducto.Location = new System.Drawing.Point(146, 219);
+            this.btn_agregarProducto.Location = new System.Drawing.Point(125, 130);
             this.btn_agregarProducto.Name = "btn_agregarProducto";
             this.btn_agregarProducto.Size = new System.Drawing.Size(75, 23);
             this.btn_agregarProducto.TabIndex = 205;
@@ -500,44 +470,88 @@
             // 
             // txt_tipo
             // 
-            this.txt_tipo.Location = new System.Drawing.Point(595, 151);
+            this.txt_tipo.Location = new System.Drawing.Point(580, 81);
             this.txt_tipo.Name = "txt_tipo";
-            this.txt_tipo.Size = new System.Drawing.Size(26, 20);
+            this.txt_tipo.Size = new System.Drawing.Size(12, 21);
             this.txt_tipo.TabIndex = 206;
             this.txt_tipo.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(5, 89);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(102, 13);
+            this.label5.TabIndex = 207;
+            this.label5.Text = "Empleado Vendedor";
+            // 
+            // cmb_empleado
+            // 
+            this.cmb_empleado.DisplayMember = "Seleccione:::";
+            this.cmb_empleado.FormattingEnabled = true;
+            this.cmb_empleado.Location = new System.Drawing.Point(113, 81);
+            this.cmb_empleado.Name = "cmb_empleado";
+            this.cmb_empleado.Size = new System.Drawing.Size(154, 21);
+            this.cmb_empleado.TabIndex = 208;
+            this.cmb_empleado.ValueMember = "Seleccione:::";
+            // 
+            // ClienteData
+            // 
+            this.ClienteData.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClienteData.Appearance.Options.UseBackColor = true;
+            this.ClienteData.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClienteData.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.ClienteData.AppearanceCaption.Options.UseFont = true;
+            this.ClienteData.AppearanceCaption.Options.UseForeColor = true;
+            this.ClienteData.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.ClienteData.CaptionImageUri.Uri = "ListBullets";
+            this.ClienteData.Controls.Add(this.label6);
+            this.ClienteData.Controls.Add(this.btn_agregarProducto);
+            this.ClienteData.Controls.Add(this.label5);
+            this.ClienteData.Controls.Add(this.label2);
+            this.ClienteData.Controls.Add(this.cmb_empleado);
+            this.ClienteData.Controls.Add(this.txt_total);
+            this.ClienteData.Controls.Add(this.cmb_prueba);
+            this.ClienteData.Controls.Add(this.label8);
+            this.ClienteData.Controls.Add(this.txt_temporal);
+            this.ClienteData.Controls.Add(this.label12);
+            this.ClienteData.Controls.Add(this.cmb_cotizaciones);
+            this.ClienteData.Controls.Add(this.txt_tipo);
+            this.ClienteData.Controls.Add(this.cmb_pago);
+            this.ClienteData.Controls.Add(this.chb_habilita);
+            this.ClienteData.Controls.Add(this.label14);
+            this.ClienteData.Controls.Add(this.btn_buscarCliente);
+            this.ClienteData.Controls.Add(this.label1);
+            this.ClienteData.Controls.Add(this.txt_nombre);
+            this.ClienteData.Controls.Add(this.label4);
+            this.ClienteData.Controls.Add(this.txt_apellido);
+            this.ClienteData.Controls.Add(this.label11);
+            this.ClienteData.Controls.Add(this.txt_nit);
+            this.ClienteData.Controls.Add(this.dtp_fecha);
+            this.ClienteData.Controls.Add(this.label3);
+            this.ClienteData.Location = new System.Drawing.Point(29, 87);
+            this.ClienteData.Name = "ClienteData";
+            this.ClienteData.Size = new System.Drawing.Size(630, 163);
+            this.ClienteData.TabIndex = 209;
+            this.ClienteData.Text = "Client Data";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(5, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.TabIndex = 198;
+            this.label6.Text = "Buscar Cliente";
             // 
             // Factura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(694, 538);
-            this.Controls.Add(this.txt_tipo);
-            this.Controls.Add(this.btn_agregarProducto);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.chb_habilita);
-            this.Controls.Add(this.cmb_cotizaciones);
-            this.Controls.Add(this.cmb_prueba);
-            this.Controls.Add(this.txt_temporal);
-            this.Controls.Add(this.btn_buscarCliente);
+            this.ClientSize = new System.Drawing.Size(694, 512);
+            this.Controls.Add(this.ClienteData);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.cmb_pago);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.txt_nit);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txt_telefono);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.txt_direccion);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txt_total);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.dtp_fecha);
-            this.Controls.Add(this.txt_apellido);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txt_nombre);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_facturaDetalle);
             this.Name = "Factura";
             this.Text = "Factura";
@@ -545,8 +559,10 @@
             this.Load += new System.EventHandler(this.Factura_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_facturaDetalle)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClienteData)).EndInit();
+            this.ClienteData.ResumeLayout(false);
+            this.ClienteData.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -556,8 +572,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
@@ -577,8 +591,6 @@
         private System.Windows.Forms.Button btn_buscarCliente;
         public System.Windows.Forms.TextBox txt_apellido;
         public System.Windows.Forms.TextBox txt_nombre;
-        public System.Windows.Forms.TextBox txt_direccion;
-        public System.Windows.Forms.TextBox txt_telefono;
         public System.Windows.Forms.TextBox txt_nit;
         public System.Windows.Forms.TextBox txt_temporal;
         private System.Windows.Forms.ComboBox cmb_prueba;
@@ -588,6 +600,10 @@
         private System.Windows.Forms.Button btn_agregarProducto;
         public System.Windows.Forms.DataGridView dgv_facturaDetalle;
         public System.Windows.Forms.TextBox txt_total;
-        private System.Windows.Forms.TextBox txt_tipo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmb_empleado;
+        public System.Windows.Forms.TextBox txt_tipo;
+        private DevExpress.XtraEditors.GroupControl ClienteData;
+        private System.Windows.Forms.Label label6;
     }
 }
