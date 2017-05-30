@@ -100,7 +100,8 @@ namespace crm
             BloquearMDI();
             Bloqueo.DesbloquearMDI(menuStrip1);
 
-         
+            tipoDePrecioToolStripMenuItem.Enabled = true;
+            comprasToolStripMenuItem.Enabled = true;
 
             //------------------------
             tipo = OpBD.VerificarTipoUsuario();
@@ -877,6 +878,12 @@ namespace crm
         private void tipoDePrecioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frm_tprecio t = new frm_tprecio();
+            t.Show();
+        }
+
+        private void comprasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_compra t = new frm_compra();
             t.Show();
         }
     }

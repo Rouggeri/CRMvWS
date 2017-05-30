@@ -151,7 +151,7 @@ namespace proyectoUOne
                         string temporales = cmb_cotizaciones.SelectedValue.ToString();
                         nuevo.ActualizaEstadoPedidoCotizacion(temporales);
                     }
-
+                
                 BuscarProducto abir = new BuscarProducto();              
                 Factura fac = new Factura();
                 CapaDatos nuev = new CapaDatos();
@@ -299,7 +299,7 @@ namespace proyectoUOne
             }
         }
         public void FuncionCodigo() {
-                string enviaCodigo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
+                string enviaCodigo = Convert.ToString(cmb_empleado.SelectedValue.ToString());
                 int codigoRecibe = CapaDatos.ConsultacodigoClienteCotizacion(enviaCodigo);
                 globalCodigo = Convert.ToString(codigoRecibe);
         }
@@ -440,8 +440,8 @@ namespace proyectoUOne
 
         public void btn_agregarProducto_Click(object sender, EventArgs e)
         {
-            /*try
-            {*/
+            try
+            {
                 BuscarProducto abir = new BuscarProducto();
                 string temporales = txt_tipo.Text; //ORDER BY nombre ASC               
                 abir.txt_ratos.Text = temporales;
@@ -484,10 +484,10 @@ namespace proyectoUOne
                     //this.Close();
                 }
                 //this.Show();
-            /*}
+            }
             catch {
                 MessageBox.Show("No se agrego ningun producto");
-            }*/
+            }
         }
 
         private void dgv_facturaDetalle_CellContentClick(object sender, DataGridViewCellEventArgs e)

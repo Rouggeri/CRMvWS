@@ -127,7 +127,7 @@ namespace proyectoUOne
             {*/
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
             DataTable dt = new DataTable();
-                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo='" + constaP+"' and p.id_producto like '%"+letraP+"%' or pr.id_tipo='"+constaP+"' and p.nombre like '%"+letraP+"%'";
+                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca, pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo='" + constaP+"' and p.id_producto like '%"+letraP+"%' or pr.id_tipo='"+constaP+"' and p.nombre like '%"+letraP+"%'";
                 OdbcCommand comando = new OdbcCommand(query, con);
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(dt);
@@ -148,7 +148,7 @@ namespace proyectoUOne
             {*/
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
             DataTable dt = new DataTable();
-                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo = '" + constaP+"' ORDER BY p.nombre ASC";
+                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca, pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo = '" + constaP+"' ORDER BY p.nombre ASC";
                 OdbcCommand comando = new OdbcCommand(query, con);
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(dt);

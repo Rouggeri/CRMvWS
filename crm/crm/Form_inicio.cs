@@ -194,8 +194,6 @@ namespace crm
                     fac.txt_nit.Text = nuevo.nitC;
                     fac.txt_nombre.Text = nuevo.nombreC;
                     fac.txt_apellido.Text = nuevo.apellidoC;
-                    fac.txt_direccion.Text = nuevo.direccionC;
-                    fac.txt_telefono.Text = nuevo.telefonoC;
 
                     fac.MdiParent = this;
                     fac.AutoSize = true;

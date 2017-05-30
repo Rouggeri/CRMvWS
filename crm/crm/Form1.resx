@@ -816,6 +816,12 @@
   <data name="tipoDePrecioToolStripMenuItem.Text" xml:space="preserve">
     <value>Tipo de Precio</value>
   </data>
+  <data name="comprasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 22</value>
+  </data>
+  <data name="comprasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Compras</value>
+  </data>
   <data name="productosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABfRJREFUeF7t
@@ -1293,6 +1299,12 @@
   <data name="&gt;&gt;marcaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;tipoDePrecioToolStripMenuItem.Name" xml:space="preserve">
+    <value>tipoDePrecioToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;tipoDePrecioToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mantenimientosToolStripMenuItem.Name" xml:space="preserve">
     <value>mantenimientosToolStripMenuItem</value>
   </data>
@@ -1407,10 +1419,10 @@
   <data name="&gt;&gt;empleadoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;tipoDePrecioToolStripMenuItem.Name" xml:space="preserve">
-    <value>tipoDePrecioToolStripMenuItem</value>
+  <data name="&gt;&gt;comprasToolStripMenuItem.Name" xml:space="preserve">
+    <value>comprasToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;tipoDePrecioToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;comprasToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
