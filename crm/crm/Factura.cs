@@ -96,17 +96,17 @@ namespace proyectoUOne
         //Cargar datagridview a traves del codigo cotizacion
         public void cargardetalle()
         {
-            /*try
-            {*/   
+            try
+            {   
             string tempo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
             DataTable dt = CapaDatos.CargarDetalleCotiza(tempo);
             dgv_facturaDetalle.DataSource = dt;
 
-            /*}
+            }
             catch
             {
                 MessageBox.Show("No hay Cotizacion en base de datos");
-            }*/
+            }
 
         }
 
@@ -151,7 +151,7 @@ namespace proyectoUOne
                         string temporales = cmb_cotizaciones.SelectedValue.ToString();
                         nuevo.ActualizaEstadoPedidoCotizacion(temporales);
                     }
-                
+                /*
                 BuscarProducto abir = new BuscarProducto();              
                 Factura fac = new Factura();
                 CapaDatos nuev = new CapaDatos();
@@ -163,7 +163,7 @@ namespace proyectoUOne
                 int ventaF = Convert.ToInt32(Venta);
                 int Existencia = Convert.ToInt32(ExistenciaVieja);
                 int existenciaNueva = Existencia - ventaF;
-                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);
+                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);*/
             }
             catch
             {
