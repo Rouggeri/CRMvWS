@@ -1185,3 +1185,10 @@ C:\CRMvWS\crm\crm\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\CRMvWS\crm\crm\bin\Debug\ShockwaveFlashObjects.dll
 C:\CRMvWS\crm\crm\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\CRMvWS\crm\crm\bin\Debug\stdole.dll
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\bin\Debug\FuncionesNavegador.dll
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\bin\Debug\seguridad.dll
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\obj\Debug\crm.frmbuscexistencia.resources
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\obj\Debug\crm.frmbuscorden.resources
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\obj\Debug\crm.frmbuscproducto.resources
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\obj\Debug\crm.frm_compra.resources
+C:\Users\Chrix\Documents\GitHub\CRMvWS\crm\crm\obj\Debug\crm.frm_tprecio.resources

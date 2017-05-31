@@ -33,6 +33,9 @@
             this.tileNavPane1 = new DevExpress.XtraBars.Navigation.TileNavPane();
             this.label8 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btn_actualizar_puesto = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_nuevo_puesto = new DevExpress.XtraEditors.SimpleButton();
+            this.txt_puesto = new System.Windows.Forms.ComboBox();
             this.txt_nombres = new System.Windows.Forms.TextBox();
             this.cmb_empresa = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +50,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_apellidos = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txt_puesto = new System.Windows.Forms.ComboBox();
             this.btn_reporte = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_cancelar = new System.Windows.Forms.Button();
@@ -60,8 +62,8 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_siguiente = new System.Windows.Forms.Button();
-            this.btn_actualizar_puesto = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_nuevo_puesto = new DevExpress.XtraEditors.SimpleButton();
+            this.cbo_tipo = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -118,6 +120,8 @@
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.cbo_tipo);
+            this.groupControl1.Controls.Add(this.label9);
             this.groupControl1.Controls.Add(this.btn_actualizar_puesto);
             this.groupControl1.Controls.Add(this.btn_nuevo_puesto);
             this.groupControl1.Controls.Add(this.txt_puesto);
@@ -140,6 +144,38 @@
             this.groupControl1.TabIndex = 19;
             this.groupControl1.Text = "Información de contacto";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
+            // 
+            // btn_actualizar_puesto
+            // 
+            this.btn_actualizar_puesto.Image = ((System.Drawing.Image)(resources.GetObject("btn_actualizar_puesto.Image")));
+            this.btn_actualizar_puesto.ImageLocation = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btn_actualizar_puesto.Location = new System.Drawing.Point(603, 116);
+            this.btn_actualizar_puesto.Name = "btn_actualizar_puesto";
+            this.btn_actualizar_puesto.Size = new System.Drawing.Size(33, 23);
+            this.btn_actualizar_puesto.TabIndex = 35;
+            this.btn_actualizar_puesto.ToolTip = "Actualizar";
+            this.btn_actualizar_puesto.Click += new System.EventHandler(this.btn_actualizar_puesto_Click);
+            // 
+            // btn_nuevo_puesto
+            // 
+            this.btn_nuevo_puesto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nuevo_puesto.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_puesto.Image")));
+            this.btn_nuevo_puesto.ImageLocation = DevExpress.XtraEditors.ImageLocation.BottomCenter;
+            this.btn_nuevo_puesto.Location = new System.Drawing.Point(565, 116);
+            this.btn_nuevo_puesto.Name = "btn_nuevo_puesto";
+            this.btn_nuevo_puesto.Size = new System.Drawing.Size(32, 23);
+            this.btn_nuevo_puesto.TabIndex = 34;
+            this.btn_nuevo_puesto.ToolTip = "Nueva moneda";
+            this.btn_nuevo_puesto.Click += new System.EventHandler(this.btn_nuevo_puesto_Click);
+            // 
+            // txt_puesto
+            // 
+            this.txt_puesto.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_puesto.FormattingEnabled = true;
+            this.txt_puesto.Location = new System.Drawing.Point(432, 115);
+            this.txt_puesto.Name = "txt_puesto";
+            this.txt_puesto.Size = new System.Drawing.Size(125, 24);
+            this.txt_puesto.TabIndex = 14;
             // 
             // txt_nombres
             // 
@@ -281,16 +317,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(630, 77);
             this.panel1.TabIndex = 184;
-            // 
-            // txt_puesto
-            // 
-            this.txt_puesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txt_puesto.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_puesto.FormattingEnabled = true;
-            this.txt_puesto.Location = new System.Drawing.Point(432, 115);
-            this.txt_puesto.Name = "txt_puesto";
-            this.txt_puesto.Size = new System.Drawing.Size(125, 24);
-            this.txt_puesto.TabIndex = 14;
             // 
             // btn_reporte
             // 
@@ -491,28 +517,25 @@
             this.btn_siguiente.TabIndex = 179;
             this.btn_siguiente.UseVisualStyleBackColor = true;
             // 
-            // btn_actualizar_puesto
+            // cbo_tipo
             // 
-            this.btn_actualizar_puesto.Image = ((System.Drawing.Image)(resources.GetObject("btn_actualizar_puesto.Image")));
-            this.btn_actualizar_puesto.ImageLocation = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btn_actualizar_puesto.Location = new System.Drawing.Point(603, 116);
-            this.btn_actualizar_puesto.Name = "btn_actualizar_puesto";
-            this.btn_actualizar_puesto.Size = new System.Drawing.Size(33, 23);
-            this.btn_actualizar_puesto.TabIndex = 35;
-            this.btn_actualizar_puesto.ToolTip = "Actualizar";
-            this.btn_actualizar_puesto.Click += new System.EventHandler(this.btn_actualizar_puesto_Click);
+            this.cbo_tipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_tipo.FormattingEnabled = true;
+            this.cbo_tipo.Location = new System.Drawing.Point(157, 254);
+            this.cbo_tipo.Name = "cbo_tipo";
+            this.cbo_tipo.Size = new System.Drawing.Size(132, 24);
+            this.cbo_tipo.TabIndex = 37;
             // 
-            // btn_nuevo_puesto
+            // label9
             // 
-            this.btn_nuevo_puesto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_nuevo_puesto.Image = ((System.Drawing.Image)(resources.GetObject("btn_nuevo_puesto.Image")));
-            this.btn_nuevo_puesto.ImageLocation = DevExpress.XtraEditors.ImageLocation.BottomCenter;
-            this.btn_nuevo_puesto.Location = new System.Drawing.Point(565, 116);
-            this.btn_nuevo_puesto.Name = "btn_nuevo_puesto";
-            this.btn_nuevo_puesto.Size = new System.Drawing.Size(32, 23);
-            this.btn_nuevo_puesto.TabIndex = 34;
-            this.btn_nuevo_puesto.ToolTip = "Nueva moneda";
-            this.btn_nuevo_puesto.Click += new System.EventHandler(this.btn_nuevo_puesto_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(84, 257);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 16);
+            this.label9.TabIndex = 36;
+            this.label9.Text = "Tipo: ";
             // 
             // frm_cliente
             // 
@@ -570,5 +593,7 @@
         public System.Windows.Forms.ComboBox txt_puesto;
         private DevExpress.XtraEditors.SimpleButton btn_actualizar_puesto;
         private DevExpress.XtraEditors.SimpleButton btn_nuevo_puesto;
+        public System.Windows.Forms.ComboBox cbo_tipo;
+        public System.Windows.Forms.Label label9;
     }
 }

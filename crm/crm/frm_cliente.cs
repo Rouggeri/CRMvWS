@@ -43,6 +43,11 @@ namespace crm
                 }
 
 
+                DataTable dt_tipo = OpBD.SeleccionarTipoC();
+                cbo_tipo.DataSource = dt_tipo;
+                cbo_tipo.DisplayMember = "tipo";
+                cbo_tipo.ValueMember = "id_tprecio_pk";
+
                 CapaDatosPersonas capadadatos = new CapaDatosPersonas();
                 DataTable puestos = new DataTable();
                 puestos = capadadatos.SeleccionarPuestos();
@@ -203,7 +208,7 @@ namespace crm
                         }
                         CapaDatosPersonas inserta = new CapaDatosPersonas();
                         inserta.InsertarNuevoCliente(txt_nombres.Text.Trim(), txt_apellidos.Text.Trim(),
-                        valor_empresa, txt_puesto.Text, txt_movil.Text, txt_telefono.Text, txt_correo.Text);
+                        valor_empresa, txt_puesto.Text, txt_movil.Text, txt_telefono.Text, txt_correo.Text,cbo_tipo.SelectedValue.ToString());
 
                        //// carga de datagrid
                        ////DataTable contenedor = inserta.SeleccionarListaClientes();
