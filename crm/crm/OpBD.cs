@@ -728,6 +728,20 @@ namespace crm
         }
 
 
+        public static DataTable SeleccionarIdEmpleado(string id_tarea)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                OdbcCommand comando = new OdbcCommand("select id_empleado from tbl_tarea where id_tarea = "+id_tarea+"", con);
+                OdbcDataAdapter ad = new OdbcDataAdapter(comando);
+                ad.Fill(dt);
+                return dt;
+            }
+            catch { return null; }
+        }
+
 
 
         public int EliminarTarea(string tarea, string titulo)
