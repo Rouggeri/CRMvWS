@@ -89,7 +89,7 @@ namespace crm
           
 
             WindowState = FormWindowState.Maximized;
-            pcb_foto.Image = Image.FromFile("andre.jpg");
+            //pcb_foto.Image = Image.FromFile("andre.jpg");
 
             // carga de combobox de usuarios de la empresa
             //DataTable empleados = new DataTable();
@@ -264,13 +264,15 @@ namespace crm
               
                 if (cmb_usuarios.SelectedValue.ToString() == "System.Data.DataRowView" || cmb_usuarios.Text=="")
                 {
-                    pcb_foto.Image = Image.FromFile("andre.jpg");
+            //        pcb_foto.Image = Image.FromFile("andre.jpg");
 
                 }
 
                 else
                 {
-                    
+                    lbl_nombres.Text = cmb_usuarios.Text;
+                    lbl_email.Text = cmb_usuarios.Text + "@gmail.com";
+
                     //DataTable datos_usuario = new DataTable();
                     //datos_usuario = CapaDatos.consultar_empleado_especifico(var_id_usuario);
                     //DataRow fila = datos_usuario.Rows[0];
@@ -278,6 +280,32 @@ namespace crm
                     //lbl_apellidos.Text = fila["apellidos"].ToString();
                     //lbl_email.Text = fila["correo"].ToString();
                     //pcb_foto.ImageLocation = fila["foto"].ToString();
+
+                    //ServiceReference1.Service1Client srv = new ServiceReference1.Service1Client();
+                    //DataSet ds = srv.ObtenerEmpleados();
+                    //DataTable dt_empleados = ds.Tables[0];
+
+                    //foreach (DataRow rown in dt_empleados.Rows)
+                    //{
+
+                    //    string comparador = "";
+                    //    comparador = rown["id_empleado_pk"].ToString();
+
+                    //    if (comparador == var_id_usuario)
+                    //    {
+                    //        lbl_nombres.Text = rown["NOMBRE"].ToString();
+                    //    }
+
+                    //}
+
+                    //DataRow row_emp = dt_empleados.NewRow();
+                    //row_emp[0] = 0;
+                    //row_emp[6] = "<Ninguno>";
+                    //dt_empleados.Rows.InsertAt(row_emp, 0);
+                    //cmb_usuarios.DataSource = dt_empleados;
+                    //cmb_usuarios.ValueMember = "id_empleado_pk";
+                    //cmb_usuarios.DisplayMember = "NOMBRE";
+
 
 
                     // ---------------------------------------------------- CARGA DE CASOS EN PESTAÑA DE CASOS ------------------------------------------
@@ -318,15 +346,15 @@ namespace crm
             }
             //DataRow casilla = datos_usuario.Rows[];
 
-            // carga de gridcasos
-            DataTable casos = new DataTable();
-            casos = CapaDatos.consultar_caso(var_id_usuario);
-            dgv_casos.DataSource = casos;
+            //// carga de gridcasos
+            //DataTable casos = new DataTable();
+            //casos = CapaDatos.consultar_caso(var_id_usuario);
+            //dgv_casos.DataSource = casos;
 
-            // carga de gridhistorial (tareas) que contienen todas las negociaciones y tareas en general
-            DataTable tareas = new DataTable();
-            tareas = CapaDatos.consultar_tareas(var_id_usuario);
-            dgv_historial_actualizaciones.DataSource = tareas;
+            //// carga de gridhistorial (tareas) que contienen todas las negociaciones y tareas en general
+            //DataTable tareas = new DataTable();
+            //tareas = CapaDatos.consultar_tareas(var_id_usuario);
+            //dgv_historial_actualizaciones.DataSource = tareas;
 
 
             // ----------------- creacion de grafica de pie para casos rendimientos -----------------------
@@ -335,24 +363,18 @@ namespace crm
             pie.BorderOptions.Color = Color.Transparent;
 
 
-            // seleccion de numero de casos finalizados y no finalizados para hacer grafica de pie en CASOS
-            foreach (DataRow fila in casos.Rows)
-            {
-                if (fila["estado"].ToString() == "activo")
-                {
-                    cont_caso_reali = cont_caso_reali + 1;
-                }
-                else if (fila["estado"].ToString() == "inactivo")
-                {
-                    cont_caso_fin = cont_caso_fin + 1;
-                }
-            }
-            //if (cont_caso_fin == 0 || cont_caso_reali == 0)
+            //// seleccion de numero de casos finalizados y no finalizados para hacer grafica de pie en CASOS
+            //foreach (DataRow fila in casos.Rows)
             //{
-            //    MessageBox.Show("Datos insuficientes para generar grafico");
+            //    if (fila["estado"].ToString() == "activo")
+            //    {
+            //        cont_caso_reali = cont_caso_reali + 1;
+            //    }
+            //    else if (fila["estado"].ToString() == "inactivo")
+            //    {
+            //        cont_caso_fin = cont_caso_fin + 1;
+            //    }
             //}
-            //else
-            //{
                     
                                
                 DataTable dt_pie = new DataTable();
