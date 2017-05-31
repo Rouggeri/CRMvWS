@@ -124,7 +124,7 @@ namespace crm
         {
             entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
             negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
-            existencia.codigo = Convert.ToString(idcompra);
+            existencia.codigo = txt_orden.Text;
             existencia.cantidad = cantidad; //Llenamos el objeto persona con la informacion de los cuadros de texto/
             existencia.producto = idproducto;
             existencia.marca = idmarca;

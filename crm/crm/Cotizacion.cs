@@ -22,8 +22,8 @@ namespace proyectoUOne
         
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            /*try
-            {*/
+            try
+            {
                 dtpFechaI.Format = DateTimePickerFormat.Custom;
                 dtpFechaI.CustomFormat = "yyyy-MM-dd";
 
@@ -51,10 +51,10 @@ namespace proyectoUOne
                     v.insertar_detalle_cotizacion(codigo_cotizacionN, codigo_productoN, cantidadN, precio, subttotalN);
                 }
 
-            /*}
+            }
             catch {
                 MessageBox.Show("Error al guardar datos de insercion");
-            }*/
+            }
         }
 
         

@@ -36,7 +36,23 @@ namespace crm
             catch { return null; }
         }
 
-        
+
+
+        public static DataTable SeleccionarTipoC()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionM();
+                OdbcCommand comando = new OdbcCommand("select * from tipo_precio", con);
+                OdbcDataAdapter ad = new OdbcDataAdapter(comando);
+                ad.Fill(dt);
+                return dt;
+            }
+            catch { return null; }
+        }
+
+
         public static DataTable SeleccionarDatosRestantes(string id_negocio)
         {
             try

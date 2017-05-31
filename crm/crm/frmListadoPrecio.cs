@@ -247,7 +247,7 @@ namespace crm
                 OdbcDataReader mdr = mcd.ExecuteReader();
                 int j = 1;
 
-                string scad4 = "DELETE FROM precio";
+                string scad4 = "DELETE FROM precio where id_tipo = "+codtipo;
                 OdbcCommand mcd4 = new OdbcCommand(scad4, Conexion.ObtenerConexion());
                 OdbcDataReader mdr4 = mcd4.ExecuteReader();
 
@@ -268,7 +268,7 @@ namespace crm
                         codm = mdr3.GetInt16(0);
                         codc = mdr3.GetInt16(1);
                     }
-
+                    
                     OdbcCommand mcd2 = new OdbcCommand(
                     string.Format("insert into precio (precio, id_bien, id_tipo, id_marca, id_categoria) values ('{0}','{1}','{2}','{3}','{4}')", total, j, codtipo, codm, codc), 
                     Conexion.ObtenerConexion());
@@ -281,9 +281,10 @@ namespace crm
                     total = 0;
                     codm = 0;
                     codc = 0;
+                    
                 }
                 MessageBox.Show("Precios modificados... presione Actualizar");
-                
+                codtipo = 0;
             }
         }
 
@@ -301,7 +302,7 @@ namespace crm
                 OdbcDataReader mdr = mcd.ExecuteReader();
                 int j = 1;
 
-                string scad4 = "DELETE FROM precio where id_categoria=" +codcategoria;
+                string scad4 = "DELETE FROM precio where id_categoria=" +codcategoria+" and id_tipo ="+codtipo;
                 OdbcCommand mcd4 = new OdbcCommand(scad4, Conexion.ObtenerConexion());
                 OdbcDataReader mdr4 = mcd4.ExecuteReader();
 
@@ -336,9 +337,10 @@ namespace crm
                     codm = 0;
                     codc = 0;
                     codp = 0;
+                   
                 }
                 MessageBox.Show("Precios modificados... presione Actualizar");
-
+                codtipo = 0;
             }
         }
 
@@ -351,12 +353,12 @@ namespace crm
             {
 
                 MessageBox.Show("Cambiando precio...");
-                string scad = "select * from producto where id_marca=" + codmarca;
+                string scad = "select * from producto where id_marca = " + codmarca;
                 OdbcCommand mcd = new OdbcCommand(scad, Conexion.ObtenerConexion());
                 OdbcDataReader mdr = mcd.ExecuteReader();
                 int j = 1;
 
-                string scad4 = "DELETE FROM precio where id_marca=" + codmarca;
+                string scad4 = "DELETE FROM precio where id_marca=" + codmarca+" and id_tipo = "+codtipo;
                 OdbcCommand mcd4 = new OdbcCommand(scad4, Conexion.ObtenerConexion());
                 OdbcDataReader mdr4 = mcd4.ExecuteReader();
 
@@ -369,7 +371,7 @@ namespace crm
                     float mult = costo * (costo2 / 100);
                     float total = mult + (Convert.ToInt32(costo));
 
-                    string scad3 = "SELECT id_categoria from producto where id_producto='" + codp + "'";
+                    string scad3 = "SELECT id_categoria from producto where id_producto = '" + codp + "'";
                     OdbcCommand mcd3 = new OdbcCommand(scad3, Conexion.ObtenerConexion());
                     OdbcDataReader mdr3 = mcd3.ExecuteReader();
 
@@ -391,9 +393,10 @@ namespace crm
                     codm = 0;
                     codc = 0;
                     codp = 0;
+                    
                 }
                 MessageBox.Show("Precios modificados... presione Actualizar");
-
+                codtipo = 0;
             }
         }
 
@@ -411,7 +414,7 @@ namespace crm
                 OdbcDataReader mdr = mcd.ExecuteReader();
                 int j = 1;
 
-                string scad4 = "DELETE FROM precio where id_marca=" + codmarca + " and id_categoria=" + codcategoria;
+                string scad4 = "DELETE FROM precio where id_marca=" + codmarca + " and id_categoria=" + codcategoria+ "and id_tipo = "+codtipo;
                 OdbcCommand mcd4 = new OdbcCommand(scad4, Conexion.ObtenerConexion());
                 OdbcDataReader mdr4 = mcd4.ExecuteReader();
 
@@ -439,7 +442,7 @@ namespace crm
                     codp = 0;
                 }
                 MessageBox.Show("Precios modificados... presione Actualizar");
-
+                codtipo = 0;
             }
         }
 
@@ -450,14 +453,14 @@ namespace crm
 
             if ((check_categoria.Checked) && (check_marca.Checked))
             {
-                obteneridmarca(); obteneridcat(); ambos();
+                 obteneridmarca(); obteneridcat(); ambos() ;
             }
             else
                 if (check_marca.Checked) { obteneridmarca(); marca(); }
             else
                         if (check_categoria.Checked) { obteneridcat(); categoria(); }
             else
-                ninguno();
+                 ninguno();
 
         }
 
