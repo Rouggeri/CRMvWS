@@ -87,8 +87,10 @@ namespace crm
             else
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
-                cdatos.insertarexistencia(existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor, existencia.marca);
+                cdatos.insertarexistencia(Convert.ToInt32(existencia.codigo), existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor, existencia.marca);
+                MessageBox.Show(existencia.codigo);
             }
+
         }
 
         public void InsertarMarca(Marca marca)

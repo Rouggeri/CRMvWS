@@ -39,6 +39,13 @@ namespace proyectoUOne
         private void llenarEmpleado() {
             try
             {
+                /*
+                DataTable eMpleaDo = new DataTable();
+                eMpleaDo = capa.CargarEmpleados();
+                cmb_empleado.DataSource = eMpleaDo;
+                cmb_empleado.ValueMember = "id_empleado";
+                cmb_empleado.DisplayMember = "nombres";*/
+                
                 crm.ServiceReference1.Service1Client srv = new crm.ServiceReference1.Service1Client();
                 DataSet ds = srv.ObtenerEmpleados();
                 DataTable dt_empleados = ds.Tables[0];
@@ -96,17 +103,17 @@ namespace proyectoUOne
         //Cargar datagridview a traves del codigo cotizacion
         public void cargardetalle()
         {
-            /*try
-            {*/   
+            try
+            {   
             string tempo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
             DataTable dt = CapaDatos.CargarDetalleCotiza(tempo);
             dgv_facturaDetalle.DataSource = dt;
 
-            /*}
+            }
             catch
             {
                 MessageBox.Show("No hay Cotizacion en base de datos");
-            }*/
+            }
 
         }
 
@@ -151,7 +158,7 @@ namespace proyectoUOne
                         string temporales = cmb_cotizaciones.SelectedValue.ToString();
                         nuevo.ActualizaEstadoPedidoCotizacion(temporales);
                     }
-                
+                /*
                 BuscarProducto abir = new BuscarProducto();              
                 Factura fac = new Factura();
                 CapaDatos nuev = new CapaDatos();
@@ -163,7 +170,8 @@ namespace proyectoUOne
                 int ventaF = Convert.ToInt32(Venta);
                 int Existencia = Convert.ToInt32(ExistenciaVieja);
                 int existenciaNueva = Existencia - ventaF;
-                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);
+                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);*/
+                MessageBox.Show("Se Inserto Correctamente");
             }
             catch
             {
@@ -278,14 +286,14 @@ namespace proyectoUOne
                     cmb_cotizaciones.Enabled = true;
                     //cargardetalle();
                     LLamado();
-                    ClientesCotizacion();
+                    //ClientesCotizacion();
                     btn_agregarProducto.Enabled = false;
                     non.Refresh();
                 }
                 if (!chb_habilita.Checked)
                 {
                     eliminarCOlumndas();
-                    LimpiarCliente();
+                    //LimpiarCliente();
                     dgv_facturaDetalle.DataSource = null;
                     cmb_cotizaciones.Enabled = false;
                     columnas();
@@ -299,14 +307,14 @@ namespace proyectoUOne
             }
         }
         public void FuncionCodigo() {
-                string enviaCodigo = Convert.ToString(cmb_empleado.SelectedValue.ToString());
+                string enviaCodigo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
                 int codigoRecibe = CapaDatos.ConsultacodigoClienteCotizacion(enviaCodigo);
                 globalCodigo = Convert.ToString(codigoRecibe);
         }
 
         public void Factura_Load(object sender, EventArgs e)
         {
-            FuncionCodigo();
+            //FuncionCodigo();
             dgv_facturaDetalle.DataSource = null;
         }
 
@@ -396,6 +404,7 @@ namespace proyectoUOne
         {
             try
             {
+                llenarEmpleado();   
                 if (chb_habilita.Checked)
                 {
                     eliminarCOlumndas();

@@ -25,7 +25,7 @@ namespace crm
             {
                 mySqlComando = new OdbcCommand(
                 string.Format("Insert into producto (id_marca, nombre, descripcion, precio_unidad, id_categoria, cporcentaje, estado) values ('{0}','{1}','{2}','{3}','{4}','{5}','ACTIVO')", marca, nombre, descripcion, precio, id_categoria, comision),
-                Conexion.ObtenerConexion()
+                seguridad.Conexion.ObtenerConexionODBC()
                 );
                 mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
                 MessageBox.Show("Se inserto con exito");        //si el try-catch no encontro algun error se muestra el mensaje de transaccion exitosa
@@ -63,7 +63,7 @@ namespace crm
             {
                 mySqlComando = new OdbcCommand(
                 string.Format("Insert into categoria (nombre) values ('{0}')", nombre),
-                Conexion.ObtenerConexion()
+                seguridad.Conexion.ObtenerConexionODBC()
                 );
                 mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
                 MessageBox.Show("Se inserto con exito");        //si el try-catch no encontro algun error se muestra el mensaje de transaccion exitosa
@@ -76,12 +76,13 @@ namespace crm
         } //insertar categoria
 
 
-        public void insertarexistencia(Int32 cantidad, Int32 producto, Int32 bodega, String ingreso, Int32 prov, Int32 marca)
+        public void insertarexistencia(Int32 compra,Int32 cantidad, Int32 producto, Int32 bodega, String ingreso, Int32 prov, Int32 marca)
         {
             try
             {
+                MessageBox.Show(Convert.ToString(compra));
                 mySqlComando = new OdbcCommand(
-                string.Format("Insert into existencia (cantidad, id_producto, id_bodega, fec_ingreso, id_proveedor, id_marca) values ('{0}','{1}','{2}','{3}','{4}','{5}')", cantidad, producto, bodega, ingreso, prov, marca),
+                string.Format("Insert into existencia (id_compra, cantidad, id_producto, id_bodega, id_proveedor, id_marca, fec_ingreso) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", compra, cantidad, producto, bodega, prov, marca, Convert.ToString(DateTime.Today)),
                 Conexion.ObtenerConexion()
                 );
                 mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
@@ -92,7 +93,7 @@ namespace crm
                           
 
                 mySqlComando = new OdbcCommand(
-                string.Format("Update existencia set cantidad = '{0}' where id_producto = '{1}' and id_marca = '{2}' and id_proveedor = '{3}' and id_bodega = '{4}'", cantidad, producto, marca, prov, bodega),
+                string.Format("Update existencia set cantidad = '{0}' where id_producto = '{1}' and id_marca = '{2}' and id_proveedor = '{3}' and id_bodega = '{4}' and id_compra = '{5}'", cantidad, producto, marca, prov, bodega, compra),
                 Conexion.ObtenerConexion()
                 );
                 mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
@@ -230,7 +231,7 @@ namespace crm
             {
                 mySqlComando = new OdbcCommand(
                      string.Format("SELECT * FROM producto"),
-                     Conexion.ObtenerConexion()
+                     seguridad.Conexion.ObtenerConexionODBC()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
                 mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
                 mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
@@ -253,7 +254,7 @@ namespace crm
             {
                 mySqlComando = new OdbcCommand(
                      string.Format("SELECT producto.id_producto AS producto, marca.nombre_marca AS marca, producto.nombre AS nombre, producto.descripcion AS descripcion, producto.precio_unidad AS precio, categoria.nombre AS categoria, producto.cporcentaje AS comision FROM producto INNER JOIN marca INNER JOIN categoria ON marca.id_marca = producto.id_marca AND categoria.id = producto.id_categoria"),
-                     Conexion.ObtenerConexion()
+                     seguridad.Conexion.ObtenerConexionODBC()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
                 mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
                 mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
