@@ -205,6 +205,8 @@ namespace crm
             return datos.ObtenerRegistros2();        //se llama la funcion ObtenerRegistros
         }
 
+        
+
         /*public System.Data.DataTable consultac()
         {
             //return datos.ObtenerClientes();         //se llama la funcion ObtenerClientes

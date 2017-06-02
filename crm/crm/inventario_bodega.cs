@@ -92,5 +92,25 @@ namespace crm
             CapaNegocio fn = new CapaNegocio();
             fn.Ultimo(dgv_bodega);
         }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgv_bodega.SelectedRows.Count == 1)
+                {
+                    int id = Convert.ToInt16(dgv_bodega.CurrentRow.Cells[0].Value);
+                    negocio n = new negocio();
+                    n.EliminarBodega(id);
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("Debe de seleccionar una fila");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }
