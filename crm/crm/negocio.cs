@@ -37,9 +37,9 @@ namespace crm
 
         }
 
-        public void EliminarBodega(Bodega bodega)
+        public void EliminarBodega(Int32 idb)
         {
-            if (string.IsNullOrWhiteSpace(bodega.codigo))
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idb)))
             {
                 MessageBox.Show("No ha seleccionado la fila a eliminar");
             }
@@ -47,7 +47,7 @@ namespace crm
             {
                 MessageBox.Show("seleccionada fila para eliminar");
                 datos edatos = new datos();     //Se crea un objeto de capa de datos
-                edatos.eliminarbodega(bodega.codigo);
+                edatos.eliminarbodega(Convert.ToString(idb));
             }
 
         }

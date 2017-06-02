@@ -156,6 +156,10 @@ namespace crm
         {
             negocio cnegocio = new negocio();           //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
             dgv_producto.DataSource = cnegocio.consultaprod();
+            cbo_cat.DataSource = null;
+            cbo_marca.DataSource = null;
+            llenarcbo();
+            llenarmarca();
         }
 
         private void btn_cancelar_Click(object sender, EventArgs e)

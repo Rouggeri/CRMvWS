@@ -448,7 +448,7 @@ namespace crm
         {
             try
             {
-                OdbcCommand comando = new OdbcCommand(string.Format("delete from bodega where id='{0}'",
+                OdbcCommand comando = new OdbcCommand(string.Format("delete from bodega where id_bodega='{0}'",
                 Convert.ToInt32(codigo)), Conexion.ObtenerConexion()
                 );
                 comando.ExecuteNonQuery();                 //se ejecuta el query
