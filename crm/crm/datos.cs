@@ -80,7 +80,7 @@ namespace crm
         {
             try
             {
-                MessageBox.Show(Convert.ToString(compra));
+               
                 mySqlComando = new OdbcCommand(
                 string.Format("Insert into existencia (id_compra, cantidad, id_producto, id_bodega, id_proveedor, id_marca, fec_ingreso) values ('{0}','{1}','{2}','{3}','{4}','{5}','{6}')", compra, cantidad, producto, bodega, prov, marca, Convert.ToString(DateTime.Today)),
                 Conexion.ObtenerConexion()
@@ -101,6 +101,59 @@ namespace crm
             }
 
         } //insertar bodega
+
+        
+
+        public void insertarexistenciabod(Int32 producto, Int32 marca, Int32 bodega, Int32 cantidad)
+        {
+            Int32 cantidad1=0;
+            OdbcCommand mcd = new OdbcCommand(
+                string.Format("select * from existencia_bodega where id_producto = '{0}' and id_marca = '{1}' and id_bodega = '{2}'", producto, marca, bodega),
+                Conexion.ObtenerConexion()
+                );
+            OdbcDataReader mdr = mcd.ExecuteReader();
+            int j = 0;
+
+            while (mdr.Read())
+            {
+                j++;
+                cantidad1=mdr.GetInt32(3);
+                
+            }
+            if (j == 0)
+            {
+                try
+                {
+
+                    mySqlComando = new OdbcCommand(
+                    string.Format("Insert into existencia_bodega (id_producto, id_marca, id_bodega, cantidad) values ('{0}','{1}','{2}','{3}')", producto, marca, bodega, cantidad),
+                    Conexion.ObtenerConexion()
+                    );
+                    mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
+                    MessageBox.Show("Se inserto con exito bodegas");        //si el try-catch no encontro algun error se muestra el mensaje de transaccion exitosa
+                }
+                catch (OdbcException e)
+                {
+                    MessageBox.Show("Error de insercion bodegas");
+                }
+            }
+            else
+                if (j == 1)
+            {
+
+
+                cantidad = cantidad + cantidad1;
+                mySqlComando = new OdbcCommand(
+                string.Format("Update existencia_bodega set cantidad = '{0}' where id_producto = '{1}' and id_marca = '{2}' and id_bodega = '{3}'", cantidad, producto, marca, bodega),
+                Conexion.ObtenerConexion());
+
+                mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
+                MessageBox.Show("Se actualizo con exito bodegas");
+                j = 0;
+            }
+            else MessageBox.Show("Fuera de contexto");
+            j = 0;
+        }
 
         public void insertarmarca(string nombre, int porcentaje)
         {
@@ -426,7 +479,7 @@ namespace crm
             return dtPrecio;
         }
 
-
+        
         public void eliminarproducto(string codigo)
         {
             try
@@ -616,6 +669,25 @@ namespace crm
             conexion.Close();
             return fact;
 
+        }
+
+
+        public static entidades.Proveedor Obteneridprov(int id_pr)
+        {
+            entidades.Proveedor prov = new entidades.Proveedor();
+            OdbcConnection conexion = Conexion.ObtenerConexion();
+            OdbcCommand _comando = new OdbcCommand(String.Format("select id_proveedor, nombre_proveedor, nit_proveedor, direccion_proveedor, telefono_proveedor from tbl_proveedor where id_proveedor= {0}", id_pr), conexion);
+            OdbcDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                prov.codigo = _reader.GetString(0);
+                prov.nombre = _reader.GetString(1);
+                prov.nit = _reader.GetString(2);
+                prov.direccion = _reader.GetString(3);
+                prov.telefono = _reader.GetString(4);
+            }
+            conexion.Close();
+            return prov;
         }
     }
 }

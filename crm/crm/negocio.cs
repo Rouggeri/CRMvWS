@@ -88,7 +88,22 @@ namespace crm
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
                 cdatos.insertarexistencia(Convert.ToInt32(existencia.codigo), existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor, existencia.marca);
-                MessageBox.Show(existencia.codigo);
+                
+            }
+
+        }
+
+        public void InsertarExistenciaBod(Existencia existencia)
+        {
+            if (String.IsNullOrWhiteSpace(Convert.ToString(existencia.cantidad)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.producto)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.bodega)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.marca)))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarexistenciabod(existencia.cantidad, existencia.producto, existencia.bodega, existencia.marca);
+               
             }
 
         }
@@ -181,6 +196,8 @@ namespace crm
         {
             return datos.ObtenerCatalogo();              //se llama la funcion ObtenerCat
         }
+
+       
 
         public void InsertarAbono(Abono abono)
         {

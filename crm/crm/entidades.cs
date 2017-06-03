@@ -164,6 +164,7 @@ namespace crm
 
         public class Proveedor
         {
+            public string codigo { get; set; }
             public string nombre { get; set; }
             public string nit { get; set; }
             public string direccion { get; set; }
@@ -171,8 +172,9 @@ namespace crm
            
 
             public Proveedor() { }
-            public Proveedor(string nombre, string nit, string direccion, string telefono)
+            public Proveedor(string codigo, string nombre, string nit, string direccion, string telefono)
             {
+                this.codigo = codigo;
                 this.nombre = nombre;
                 this.nit = nit;
                 this.direccion = direccion;
