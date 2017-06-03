@@ -418,7 +418,7 @@ namespace crm
             try
             {
                 mySqlComando = new OdbcCommand(
-                     string.Format("SELECT producto.nombre, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto"),
+                     string.Format("SELECT producto.nombre, marca.nombre_marca, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega INNER JOIN marca ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto AND producto.id_marca = marca.id_marca"),
                      Conexion.ObtenerConexion()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
                 mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
@@ -508,7 +508,7 @@ namespace crm
             try
             {
                 mySqlComando = new OdbcCommand(
-                    string.Format("SELECT producto.nombre, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto AND producto.nombre like '%{0}%'",nombre),      //query de consultas de categoria
+                    string.Format("SELECT producto.nombre, marca.nombre_marca, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega INNER JOIN marca ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto AND marca.id_marca = producto.id_marca AND producto.nombre like '%{0}%'",nombre),      //query de consultas de categoria
                     Conexion.ObtenerConexion()              //llamada a clase conexion
                     );
                 //-------------------------------------------------------------------------//
@@ -546,6 +546,23 @@ namespace crm
             try
             {
                 OdbcCommand comando = new OdbcCommand(string.Format("delete from bodega where id_bodega='{0}'",
+                Convert.ToInt32(codigo)), Conexion.ObtenerConexion()
+                );
+                comando.ExecuteNonQuery();                 //se ejecuta el query
+                MessageBox.Show("Registro eliminado con exito");
+            }
+            catch (OdbcException e)
+            {
+                MessageBox.Show("Error de eliminacion");          //si el try-catch encontro algun error indica mensaje de fracaso
+            }
+
+        } //eliminar bodega
+
+        public void eliminarcompra(string codigo)
+        {
+            try
+            {
+                OdbcCommand comando = new OdbcCommand(string.Format("delete from compra where id_compra='{0}'",
                 Convert.ToInt32(codigo)), Conexion.ObtenerConexion()
                 );
                 comando.ExecuteNonQuery();                 //se ejecuta el query

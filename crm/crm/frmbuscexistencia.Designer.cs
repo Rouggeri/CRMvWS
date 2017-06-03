@@ -83,7 +83,7 @@
             this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_agregar.Location = new System.Drawing.Point(475, 55);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_agregar.Name = "btn_agregar";
             this.btn_agregar.Size = new System.Drawing.Size(58, 59);
             this.btn_agregar.TabIndex = 175;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.txt_exis);
             this.Controls.Add(this.lbl_exis);
             this.Name = "frmbuscexistencia";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Existencia";
             this.Load += new System.EventHandler(this.frmbuscexistencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_exis)).EndInit();

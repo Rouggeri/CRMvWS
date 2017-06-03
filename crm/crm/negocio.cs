@@ -52,6 +52,21 @@ namespace crm
 
         }
 
+        public void EliminarCompra(Int32 idc)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idc)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarcompra(Convert.ToString(idc));
+            }
+
+        }
+
         public void InsertarBodega(Bodega bodega)
         {
             if (string.IsNullOrWhiteSpace(bodega.nombre) || string.IsNullOrWhiteSpace(bodega.direccion))
