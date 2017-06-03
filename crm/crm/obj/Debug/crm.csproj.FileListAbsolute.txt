@@ -1193,3 +1193,4 @@ C:\CRMvWS\crm\crm\bin\Debug\ShockwaveFlashObjects.dll
 C:\CRMvWS\crm\crm\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\CRMvWS\crm\crm\bin\Debug\stdole.dll
 C:\CRMvWS\crm\crm\obj\Debug\crm.frm_informe_estadistico_proyeccion.resources
+C:\CRMvWS\crm\crm\obj\Debug\crm.frmbuscexisbod.resources
