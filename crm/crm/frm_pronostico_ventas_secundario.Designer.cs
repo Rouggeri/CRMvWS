@@ -33,6 +33,8 @@
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.SwiftPlotSeriesView swiftPlotSeriesView1 = new DevExpress.XtraCharts.SwiftPlotSeriesView();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.dgv_detalle_informe = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.dgv_detalle = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -68,8 +70,23 @@
             this.cmb_metodo = new System.Windows.Forms.ComboBox();
             this.ctc_pronostico = new DevExpress.XtraCharts.ChartControl();
             this.label1 = new System.Windows.Forms.Label();
+            this.dgv_cont_ventas = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_reporte = new System.Windows.Forms.Button();
+            this.btn_nuevo = new System.Windows.Forms.Button();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_ultimo = new System.Windows.Forms.Button();
+            this.btn_actualizar = new System.Windows.Forms.Button();
+            this.btn_guardar = new System.Windows.Forms.Button();
+            this.btn_buscar = new System.Windows.Forms.Button();
+            this.btn_primero = new System.Windows.Forms.Button();
+            this.btn_anterior = new System.Windows.Forms.Button();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_siguiente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle_informe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).BeginInit();
@@ -91,6 +108,8 @@
             ((System.ComponentModel.ISupportInitialize)(swiftPlotDiagram1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_cont_ventas)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -99,6 +118,10 @@
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
             this.groupControl1.CaptionImage = ((System.Drawing.Image)(resources.GetObject("groupControl1.CaptionImage")));
             this.groupControl1.CaptionLocation = DevExpress.Utils.Locations.Top;
+            this.groupControl1.Controls.Add(this.panel1);
+            this.groupControl1.Controls.Add(this.dgv_cont_ventas);
+            this.groupControl1.Controls.Add(this.dgv_detalle_informe);
+            this.groupControl1.Controls.Add(this.button1);
             this.groupControl1.Controls.Add(this.groupControl2);
             this.groupControl1.Controls.Add(this.xtraTabControl1);
             this.groupControl1.Controls.Add(this.dgv_complemento);
@@ -115,10 +138,29 @@
             this.groupControl1.TabIndex = 31;
             this.groupControl1.Text = "Proyecciones";
             // 
+            // dgv_detalle_informe
+            // 
+            this.dgv_detalle_informe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_detalle_informe.Location = new System.Drawing.Point(12, 135);
+            this.dgv_detalle_informe.Name = "dgv_detalle_informe";
+            this.dgv_detalle_informe.Size = new System.Drawing.Size(24, 30);
+            this.dgv_detalle_informe.TabIndex = 33;
+            this.dgv_detalle_informe.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1208, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(10, 10);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.dgv_detalle);
-            this.groupControl2.Location = new System.Drawing.Point(864, 125);
+            this.groupControl2.Location = new System.Drawing.Point(864, 211);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(467, 473);
             this.groupControl2.TabIndex = 30;
@@ -143,7 +185,7 @@
             // 
             // xtraTabControl1
             // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(44, 102);
+            this.xtraTabControl1.Location = new System.Drawing.Point(44, 188);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
             this.xtraTabControl1.Size = new System.Drawing.Size(814, 207);
@@ -481,7 +523,7 @@
             swiftPlotDiagram1.AxisX.VisibleInPanesSerializable = "-1";
             swiftPlotDiagram1.AxisY.VisibleInPanesSerializable = "-1";
             this.ctc_pronostico.Diagram = swiftPlotDiagram1;
-            this.ctc_pronostico.Location = new System.Drawing.Point(45, 330);
+            this.ctc_pronostico.Location = new System.Drawing.Point(45, 416);
             this.ctc_pronostico.Name = "ctc_pronostico";
             this.ctc_pronostico.PaletteName = "Default";
             series1.Name = "Serie1";
@@ -502,6 +544,228 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Proyección de ventas";
             // 
+            // dgv_cont_ventas
+            // 
+            this.dgv_cont_ventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_cont_ventas.Location = new System.Drawing.Point(14, 171);
+            this.dgv_cont_ventas.Name = "dgv_cont_ventas";
+            this.dgv_cont_ventas.Size = new System.Drawing.Size(24, 30);
+            this.dgv_cont_ventas.TabIndex = 34;
+            this.dgv_cont_ventas.Visible = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btn_reporte);
+            this.panel1.Controls.Add(this.btn_nuevo);
+            this.panel1.Controls.Add(this.btn_cancelar);
+            this.panel1.Controls.Add(this.btn_ultimo);
+            this.panel1.Controls.Add(this.btn_actualizar);
+            this.panel1.Controls.Add(this.btn_guardar);
+            this.panel1.Controls.Add(this.btn_buscar);
+            this.panel1.Controls.Add(this.btn_primero);
+            this.panel1.Controls.Add(this.btn_anterior);
+            this.panel1.Controls.Add(this.btn_editar);
+            this.panel1.Controls.Add(this.btn_eliminar);
+            this.panel1.Controls.Add(this.btn_siguiente);
+            this.panel1.Location = new System.Drawing.Point(260, 93);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(630, 77);
+            this.panel1.TabIndex = 185;
+            // 
+            // btn_reporte
+            // 
+            this.btn_reporte.BackgroundImage = global::crm.Properties.Resources.imprimir1;
+            this.btn_reporte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_reporte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_reporte.FlatAppearance.BorderSize = 0;
+            this.btn_reporte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_reporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_reporte.Location = new System.Drawing.Point(541, 4);
+            this.btn_reporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reporte.Name = "btn_reporte";
+            this.btn_reporte.Size = new System.Drawing.Size(56, 59);
+            this.btn_reporte.TabIndex = 182;
+            this.btn_reporte.UseVisualStyleBackColor = true;
+            this.btn_reporte.Click += new System.EventHandler(this.btn_reporte_Click);
+            // 
+            // btn_nuevo
+            // 
+            this.btn_nuevo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_nuevo.BackgroundImage")));
+            this.btn_nuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_nuevo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_nuevo.FlatAppearance.BorderSize = 0;
+            this.btn_nuevo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_nuevo.Location = new System.Drawing.Point(29, 4);
+            this.btn_nuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_nuevo.Name = "btn_nuevo";
+            this.btn_nuevo.Size = new System.Drawing.Size(58, 59);
+            this.btn_nuevo.TabIndex = 171;
+            this.btn_nuevo.UseVisualStyleBackColor = true;
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_cancelar.BackgroundImage")));
+            this.btn_cancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Location = new System.Drawing.Point(334, 4);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
+            this.btn_cancelar.TabIndex = 176;
+            this.btn_cancelar.UseVisualStyleBackColor = true;
+            // 
+            // btn_ultimo
+            // 
+            this.btn_ultimo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ultimo.BackgroundImage")));
+            this.btn_ultimo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ultimo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ultimo.FlatAppearance.BorderSize = 0;
+            this.btn_ultimo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_ultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_ultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ultimo.Location = new System.Drawing.Point(503, 37);
+            this.btn_ultimo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ultimo.Name = "btn_ultimo";
+            this.btn_ultimo.Size = new System.Drawing.Size(30, 26);
+            this.btn_ultimo.TabIndex = 181;
+            this.btn_ultimo.UseVisualStyleBackColor = true;
+            // 
+            // btn_actualizar
+            // 
+            this.btn_actualizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_actualizar.BackgroundImage")));
+            this.btn_actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_actualizar.FlatAppearance.BorderSize = 0;
+            this.btn_actualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_actualizar.Location = new System.Drawing.Point(391, 4);
+            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_actualizar.Name = "btn_actualizar";
+            this.btn_actualizar.Size = new System.Drawing.Size(56, 59);
+            this.btn_actualizar.TabIndex = 177;
+            this.btn_actualizar.UseVisualStyleBackColor = true;
+            // 
+            // btn_guardar
+            // 
+            this.btn_guardar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_guardar.BackgroundImage")));
+            this.btn_guardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_guardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_guardar.FlatAppearance.BorderSize = 0;
+            this.btn_guardar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_guardar.Location = new System.Drawing.Point(98, 4);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_guardar.Name = "btn_guardar";
+            this.btn_guardar.Size = new System.Drawing.Size(58, 59);
+            this.btn_guardar.TabIndex = 172;
+            this.btn_guardar.UseVisualStyleBackColor = true;
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
+            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.Location = new System.Drawing.Point(275, 4);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(58, 59);
+            this.btn_buscar.TabIndex = 175;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            // 
+            // btn_primero
+            // 
+            this.btn_primero.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_primero.BackgroundImage")));
+            this.btn_primero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_primero.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_primero.FlatAppearance.BorderSize = 0;
+            this.btn_primero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_primero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_primero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_primero.Location = new System.Drawing.Point(465, 37);
+            this.btn_primero.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_primero.Name = "btn_primero";
+            this.btn_primero.Size = new System.Drawing.Size(30, 26);
+            this.btn_primero.TabIndex = 180;
+            this.btn_primero.UseVisualStyleBackColor = true;
+            // 
+            // btn_anterior
+            // 
+            this.btn_anterior.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anterior.BackgroundImage")));
+            this.btn_anterior.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_anterior.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_anterior.FlatAppearance.BorderSize = 0;
+            this.btn_anterior.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_anterior.Location = new System.Drawing.Point(465, 4);
+            this.btn_anterior.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_anterior.Name = "btn_anterior";
+            this.btn_anterior.Size = new System.Drawing.Size(30, 26);
+            this.btn_anterior.TabIndex = 178;
+            this.btn_anterior.UseVisualStyleBackColor = true;
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_editar.BackgroundImage")));
+            this.btn_editar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_editar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_editar.FlatAppearance.BorderSize = 0;
+            this.btn_editar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Location = new System.Drawing.Point(157, 4);
+            this.btn_editar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(58, 59);
+            this.btn_editar.TabIndex = 173;
+            this.btn_editar.UseVisualStyleBackColor = true;
+            // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_eliminar.BackgroundImage")));
+            this.btn_eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_eliminar.FlatAppearance.BorderSize = 0;
+            this.btn_eliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eliminar.Location = new System.Drawing.Point(216, 4);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(58, 59);
+            this.btn_eliminar.TabIndex = 174;
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            // 
+            // btn_siguiente
+            // 
+            this.btn_siguiente.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_siguiente.BackgroundImage")));
+            this.btn_siguiente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_siguiente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_siguiente.FlatAppearance.BorderSize = 0;
+            this.btn_siguiente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_siguiente.Location = new System.Drawing.Point(503, 3);
+            this.btn_siguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_siguiente.Name = "btn_siguiente";
+            this.btn_siguiente.Size = new System.Drawing.Size(30, 26);
+            this.btn_siguiente.TabIndex = 179;
+            this.btn_siguiente.UseVisualStyleBackColor = true;
+            // 
             // frm_pronostico_ventas_secundario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -515,6 +779,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle_informe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_detalle)).EndInit();
@@ -541,6 +806,8 @@
             ((System.ComponentModel.ISupportInitialize)(swiftPlotSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ctc_pronostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_cont_ventas)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -583,5 +850,21 @@
         private DevExpress.XtraGrid.GridControl dgv_detalle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.DataGridView dgv_detalle_informe;
+        public System.Windows.Forms.DataGridView dgv_cont_ventas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_reporte;
+        private System.Windows.Forms.Button btn_nuevo;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_ultimo;
+        private System.Windows.Forms.Button btn_actualizar;
+        private System.Windows.Forms.Button btn_guardar;
+        private System.Windows.Forms.Button btn_buscar;
+        private System.Windows.Forms.Button btn_primero;
+        private System.Windows.Forms.Button btn_anterior;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_siguiente;
     }
 }
