@@ -21,7 +21,7 @@ namespace crm
         {
             try
             {
-                dgv_exis.DataSource = Clsopexis.Buscar(txt_exis.Text);
+                dgv_exis.DataSource = datos.BuscarExis(txt_exis.Text);
             }
             catch (Exception ex)
             {
@@ -32,6 +32,19 @@ namespace crm
         private void btn_agregar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void frmbuscexistencia_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                negocio n = new negocio();
+                dgv_exis.DataSource = n.consultaexistenciabod();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

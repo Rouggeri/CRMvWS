@@ -395,7 +395,7 @@ namespace crm
             try
             {
                 mySqlComando = new OdbcCommand(
-                     string.Format("SELECT producto.nombre, bodega.nombre_bodega, existencia.fec_ingreso, existencia.cantidad, tbl_proveedor.nombre_proveedor FROM producto INNER JOIN existencia INNER JOIN bodega INNER JOIN tbl_proveedor ON bodega.id_bodega = existencia.id_bodega AND producto.id_producto = existencia.id_producto AND existencia.id_proveedor = tbl_proveedor.id_proveedor"),
+                     string.Format("SELECT existencia.id_compra, producto.nombre, bodega.nombre_bodega, existencia.fec_ingreso, existencia.cantidad, tbl_proveedor.nombre_proveedor FROM producto INNER JOIN existencia INNER JOIN bodega INNER JOIN tbl_proveedor ON bodega.id_bodega = existencia.id_bodega AND producto.id_producto = existencia.id_producto AND existencia.id_proveedor = tbl_proveedor.id_proveedor"),
                      Conexion.ObtenerConexion()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
                 mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
@@ -409,6 +409,29 @@ namespace crm
             }
 
             return dtExistencia; //retornamos el sqlDataAdaptor con los datos del query
+
+        }
+
+        public static DataTable ObtenerExistenciaBod()
+        {
+            DataTable dtExistenciab = new DataTable();
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                     string.Format("SELECT producto.nombre, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto"),
+                     Conexion.ObtenerConexion()
+                 );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
+                mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                mySqlDAdAdaptador.Fill(dtExistenciab);                 //poblamos el sqlDataAdaptor con el resultado del query
+
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show("No es posible obtener el registro", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            return dtExistenciab; //retornamos el sqlDataAdaptor con los datos del query
 
         }
 
@@ -479,7 +502,28 @@ namespace crm
             return dtPrecio;
         }
 
-        
+        public static DataTable BuscarExis(String nombre)
+        {
+            DataTable dtExis = new DataTable();
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                    string.Format("SELECT producto.nombre, bodega.nombre_bodega, existencia_bodega.cantidad FROM producto INNER JOIN existencia_bodega INNER JOIN bodega ON bodega.id_bodega = existencia_bodega.id_bodega AND producto.id_producto = existencia_bodega.id_producto AND producto.nombre like '%{0}%'",nombre),      //query de consultas de categoria
+                    Conexion.ObtenerConexion()              //llamada a clase conexion
+                    );
+                //-------------------------------------------------------------------------//
+                mySqlDAdAdaptador = new OdbcDataAdapter();         //Llenando DataTable Categoria
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                mySqlDAdAdaptador.Fill(dtExis);
+                //------------------------------------------------------------------------//
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible acceder a los registros en existencia de bodega");
+            }
+            return dtExis;
+        }
+
         public void eliminarproducto(string codigo)
         {
             try

@@ -321,5 +321,11 @@ namespace crm
             CapaNegocio fn = new CapaNegocio();
             fn.Ultimo(dgv_existencia);
         }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            frmbuscexisbod existencia = new frmbuscexisbod();
+            existencia.Show();
+        }
     }
 }

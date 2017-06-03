@@ -197,7 +197,11 @@ namespace crm
             return datos.ObtenerCatalogo();              //se llama la funcion ObtenerCat
         }
 
-       
+        public System.Data.DataTable consultaexistenciabod()
+        {
+            return datos.ObtenerExistenciaBod();              //se llama la funcion ObtenerCat
+        }
+
 
         public void InsertarAbono(Abono abono)
         {
