@@ -80,17 +80,21 @@ namespace crm
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-            entidades.Producto producto = new entidades.Producto();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
-            negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
-            producto.nombre = txt_nombre.Text; //Llenamos el objeto persona con la informacion de los cuadros de texto/
-            producto.descripcion = txt_descripcion.Text;
-            producto.marca = Convert.ToInt32(cbo_marca.SelectedIndex + 1);
-            producto.precio = Convert.ToDouble(txt_precio.Text);
-            producto.categoria = Convert.ToInt32(cbo_cat.SelectedIndex + 1);
-            producto.porcentaje = Convert.ToInt32(txt_comision.Text);
-            cnegocio.InsertarProducto(producto);                                    //Llamamos a la funcion Ninsertar a traves del objeto de la capa de negocio y le enviamos como parametro nuestro objeto persona
-            limpiar();
+            try
+            {
+                entidades.Producto producto = new entidades.Producto();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
+                negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
+                producto.nombre = txt_nombre.Text; //Llenamos el objeto persona con la informacion de los cuadros de texto/
+                producto.descripcion = txt_descripcion.Text;
+                producto.marca = Convert.ToInt32(cbo_marca.SelectedIndex + 1);
+                producto.precio = Convert.ToDouble(txt_precio.Text);
+                producto.categoria = Convert.ToInt32(cbo_cat.SelectedIndex + 1);
+                producto.porcentaje = Convert.ToInt32(txt_comision.Text);
+                cnegocio.InsertarProducto(producto);                                    //Llamamos a la funcion Ninsertar a traves del objeto de la capa de negocio y le enviamos como parametro nuestro objeto persona
+            }catch { MessageBox.Show("Debe llenar todos los campos"); }
+                limpiar();
             deshabilitar();
+
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)

@@ -105,6 +105,7 @@
             this.btn_nuevo.Size = new System.Drawing.Size(58, 59);
             this.btn_nuevo.TabIndex = 171;
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_cancelar
             // 
@@ -121,6 +122,7 @@
             this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
             this.btn_cancelar.TabIndex = 176;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_ultimo
             // 
@@ -254,6 +256,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(58, 59);
             this.btn_eliminar.TabIndex = 174;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_siguiente
             // 
@@ -281,7 +284,7 @@
             this.groupControl1.Controls.Add(this.dgv_marca);
             this.groupControl1.Location = new System.Drawing.Point(42, 97);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(401, 229);
+            this.groupControl1.Size = new System.Drawing.Size(401, 237);
             this.groupControl1.TabIndex = 201;
             this.groupControl1.Text = "Información de Marca";
             // 

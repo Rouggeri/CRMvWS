@@ -20,7 +20,8 @@ namespace crm
 
         private void inventario_bodega_Load(object sender, EventArgs e)
         {
-
+            txt_nombre.Enabled = false;
+            txt_ubicacion.Enabled = false;
         }
         string id_form = "117";
 
@@ -97,22 +98,18 @@ namespace crm
 
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (dgv_bodega.SelectedRows.Count == 1)
-                {
-                    int id = Convert.ToInt16(dgv_bodega.CurrentRow.Cells[0].Value);
-                    negocio n = new negocio();
-                    n.EliminarBodega(id);
-                    
-                }
-                else
-                    MessageBox.Show("Debe de seleccionar una fila");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+            txt_nombre.Enabled = false;
+            txt_ubicacion.Enabled = false;
+            txt_nombre.Clear();
+            txt_ubicacion.Clear();
+        }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            txt_nombre.Enabled = true;
+            txt_ubicacion.Enabled = true;
+            txt_nombre.Clear();
+            txt_ubicacion.Clear();
         }
     }
 }
