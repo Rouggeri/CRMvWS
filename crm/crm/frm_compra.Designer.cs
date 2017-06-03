@@ -74,7 +74,7 @@
             this.panel1.Controls.Add(this.btn_eliminar);
             this.panel1.Controls.Add(this.btn_siguiente);
             this.panel1.Location = new System.Drawing.Point(31, 3);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(630, 77);
             this.panel1.TabIndex = 188;
@@ -89,7 +89,7 @@
             this.btn_reporte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_reporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_reporte.Location = new System.Drawing.Point(541, 4);
-            this.btn_reporte.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_reporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_reporte.Name = "btn_reporte";
             this.btn_reporte.Size = new System.Drawing.Size(56, 59);
             this.btn_reporte.TabIndex = 182;
@@ -105,7 +105,7 @@
             this.btn_nuevo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_nuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_nuevo.Location = new System.Drawing.Point(29, 4);
-            this.btn_nuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(58, 59);
             this.btn_nuevo.TabIndex = 171;
@@ -121,11 +121,12 @@
             this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Location = new System.Drawing.Point(334, 4);
-            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
             this.btn_cancelar.TabIndex = 176;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_ultimo
             // 
@@ -137,7 +138,7 @@
             this.btn_ultimo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_ultimo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ultimo.Location = new System.Drawing.Point(503, 37);
-            this.btn_ultimo.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ultimo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_ultimo.Name = "btn_ultimo";
             this.btn_ultimo.Size = new System.Drawing.Size(30, 26);
             this.btn_ultimo.TabIndex = 181;
@@ -154,7 +155,7 @@
             this.btn_actualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_actualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_actualizar.Location = new System.Drawing.Point(391, 4);
-            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_actualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_actualizar.Name = "btn_actualizar";
             this.btn_actualizar.Size = new System.Drawing.Size(56, 59);
             this.btn_actualizar.TabIndex = 177;
@@ -171,7 +172,7 @@
             this.btn_guardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_guardar.Location = new System.Drawing.Point(98, 4);
-            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_guardar.Name = "btn_guardar";
             this.btn_guardar.Size = new System.Drawing.Size(58, 59);
             this.btn_guardar.TabIndex = 172;
@@ -188,7 +189,7 @@
             this.btn_buscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Location = new System.Drawing.Point(275, 4);
-            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(58, 59);
             this.btn_buscar.TabIndex = 175;
@@ -204,7 +205,7 @@
             this.btn_primero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_primero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_primero.Location = new System.Drawing.Point(465, 37);
-            this.btn_primero.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_primero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_primero.Name = "btn_primero";
             this.btn_primero.Size = new System.Drawing.Size(30, 26);
             this.btn_primero.TabIndex = 180;
@@ -221,7 +222,7 @@
             this.btn_anterior.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_anterior.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_anterior.Location = new System.Drawing.Point(465, 4);
-            this.btn_anterior.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_anterior.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_anterior.Name = "btn_anterior";
             this.btn_anterior.Size = new System.Drawing.Size(30, 26);
             this.btn_anterior.TabIndex = 178;
@@ -238,7 +239,7 @@
             this.btn_editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editar.Location = new System.Drawing.Point(157, 4);
-            this.btn_editar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(58, 59);
             this.btn_editar.TabIndex = 173;
@@ -254,7 +255,7 @@
             this.btn_eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_eliminar.Location = new System.Drawing.Point(216, 4);
-            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(58, 59);
             this.btn_eliminar.TabIndex = 174;
@@ -270,7 +271,7 @@
             this.btn_siguiente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_siguiente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_siguiente.Location = new System.Drawing.Point(503, 3);
-            this.btn_siguiente.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_siguiente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_siguiente.Name = "btn_siguiente";
             this.btn_siguiente.Size = new System.Drawing.Size(30, 26);
             this.btn_siguiente.TabIndex = 179;
@@ -335,7 +336,7 @@
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(405, 47);
+            this.txt_cantidad.Location = new System.Drawing.Point(422, 47);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(102, 21);
             this.txt_cantidad.TabIndex = 213;
@@ -390,6 +391,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panel1);
             this.Name = "frm_compra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Orden de Compra";
             this.Load += new System.EventHandler(this.frm_compra_Load);
             this.panel1.ResumeLayout(false);

@@ -63,8 +63,26 @@ namespace crm
             //------------------------------------
             if (btn_guardar.Text == "Actualizar")
             {
-                int indice_empleado = cbo_empleado.FindString(empleado);
-                cbo_empleado.SelectedIndex = indice_empleado;
+                DataTable dt_ids_empledos = OpBD.SeleccionarIdEmpleado(id_tarea);
+
+                if (dt_ids_empledos != null)
+                {
+                    DataRow row = dt_ids_empledos.Rows[0];
+                    string id_empleado = row[0].ToString();
+
+                    string empleado_ws = "--";
+                    foreach (DataRow roww in dt_empleados.Rows)
+                    {
+                        if (roww[0].ToString() == id_empleado)
+                        {
+                            empleado_ws = roww[6].ToString();
+                        }
+                    }
+
+                    int indice_empleado = cbo_empleado.FindString(empleado_ws);
+                    cbo_empleado.SelectedIndex = indice_empleado;
+                }
+               
 
                 int indice_tipo = cbo_tareas.FindString(tipo);
                 cbo_tareas.SelectedIndex = indice_tipo;

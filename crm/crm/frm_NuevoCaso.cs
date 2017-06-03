@@ -151,8 +151,19 @@ namespace crm
                     string fecha_asignacion = row[0].ToString();
                     string estado_caso = row[1].ToString();
                     string descripcion = row[2].ToString();
-                    string empleado = row[3].ToString();
+                  //  string empleado = row[3].ToString();
                     string id_empleado = row[4].ToString();
+                    //---------------WS--------------
+                    string empleado_ws = "--";
+                    foreach (DataRow roww in dt_empleados.Rows)
+                    {
+                        if (roww[0].ToString() == id_empleado)
+                        {
+                            empleado_ws = roww[6].ToString();
+                        }
+                    }
+
+                    //------------------------------
 
                     txt_descripcion.Text = descripcion;
                     txt_descripcion.ForeColor = Color.Black;
@@ -165,7 +176,7 @@ namespace crm
                     
                     if (id_empleado != "0")
                     {
-                        int indice_empleado = cmb_responsable.FindString(id_empleado + " - " + empleado);
+                        int indice_empleado = cmb_responsable.FindString(empleado_ws);
                         cmb_responsable.SelectedIndex = indice_empleado;
                     }
                     else

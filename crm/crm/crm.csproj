@@ -270,6 +270,12 @@
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmbuscexisbod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbuscexisbod.Designer.cs">
+      <DependentUpon>frmbuscexisbod.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmbuscexistencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -592,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmbuscexisbod.resx">
+      <DependentUpon>frmbuscexisbod.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexistencia.resx">
       <DependentUpon>frmbuscexistencia.cs</DependentUpon>

@@ -222,6 +222,9 @@ namespace crm
         private void frmListadoPrecio_Load(object sender, EventArgs e)
         {
             cbo_catalogo.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbo_categoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbo_marca.DropDownStyle = ComboBoxStyle.DropDownList;
+            
             llenar_encabezado();
             llenarcbo();
             cbo_categoria.Enabled = false;
@@ -469,6 +472,13 @@ namespace crm
         private void btn_actualizar_Click(object sender, EventArgs e)
         {
             obtenerid();
+            cbo_catalogo.DataSource = null;
+            cbo_categoria.DataSource = null;
+            cbo_marca.DataSource = null;
+            //llenarmarca();
+            llenarcbo();
+            //llenarcategoria();
+           
             //condiciones();
             if((check_categoria.Checked)&&(check_marca.Checked)) {
                 obteneridcat(); obteneridmarca(); llenar_biena();

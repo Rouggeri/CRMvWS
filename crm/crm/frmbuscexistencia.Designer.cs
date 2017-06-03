@@ -101,7 +101,9 @@
             this.Controls.Add(this.txt_exis);
             this.Controls.Add(this.lbl_exis);
             this.Name = "frmbuscexistencia";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Buscar Existencia";
+            this.Load += new System.EventHandler(this.frmbuscexistencia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_exis)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

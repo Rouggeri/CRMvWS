@@ -784,7 +784,7 @@
     <value>169, 22</value>
   </data>
   <data name="bodegaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Bodega</value>
+    <value>Ingreso Bodega</value>
   </data>
   <data name="listaDePrecioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -796,7 +796,7 @@
     <value>169, 22</value>
   </data>
   <data name="ordenDeCompraToolStripMenuItem.Text" xml:space="preserve">
-    <value>Orden de Compra</value>
+    <value>Ingreso Existencia</value>
   </data>
   <data name="ingresoCategoriaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -808,7 +808,7 @@
     <value>169, 22</value>
   </data>
   <data name="marcaToolStripMenuItem.Text" xml:space="preserve">
-    <value>Marca</value>
+    <value>Ingreso Marca</value>
   </data>
   <data name="tipoDePrecioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 22</value>
@@ -820,7 +820,7 @@
     <value>169, 22</value>
   </data>
   <data name="comprasToolStripMenuItem.Text" xml:space="preserve">
-    <value>Compras</value>
+    <value>Orden de Compra</value>
   </data>
   <data name="productosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -1305,6 +1305,12 @@
   <data name="&gt;&gt;tipoDePrecioToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;comprasToolStripMenuItem.Name" xml:space="preserve">
+    <value>comprasToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;comprasToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mantenimientosToolStripMenuItem.Name" xml:space="preserve">
     <value>mantenimientosToolStripMenuItem</value>
   </data>
@@ -1417,12 +1423,6 @@
     <value>empleadoToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;empleadoToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comprasToolStripMenuItem.Name" xml:space="preserve">
-    <value>comprasToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;comprasToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

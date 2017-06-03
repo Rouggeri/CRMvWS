@@ -89,10 +89,20 @@ namespace crm
                     string etapa = row[1].ToString();
                     string fecha_inicio = row[2].ToString();
                     string id_empleado = row[3].ToString();
-                    string nombre_empleado = row[4].ToString();
+                  //  string nombre_empleado = row[4].ToString();
                     string estado = row[5].ToString();
                     txt_detalles.Text = detalles;
+                    //---------------WS--------------
+                    string empleado_ws = "--";
+                    foreach (DataRow roww in dt_empleados.Rows)
+                    {
+                        if (roww[0].ToString() == id_empleado)
+                        {
+                            empleado_ws = roww[6].ToString();
+                        }
+                    }
 
+                    //------------------------------
                     string[] moneda_dividida = moneda_e.Split('(',')');
                     string nombre_moneda = moneda_dividida[0];
                     string signo_moneda = moneda_dividida[1];
@@ -109,7 +119,7 @@ namespace crm
 
                     if (id_empleado != "0")
                     {
-                        int indice_empleado = cbo_empleado.FindString(id_empleado + " - " + nombre_empleado);
+                        int indice_empleado = cbo_empleado.FindString(empleado_ws);
                         cbo_empleado.SelectedIndex = indice_empleado;
                     }
                     else

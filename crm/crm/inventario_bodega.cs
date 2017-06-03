@@ -28,18 +28,19 @@ namespace crm
         {
             negocio cnegocio = new negocio();           //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
             dgv_bodega.DataSource = cnegocio.consultarbod();
+            
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            entidades.Bodega bodega = new entidades.Bodega();
+            String codi;
             Int32 selectedRowCount =
             dgv_bodega.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount > 0)
             {
-                bodega.codigo = Convert.ToString(dgv_bodega.CurrentRow.Cells[0].Value);
+                codi = Convert.ToString(dgv_bodega.CurrentRow.Cells[0].Value);
                 negocio neg = new negocio();
-                neg.EliminarBodega(bodega);
+                neg.EliminarBodega(Convert.ToInt32(codi));
             }
             else
             {
@@ -91,6 +92,27 @@ namespace crm
         {
             CapaNegocio fn = new CapaNegocio();
             fn.Ultimo(dgv_bodega);
+        }
+
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgv_bodega.SelectedRows.Count == 1)
+                {
+                    int id = Convert.ToInt16(dgv_bodega.CurrentRow.Cells[0].Value);
+                    negocio n = new negocio();
+                    n.EliminarBodega(id);
+                    
+                }
+                else
+                    MessageBox.Show("Debe de seleccionar una fila");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
