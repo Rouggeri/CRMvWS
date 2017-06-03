@@ -111,18 +111,20 @@ namespace crm
 
         private void guardarnuevo()
         {
-            entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
-            negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
-            datos cdatos = new crm.datos();
-            existencia.cantidad = Convert.ToInt32(txt_cantidad.Text); //Llenamos el objeto persona con la informacion de los cuadros de texto/
-            existencia.producto = idprod;
-            existencia.marca = idmarc;
-            existencia.bodega = Convert.ToInt32(cbo_bodega.SelectedIndex + 1);
-            existencia.ingreso = Convert.ToString(DateTime.Today);
-            existencia.proveedor = Convert.ToInt32(cbo_proveedor.SelectedIndex + 1);
-            cnegocio.InsertarExistencia(existencia);
-            cdatos.insertarexistenciabod(existencia.producto, existencia.marca, existencia.bodega, existencia.cantidad);
-
+            try
+            {
+                entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
+                negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
+                datos cdatos = new crm.datos();
+                existencia.cantidad = Convert.ToInt32(txt_cantidad.Text); //Llenamos el objeto persona con la informacion de los cuadros de texto/
+                existencia.producto = idprod;
+                existencia.marca = idmarc;
+                existencia.bodega = Convert.ToInt32(cbo_bodega.SelectedIndex + 1);
+                existencia.ingreso = Convert.ToString(DateTime.Today);
+                existencia.proveedor = Convert.ToInt32(cbo_proveedor.SelectedIndex + 1);
+                cnegocio.InsertarExistencia(existencia);
+                cdatos.insertarexistenciabod(existencia.producto, existencia.marca, existencia.bodega, existencia.cantidad);
+            }catch { MessageBox.Show("Debe llenar todos los campos"); }
         }
 
         private void guardarexistente()
@@ -159,7 +161,7 @@ namespace crm
             else
                         if (check_nuevo.Checked) {
 
-                txt_ingreso.Enabled = true;
+                //txt_ingreso.Enabled = true;
                 txt_prod.Enabled = true;
                 btn_bproducto.Enabled = true;
                 cbo_proveedor.Enabled = true;
@@ -241,6 +243,7 @@ namespace crm
         
         private void btn_borden_Click(object sender, EventArgs e)
         {
+            txt_cantidad.Text = null;            
             existente();
         }
 
@@ -296,6 +299,7 @@ namespace crm
         private void check_categoria_CheckedChanged(object sender, EventArgs e)
         {
             llenarprov();
+            txt_orden.Clear();
         }
 
         private void btn_anterior_Click(object sender, EventArgs e)

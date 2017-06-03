@@ -112,6 +112,21 @@ namespace crm
 
         }
 
+        public void EliminarProveedor(Int32 idca)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idca)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarproveedor(Convert.ToString(idca));
+            }
+
+        }
+
         public void InsertarBodega(Bodega bodega)
         {
             if (string.IsNullOrWhiteSpace(bodega.nombre) || string.IsNullOrWhiteSpace(bodega.direccion))
@@ -122,6 +137,19 @@ namespace crm
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
                 cdatos.insertarbodega(bodega.nombre, bodega.direccion);
+            }
+        }
+
+        public void InsertarProveedor(Proveedor proveedor)
+        {
+            if (string.IsNullOrWhiteSpace(proveedor.nombre) || string.IsNullOrWhiteSpace(proveedor.nit) || string.IsNullOrWhiteSpace(proveedor.direccion) || string.IsNullOrWhiteSpace(proveedor.telefono))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarproveedor(proveedor.nombre, proveedor.nit, proveedor.direccion, proveedor.telefono);
             }
         }
 

@@ -456,6 +456,12 @@
     <Compile Include="frm_pronostico_ventas_secundario.Designer.cs">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proveedor.Designer.cs">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_tprecio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -697,6 +703,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pronostico_ventas_secundario.resx">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_proveedor.resx">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_tprecio.resx">
       <DependentUpon>frm_tprecio.cs</DependentUpon>

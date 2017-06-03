@@ -260,7 +260,7 @@ namespace crm
             try
             {
                 mySqlComando = new OdbcCommand(
-                    string.Format("SELECT * FROM tbl_proveedor"),      //query de consultas de categoria
+                    string.Format("SELECT * FROM tbl_proveedor where estado = 'ACTIVO'"),      //query de consultas de categoria
                     Conexion.ObtenerConexion()              //llamada a clase conexion
                     );
                 //-------------------------------------------------------------------------//
@@ -645,7 +645,40 @@ namespace crm
 
         } //insertar abono
 
+        public void insertarproveedor(string nombre, string nit, string direccion, string telefono)
+        {
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                string.Format("Insert into tbl_proveedor (nombre_proveedor, nit_proveedor, direccion_proveedor, telefono_proveedor, estado) values ('{0}','{1}','{2}','{3}','ACTIVO')", nombre, nit, direccion, telefono),
+                seguridad.Conexion.ObtenerConexionODBC()
+                );                                              //se realiza el query con los datos que ser recibieron del objeto persona
+                mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
+                MessageBox.Show("Se inserto con exito");        //si el try-catch no encontro algun error se muestra el mensaje de transaccion exitosa
+            }
+            catch (OdbcException e)
+            {
+                MessageBox.Show("Error de insercion");          //si el try-catch encontro algun error indica mensaje de fracaso
+            }
 
+        } //insertar PROVEEDOR
+
+        public void eliminarproveedor(string codigo)
+        {
+            try
+            {
+                OdbcCommand comando = new OdbcCommand(string.Format("update tbl_proveedor set estado = 'INACTIVO' where id_proveedor='{0}'",
+                Convert.ToInt32(codigo)), Conexion.ObtenerConexion()
+                );
+                comando.ExecuteNonQuery();                 //se ejecuta el query
+                MessageBox.Show("Registro eliminado con exito");
+            }
+            catch (OdbcException e)
+            {
+                MessageBox.Show("Error de eliminacion");          //si el try-catch encontro algun error indica mensaje de fracaso
+            }
+
+        } //eliminar bodega
 
 
         #endregion

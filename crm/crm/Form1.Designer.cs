@@ -82,6 +82,7 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ingresoProveedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -286,7 +287,8 @@
             this.ingresoCategoriaToolStripMenuItem,
             this.marcaToolStripMenuItem,
             this.tipoDePrecioToolStripMenuItem,
-            this.comprasToolStripMenuItem});
+            this.comprasToolStripMenuItem,
+            this.ingresoProveedorToolStripMenuItem});
             resources.ApplyResources(this.productosToolStripMenuItem, "productosToolStripMenuItem");
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
             this.productosToolStripMenuItem.Tag = "5";
@@ -476,6 +478,13 @@
             resources.ApplyResources(this.empleadoToolStripMenuItem, "empleadoToolStripMenuItem");
             this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
+            // ingresoProveedorToolStripMenuItem
+            // 
+            this.ingresoProveedorToolStripMenuItem.Name = "ingresoProveedorToolStripMenuItem";
+            resources.ApplyResources(this.ingresoProveedorToolStripMenuItem, "ingresoProveedorToolStripMenuItem");
+            this.ingresoProveedorToolStripMenuItem.Tag = "125";
+            this.ingresoProveedorToolStripMenuItem.Click += new System.EventHandler(this.ingresoProveedorToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
@@ -548,6 +557,7 @@
         private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoDePrecioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresoProveedorToolStripMenuItem;
     }
 }
 
