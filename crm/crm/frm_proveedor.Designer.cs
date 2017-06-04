@@ -1,6 +1,6 @@
 ﻿namespace crm
 {
-    partial class frm_categoria
+    partial class frm_proveedor
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_categoria));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_proveedor));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_reporte = new System.Windows.Forms.Button();
             this.btn_nuevo = new System.Windows.Forms.Button();
@@ -43,10 +43,19 @@
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_siguiente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.dgv_categoria = new System.Windows.Forms.DataGridView();
+            this.txt_nit = new System.Windows.Forms.TextBox();
+            this.txt_direccion = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
+            this.dgv_prov = new System.Windows.Forms.DataGridView();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_prov)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -63,11 +72,11 @@
             this.panel1.Controls.Add(this.btn_editar);
             this.panel1.Controls.Add(this.btn_eliminar);
             this.panel1.Controls.Add(this.btn_siguiente);
-            this.panel1.Location = new System.Drawing.Point(9, 11);
+            this.panel1.Location = new System.Drawing.Point(5, 8);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(630, 77);
-            this.panel1.TabIndex = 187;
+            this.panel1.TabIndex = 188;
             // 
             // btn_reporte
             // 
@@ -269,44 +278,109 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 117);
+            this.label1.Location = new System.Drawing.Point(19, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 200;
+            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.TabIndex = 189;
             this.label1.Text = "Nombre:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 13);
+            this.label2.TabIndex = 190;
+            this.label2.Text = "NIT:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(324, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.TabIndex = 191;
+            this.label3.Text = "Direccion:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(324, 69);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 192;
+            this.label4.Text = "Telefono:";
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(84, 114);
+            this.txt_nombre.Location = new System.Drawing.Point(73, 35);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(121, 20);
-            this.txt_nombre.TabIndex = 203;
+            this.txt_nombre.Size = new System.Drawing.Size(194, 21);
+            this.txt_nombre.TabIndex = 193;
             // 
-            // dgv_categoria
+            // txt_nit
             // 
-            this.dgv_categoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_categoria.Location = new System.Drawing.Point(34, 141);
-            this.dgv_categoria.Name = "dgv_categoria";
-            this.dgv_categoria.Size = new System.Drawing.Size(240, 150);
-            this.dgv_categoria.TabIndex = 204;
+            this.txt_nit.Location = new System.Drawing.Point(73, 67);
+            this.txt_nit.Name = "txt_nit";
+            this.txt_nit.Size = new System.Drawing.Size(151, 21);
+            this.txt_nit.TabIndex = 194;
             // 
-            // frm_categoria
+            // txt_direccion
+            // 
+            this.txt_direccion.Location = new System.Drawing.Point(384, 35);
+            this.txt_direccion.Name = "txt_direccion";
+            this.txt_direccion.Size = new System.Drawing.Size(169, 21);
+            this.txt_direccion.TabIndex = 195;
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(384, 67);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(169, 21);
+            this.txt_telefono.TabIndex = 196;
+            // 
+            // dgv_prov
+            // 
+            this.dgv_prov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_prov.Location = new System.Drawing.Point(22, 113);
+            this.dgv_prov.Name = "dgv_prov";
+            this.dgv_prov.Size = new System.Drawing.Size(531, 150);
+            this.dgv_prov.TabIndex = 197;
+            this.dgv_prov.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.label1);
+            this.groupControl1.Controls.Add(this.dgv_prov);
+            this.groupControl1.Controls.Add(this.txt_nombre);
+            this.groupControl1.Controls.Add(this.label4);
+            this.groupControl1.Controls.Add(this.txt_telefono);
+            this.groupControl1.Controls.Add(this.label2);
+            this.groupControl1.Controls.Add(this.txt_direccion);
+            this.groupControl1.Controls.Add(this.txt_nit);
+            this.groupControl1.Controls.Add(this.label3);
+            this.groupControl1.Location = new System.Drawing.Point(12, 92);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(615, 299);
+            this.groupControl1.TabIndex = 201;
+            this.groupControl1.Text = "Información Proveedor";
+            // 
+            // frm_proveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 303);
-            this.Controls.Add(this.dgv_categoria);
-            this.Controls.Add(this.txt_nombre);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(639, 404);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panel1);
-            this.Name = "frm_categoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Categoria";
-            this.Load += new System.EventHandler(this.frm_categoria_Load);
+            this.Name = "frm_proveedor";
+            this.Text = "Ingreso Proveedor";
+            this.Load += new System.EventHandler(this.frm_proveedor_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_categoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_prov)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -326,7 +400,14 @@
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_siguiente;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_nombre;
-        private System.Windows.Forms.DataGridView dgv_categoria;
+        private System.Windows.Forms.TextBox txt_nit;
+        private System.Windows.Forms.TextBox txt_direccion;
+        private System.Windows.Forms.TextBox txt_telefono;
+        private System.Windows.Forms.DataGridView dgv_prov;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
     }
 }

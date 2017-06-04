@@ -886,5 +886,11 @@ namespace crm
             frm_compra t = new frm_compra();
             t.Show();
         }
+
+        private void ingresoProveedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_proveedor fp = new frm_proveedor();
+            fp.Show();
+        }
     }
 }

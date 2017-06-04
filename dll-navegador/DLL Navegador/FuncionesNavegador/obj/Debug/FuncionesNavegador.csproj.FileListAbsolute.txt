@@ -83,6 +83,5 @@ C:\Users\ottog\Desktop\Proyecto Hotel San Carlos\Objeto Comun\Octava entrega\DLL
 C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll
 C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.pdb
 C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\MySql.Data.dll
-C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.csprojResolveAssemblyReference.cache
 C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.dll
 C:\CRMvWS\DLL-Navegador\DLL Navegador\FuncionesNavegador\obj\Debug\FuncionesNavegador.pdb

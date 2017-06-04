@@ -37,9 +37,9 @@ namespace crm
 
         }
 
-        public void EliminarBodega(Bodega bodega)
+        public void EliminarBodega(Int32 idb)
         {
-            if (string.IsNullOrWhiteSpace(bodega.codigo))
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idb)))
             {
                 MessageBox.Show("No ha seleccionado la fila a eliminar");
             }
@@ -47,7 +47,82 @@ namespace crm
             {
                 MessageBox.Show("seleccionada fila para eliminar");
                 datos edatos = new datos();     //Se crea un objeto de capa de datos
-                edatos.eliminarbodega(bodega.codigo);
+                edatos.eliminarbodega(Convert.ToString(idb));
+            }
+
+        }
+
+        public void EliminarCompra(Int32 idc)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idc)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarcompra(Convert.ToString(idc));
+            }
+
+        }
+
+        public void EliminarMarca(Int32 idm)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idm)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarmarca(Convert.ToString(idm));
+            }
+
+        }
+
+        public void EliminarCategoria(Int32 idcat)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idcat)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarcategoria(Convert.ToString(idcat));
+            }
+
+        }
+
+        public void EliminarCatalogo(Int32 idca)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idca)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarcatalogo(Convert.ToString(idca));
+            }
+
+        }
+
+        public void EliminarProveedor(Int32 idca)
+        {
+            if (string.IsNullOrWhiteSpace(Convert.ToString(idca)))
+            {
+                MessageBox.Show("No ha seleccionado la fila a eliminar");
+            }
+            else
+            {
+                MessageBox.Show("seleccionada fila para eliminar");
+                datos edatos = new datos();     //Se crea un objeto de capa de datos
+                edatos.eliminarproveedor(Convert.ToString(idca));
             }
 
         }
@@ -62,6 +137,19 @@ namespace crm
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
                 cdatos.insertarbodega(bodega.nombre, bodega.direccion);
+            }
+        }
+
+        public void InsertarProveedor(Proveedor proveedor)
+        {
+            if (string.IsNullOrWhiteSpace(proveedor.nombre) || string.IsNullOrWhiteSpace(proveedor.nit) || string.IsNullOrWhiteSpace(proveedor.direccion) || string.IsNullOrWhiteSpace(proveedor.telefono))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarproveedor(proveedor.nombre, proveedor.nit, proveedor.direccion, proveedor.telefono);
             }
         }
 
@@ -88,7 +176,22 @@ namespace crm
             {
                 datos cdatos = new datos();     //Se crea un objeto de capa de datos
                 cdatos.insertarexistencia(Convert.ToInt32(existencia.codigo), existencia.cantidad, existencia.producto, existencia.bodega, existencia.ingreso, existencia.proveedor, existencia.marca);
-                MessageBox.Show(existencia.codigo);
+                
+            }
+
+        }
+
+        public void InsertarExistenciaBod(Existencia existencia)
+        {
+            if (String.IsNullOrWhiteSpace(Convert.ToString(existencia.cantidad)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.producto)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.bodega)) || string.IsNullOrWhiteSpace(Convert.ToString(existencia.marca)))
+            {
+                MessageBox.Show("Hay campos que estan vacios");     //si hace falta algun campo no se realiza la transaccion
+            }
+            else
+            {
+                datos cdatos = new datos();     //Se crea un objeto de capa de datos
+                cdatos.insertarexistenciabod(existencia.cantidad, existencia.producto, existencia.bodega, existencia.marca);
+               
             }
 
         }
@@ -182,6 +285,12 @@ namespace crm
             return datos.ObtenerCatalogo();              //se llama la funcion ObtenerCat
         }
 
+        public System.Data.DataTable consultaexistenciabod()
+        {
+            return datos.ObtenerExistenciaBod();              //se llama la funcion ObtenerCat
+        }
+
+
         public void InsertarAbono(Abono abono)
         {
             if (string.IsNullOrWhiteSpace(abono.id_factura) || string.IsNullOrWhiteSpace(abono.id_cliente) || string.IsNullOrWhiteSpace(Convert.ToString(abono.forma_pago)) || string.IsNullOrWhiteSpace(Convert.ToString(abono.abono)) || string.IsNullOrWhiteSpace(Convert.ToString(abono.fecha)))
@@ -204,6 +313,8 @@ namespace crm
         {
             return datos.ObtenerRegistros2();        //se llama la funcion ObtenerRegistros
         }
+
+        
 
         /*public System.Data.DataTable consultac()
         {

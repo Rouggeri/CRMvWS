@@ -110,6 +110,7 @@
             this.btn_nuevo.Size = new System.Drawing.Size(58, 59);
             this.btn_nuevo.TabIndex = 171;
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_cancelar
             // 
@@ -126,6 +127,7 @@
             this.btn_cancelar.Size = new System.Drawing.Size(56, 59);
             this.btn_cancelar.TabIndex = 176;
             this.btn_cancelar.UseVisualStyleBackColor = true;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_ultimo
             // 
@@ -259,6 +261,7 @@
             this.btn_eliminar.Size = new System.Drawing.Size(58, 59);
             this.btn_eliminar.TabIndex = 174;
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_siguiente
             // 
@@ -335,7 +338,7 @@
             // 
             // txt_cantidad
             // 
-            this.txt_cantidad.Location = new System.Drawing.Point(405, 47);
+            this.txt_cantidad.Location = new System.Drawing.Point(422, 47);
             this.txt_cantidad.Name = "txt_cantidad";
             this.txt_cantidad.Size = new System.Drawing.Size(102, 21);
             this.txt_cantidad.TabIndex = 213;
@@ -390,6 +393,7 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panel1);
             this.Name = "frm_compra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Orden de Compra";
             this.Load += new System.EventHandler(this.frm_compra_Load);
             this.panel1.ResumeLayout(false);

@@ -61,6 +61,8 @@ namespace crm
         private void frm_compra_Load(object sender, EventArgs e)
         {
             llenarprov();
+            txt_cantidad.Enabled = false;
+            txt_cantidad.Clear();
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -73,6 +75,10 @@ namespace crm
             compra.cantidad = Convert.ToInt32(txt_cantidad.Text);
             compra.fecha = txt_ingreso.Text;
             cnegocio.InsertarCompra(compra);
+            txt_cantidad.Clear();
+            txt_prod.Clear();
+            idmarc = 0;
+            idprod = 0;
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -103,6 +109,37 @@ namespace crm
         {
             CapaNegocio fn = new CapaNegocio();
             fn.Ultimo(dgv_compra);
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgv_compra.SelectedRows.Count == 1)
+                {
+                    int id = Convert.ToInt16(dgv_compra.CurrentRow.Cells[0].Value);
+                    negocio n = new negocio();
+                    n.EliminarCompra(id);
+
+                }
+                else
+                    MessageBox.Show("Debe de seleccionar una fila");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            txt_cantidad.Enabled = true;
+            txt_cantidad.Clear();
         }
     }
 }

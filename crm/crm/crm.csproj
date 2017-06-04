@@ -153,6 +153,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="cr_estadistica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_estadistica.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="cr_esta_ventas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cr_esta_ventas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,19 @@
       <DependentUpon>DataSet_Casos.xsd</DependentUpon>
     </Compile>
     <Compile Include="datos.cs" />
+    <Compile Include="ds_estadistica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_estadistica.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dt_estadistica_ventas.cs">
+      <DependentUpon>dt_estadistica_ventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dt_estadistica_ventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dt_estadistica_ventas.xsd</DependentUpon>
+    </Compile>
     <Compile Include="entidades.cs" />
     <Compile Include="Factura.cs">
       <SubType>Form</SubType>
@@ -255,6 +280,7 @@
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Form_Reporte_caso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -266,6 +292,13 @@
     </Compile>
     <Compile Include="Form_Reporte_Negocios.Designer.cs">
       <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
+=======
+    <Compile Include="frmbuscexisbod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmbuscexisbod.Designer.cs">
+      <DependentUpon>frmbuscexisbod.cs</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </Compile>
     <Compile Include="frmbuscexistencia.cs">
       <SubType>Form</SubType>
@@ -387,6 +420,12 @@
     <Compile Include="frm_existencia.Designer.cs">
       <DependentUpon>frm_existencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_informe_estadistico_proyeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_informe_estadistico_proyeccion.Designer.cs">
+      <DependentUpon>frm_informe_estadistico_proyeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_marca.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -440,6 +479,12 @@
     </Compile>
     <Compile Include="frm_pronostico_ventas_secundario.Designer.cs">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_proveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_proveedor.Designer.cs">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_tprecio.cs">
       <SubType>Form</SubType>
@@ -528,6 +573,14 @@
     <EmbeddedResource Include="CotizacionVista.resx">
       <DependentUpon>CotizacionVista.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cr_estadistica.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_estadistica.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cr_esta_ventas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cr_esta_ventas.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuenta.resx">
       <DependentUpon>Cuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -588,11 +641,16 @@
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Form_Reporte_caso.resx">
       <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Reporte_Negocios.resx">
       <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmbuscexisbod.resx">
+      <DependentUpon>frmbuscexisbod.cs</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexistencia.resx">
       <DependentUpon>frmbuscexistencia.cs</DependentUpon>
@@ -657,6 +715,9 @@
     <EmbeddedResource Include="frm_existencia.resx">
       <DependentUpon>frm_existencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_informe_estadistico_proyeccion.resx">
+      <DependentUpon>frm_informe_estadistico_proyeccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_marca.resx">
       <DependentUpon>frm_marca.cs</DependentUpon>
     </EmbeddedResource>
@@ -686,6 +747,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_pronostico_ventas_secundario.resx">
       <DependentUpon>frm_pronostico_ventas_secundario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_proveedor.resx">
+      <DependentUpon>frm_proveedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_tprecio.resx">
       <DependentUpon>frm_tprecio.cs</DependentUpon>
@@ -755,6 +819,7 @@
     <None Include="crmbdDataSet.xss">
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
     <None Include="DataSetReporteNegocios.xsc">
       <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
     </None>
@@ -776,6 +841,29 @@
     </None>
     <None Include="DataSet_Casos.xss">
       <DependentUpon>DataSet_Casos.xsd</DependentUpon>
+=======
+    <None Include="ds_estadistica.xsc">
+      <DependentUpon>ds_estadistica.xsd</DependentUpon>
+    </None>
+    <None Include="ds_estadistica.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_estadistica.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_estadistica.xss">
+      <DependentUpon>ds_estadistica.xsd</DependentUpon>
+    </None>
+    <None Include="dt_estadistica_ventas.xsc">
+      <DependentUpon>dt_estadistica_ventas.xsd</DependentUpon>
+    </None>
+    <None Include="dt_estadistica_ventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dt_estadistica_ventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dt_estadistica_ventas.xss">
+      <DependentUpon>dt_estadistica_ventas.xsd</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </None>
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">

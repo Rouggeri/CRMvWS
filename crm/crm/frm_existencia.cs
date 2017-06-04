@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FuncionesNavegador;
+using System.Data.Odbc;
 
 namespace crm
 {
@@ -24,6 +25,7 @@ namespace crm
         Int32 idproveedor;
         Int32 cantidad;
         String fecha;
+        String producto;
 
 
 
@@ -109,21 +111,27 @@ namespace crm
 
         private void guardarnuevo()
         {
-            entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
-            negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
-            existencia.cantidad = Convert.ToInt32(txt_cantidad.Text); //Llenamos el objeto persona con la informacion de los cuadros de texto/
-            existencia.producto = idprod;
-            existencia.marca = idmarc;
-            existencia.bodega = Convert.ToInt32(cbo_bodega.SelectedIndex + 1);
-            existencia.ingreso = Convert.ToString(DateTime.Today);
-            existencia.proveedor = Convert.ToInt32(cbo_proveedor.SelectedIndex + 1);
-            cnegocio.InsertarExistencia(existencia);
+            try
+            {
+                entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
+                negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
+                datos cdatos = new crm.datos();
+                existencia.cantidad = Convert.ToInt32(txt_cantidad.Text); //Llenamos el objeto persona con la informacion de los cuadros de texto/
+                existencia.producto = idprod;
+                existencia.marca = idmarc;
+                existencia.bodega = Convert.ToInt32(cbo_bodega.SelectedIndex + 1);
+                existencia.ingreso = Convert.ToString(DateTime.Today);
+                existencia.proveedor = Convert.ToInt32(cbo_proveedor.SelectedIndex + 1);
+                cnegocio.InsertarExistencia(existencia);
+                cdatos.insertarexistenciabod(existencia.producto, existencia.marca, existencia.bodega, existencia.cantidad);
+            }catch { MessageBox.Show("Debe llenar todos los campos"); }
         }
 
         private void guardarexistente()
         {
             entidades.Existencia existencia = new entidades.Existencia();  //Creamos un objeto de la capa de Entidades para poder acceder a sus objetos
             negocio cnegocio = new negocio();                       //Creamos un objeto de la capa de negocio para poder acceder a sus funciones
+            datos cdatos = new datos();
             existencia.codigo = txt_orden.Text;
             existencia.cantidad = cantidad; //Llenamos el objeto persona con la informacion de los cuadros de texto/
             existencia.producto = idproducto;
@@ -132,6 +140,10 @@ namespace crm
             existencia.ingreso = fecha;
             existencia.proveedor = idproveedor;
             cnegocio.InsertarExistencia(existencia);
+            cdatos.insertarexistenciabod(existencia.producto, existencia.marca, existencia.bodega, existencia.cantidad);
+
+
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -143,15 +155,13 @@ namespace crm
                 btn_borden.Enabled = true;
                 cbo_bodega.Enabled = true;
 
-                guardarexistente();
-                            
-
+                guardarexistente();                           
             }
 
             else
                         if (check_nuevo.Checked) {
 
-                txt_ingreso.Enabled = true;
+                //txt_ingreso.Enabled = true;
                 txt_prod.Enabled = true;
                 btn_bproducto.Enabled = true;
                 cbo_proveedor.Enabled = true;
@@ -181,8 +191,6 @@ namespace crm
         {
             try
             {
-
-
                 frmbuscproducto buscl = new frmbuscproducto();
                 buscl.ShowDialog();
 
@@ -235,16 +243,17 @@ namespace crm
         
         private void btn_borden_Click(object sender, EventArgs e)
         {
+            txt_cantidad.Text = null;            
             existente();
         }
 
         public entidades.Orden clsord { get; set; }
+        public entidades.Proveedor clsprov { get; set; }
         private void existente()
         {
             try
             {
-
-
+                cbo_proveedor.DataSource = null;
                 frmbuscorden busco = new frmbuscorden();
                 busco.ShowDialog();
 
@@ -261,14 +270,23 @@ namespace crm
                     cantidad = busco.busq.cantidad;
                     fecha = Convert.ToString(DateTime.Today);
 
-                    /*MessageBox.Show(Convert.ToString(idcompra));
-                    MessageBox.Show(Convert.ToString(idproducto));
-                    MessageBox.Show(Convert.ToString(idmarca));
-                    MessageBox.Show(Convert.ToString(idproveedor));
-                    MessageBox.Show(Convert.ToString(cantidad));
-                    MessageBox.Show(Convert.ToString(fecha));*/
+                    txt_cantidad.Text = Convert.ToString(cantidad);
+                    
+                    datos d = new crm.datos();
+                    clsprov = datos.Obteneridprov(idproveedor);
+                    //cbo_proveedor.Enabled = true;
+                    cbo_proveedor.Items.Add(clsprov.nombre);
+                    //cbo_proveedor. = clsprov.nombre;
+                    
 
-                }
+        /*MessageBox.Show(Convert.ToString(idcompra));
+        MessageBox.Show(Convert.ToString(idproducto));
+        MessageBox.Show(Convert.ToString(idmarca));
+        MessageBox.Show(Convert.ToString(idproveedor));
+        MessageBox.Show(Convert.ToString(cantidad));
+        MessageBox.Show(Convert.ToString(fecha));*/
+
+    }
 
             }
             catch (Exception ex)
@@ -281,6 +299,7 @@ namespace crm
         private void check_categoria_CheckedChanged(object sender, EventArgs e)
         {
             llenarprov();
+            txt_orden.Clear();
         }
 
         private void btn_anterior_Click(object sender, EventArgs e)
@@ -305,6 +324,12 @@ namespace crm
         {
             CapaNegocio fn = new CapaNegocio();
             fn.Ultimo(dgv_existencia);
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            frmbuscexisbod existencia = new frmbuscexisbod();
+            existencia.Show();
         }
     }
 }

@@ -41,7 +41,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(72, 53);
+            this.label3.Location = new System.Drawing.Point(108, 82);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 21);
             this.label3.TabIndex = 18;
@@ -49,18 +50,20 @@
             // 
             // txt_bien
             // 
-            this.txt_bien.Location = new System.Drawing.Point(155, 56);
+            this.txt_bien.Location = new System.Drawing.Point(232, 86);
+            this.txt_bien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_bien.Name = "txt_bien";
-            this.txt_bien.Size = new System.Drawing.Size(199, 20);
+            this.txt_bien.Size = new System.Drawing.Size(296, 26);
             this.txt_bien.TabIndex = 22;
             // 
             // btn_buscbien
             // 
             this.btn_buscbien.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscbien.BackgroundImage")));
             this.btn_buscbien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscbien.Location = new System.Drawing.Point(371, 56);
+            this.btn_buscbien.Location = new System.Drawing.Point(556, 86);
+            this.btn_buscbien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_buscbien.Name = "btn_buscbien";
-            this.btn_buscbien.Size = new System.Drawing.Size(29, 23);
+            this.btn_buscbien.Size = new System.Drawing.Size(44, 35);
             this.btn_buscbien.TabIndex = 23;
             this.btn_buscbien.UseVisualStyleBackColor = true;
             this.btn_buscbien.Click += new System.EventHandler(this.btn_buscbien_Click);
@@ -68,9 +71,10 @@
             // dgv_bien
             // 
             this.dgv_bien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_bien.Location = new System.Drawing.Point(76, 126);
+            this.dgv_bien.Location = new System.Drawing.Point(114, 194);
+            this.dgv_bien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_bien.Name = "dgv_bien";
-            this.dgv_bien.Size = new System.Drawing.Size(484, 150);
+            this.dgv_bien.Size = new System.Drawing.Size(726, 231);
             this.dgv_bien.TabIndex = 26;
             // 
             // btn_agregar
@@ -82,25 +86,27 @@
             this.btn_agregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btn_agregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_agregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_agregar.Location = new System.Drawing.Point(502, 56);
-            this.btn_agregar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_agregar.Location = new System.Drawing.Point(753, 86);
+            this.btn_agregar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_agregar.Name = "btn_agregar";
-            this.btn_agregar.Size = new System.Drawing.Size(58, 59);
+            this.btn_agregar.Size = new System.Drawing.Size(87, 91);
             this.btn_agregar.TabIndex = 173;
             this.btn_agregar.UseVisualStyleBackColor = true;
             this.btn_agregar.Click += new System.EventHandler(this.btn_agregar_Click_1);
             // 
             // frmbuscproducto
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 305);
+            this.ClientSize = new System.Drawing.Size(1068, 469);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.dgv_bien);
             this.Controls.Add(this.btn_buscbien);
             this.Controls.Add(this.txt_bien);
             this.Controls.Add(this.label3);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmbuscproducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Buscar Producto";
             this.Load += new System.EventHandler(this.frmbuscproducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_bien)).EndInit();
