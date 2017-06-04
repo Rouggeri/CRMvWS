@@ -414,5 +414,12 @@ namespace crm
 
             dgv_neg.Columns[3].GroupIndex = 1;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_Reporte_Negocios r = new Form_Reporte_Negocios();
+            r.dataGridView1.DataSource = OpBD.SeleccionarNegocios();
+            r.Show();
+        }
     }
 }

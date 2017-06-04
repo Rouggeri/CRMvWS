@@ -48,6 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.Designer.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -74,6 +78,7 @@
     <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="FuncionesNavegador">
       <HintPath>..\..\dll-navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
     </Reference>
@@ -88,6 +93,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -151,6 +158,16 @@
     </Compile>
     <Compile Include="Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetReporteNegocios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Casos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
     </Compile>
     <Compile Include="datos.cs" />
     <Compile Include="entidades.cs" />
@@ -237,6 +254,18 @@
     </Compile>
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reporte_caso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reporte_caso.Designer.cs">
+      <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reporte_Negocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reporte_Negocios.Designer.cs">
+      <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmbuscexistencia.cs">
       <SubType>Form</SubType>
@@ -470,6 +499,18 @@
     <Compile Include="prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCasos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCasos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteNegocios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteNegocios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -546,6 +587,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reporte_caso.resx">
+      <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reporte_Negocios.resx">
+      <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexistencia.resx">
       <DependentUpon>frmbuscexistencia.cs</DependentUpon>
@@ -678,6 +725,14 @@
     <EmbeddedResource Include="prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCasos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCasos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteNegocios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteNegocios.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="BaseDatosCalendarioDataSet.xsc">
       <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
     </None>
@@ -699,6 +754,28 @@
     </None>
     <None Include="crmbdDataSet.xss">
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReporteNegocios.xsc">
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReporteNegocios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReporteNegocios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReporteNegocios.xss">
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Casos.xsc">
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Casos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Casos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Casos.xss">
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
@@ -759,6 +836,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -21,7 +21,8 @@ namespace crm
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            pb_hsc.BackgroundImage = Image.FromFile("crm_logo.png");
+            pb_hsc.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void btn_logear_Click(object sender, EventArgs e)

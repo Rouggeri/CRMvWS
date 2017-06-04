@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.Odbc;
 using System.Windows.Forms;
+using seguridad;
 
 
 namespace crm
@@ -432,24 +433,110 @@ namespace crm
 
         public  int InsertarCategoria(string nombre)
         {
+
+            OdbcConnection con = seguridad.Conexion.ConexionPermisos();
+            OdbcTransaction trans = con.BeginTransaction();
+            OdbcCommand comando = con.CreateCommand();
+            comando.Transaction = trans;
+            comando.Connection = con;
+            // OdbcCommand comando = new OdbcCommand("set autocommit = 0;", con);
+            // comando.ExecuteNonQuery();
+
+            //  OdbcCommand comandostart = new OdbcCommand("start transaction;", con);
+            // comandostart.ExecuteNonQuery();
+            try
+            {
+                comando.CommandText = "insert into categoria_neg(id_cat, nombre_cat, estado) values ( null ,'" + nombre + "','activo')";
+                comando.ExecuteNonQuery();
+                comando.CommandText = "insert into bitacora(hora,fecha,usuario,descripcion,accion,tabla,ip) values(current_time(),curdate(),'"+seguridad.Conexion.User+"','insercion de categoria de negocio','insercion','categoria_neg','192.168.56.8')";
+                comando.ExecuteNonQuery();
+
+                trans.Commit();
+                MessageBox.Show("hice commit");
+                return 1;
+            }
+            catch
+               {
+                trans.Rollback();
+                return 0;
+               }
+
+           // int res_ic = InsercionDeCategoria(nombre);
+            //if(res_ic == 1)
+            //{
+              //  int res_rb = RegistroBitacora("Insert", "Registro de categoria: " + nombre, "categoria_neg");
+                //if(res_rb == 1)
+                //{
+                  //  OdbcCommand comandocom = new OdbcCommand("commit;", con);
+                    //comandocom.ExecuteNonQuery();
+
+                    //OdbcCommand comando2 = new OdbcCommand("set autocommit = 1;", con);
+                    //comando2.ExecuteNonQuery();
+                    //return 1;
+                //}
+                //else
+                //{
+                  //  MessageBox.Show("ups rollback");
+                    //OdbcCommand comandorol = new OdbcCommand("rollback;", con);
+                    //comandorol.ExecuteNonQuery();
+
+                    //OdbcCommand comando3 = new OdbcCommand("set autocommit = 1;", con);
+                    //comando3.ExecuteNonQuery();
+                   // return 0;
+                //}
+           // }
+            //else
+              //{
+                
+                //return 0;
+              //}
+         
+                         
+                
+         
+        }
+
+        public int InsercionDeCategoria(string nombre)
+        {
             try
             {
 
-                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                OdbcConnection con = seguridad.Conexion.ConexionPermisos();
                 string query = "insert into categoria_neg(id_cat, nombre_cat, estado)" +
                    " values ( null ,'" + nombre + "','activo')";
                 OdbcCommand cmd = new OdbcCommand(query, con);
                 cmd.ExecuteNonQuery();
-                try
-                {
-                    bita.Insertar("Registro de categoria: " + nombre, "categoria_neg");
-                }
-                catch { MessageBox.Show("Error en bitacora"); }
-
                 con.Close();
                 return 1;
             }
             catch { return 0; }
+        }
+
+        public int RegistroBitacora(string accion, string descrip, string tabla)
+        {
+            try
+            {
+                //bita.Insertar(registro,tabla);
+               
+                ClaseTomaIp ip = new ClaseTomaIp();
+                string localIP = ip.direccion();
+             
+              
+                    OdbcConnection con = seguridad.Conexion.ConexionPermisos();
+                    string consulta = "select registraroperacion('" + seguridad.Conexion.User + "', '"+accion+" ', '" + descrip + "', '" + tabla + "','" + localIP + "') ";
+                    OdbcCommand comando = new OdbcCommand(consulta, con);
+                    object resultado = comando.ExecuteScalar();
+                    if (Convert.ToInt16(resultado) == 1) //esto nos indica que la validaciòn ha sido correcta por parte de la funciòn almacenada
+                    { 
+
+                    return 1;
+
+                }
+                else { return 0; }
+             }
+            catch { return 0; }
+
+            
         }
 
         public int InsertarNota(string nota, string id_negocio, string titulo)

@@ -301,5 +301,12 @@ namespace crm
 
             gv_casos.Columns[6].GroupIndex = 1;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form_Reporte_caso f = new Form_Reporte_caso();
+            f.dataGridView1.DataSource = OpBD.SeleccionarCasos();
+            f.Show();
+        }
     }
 }
