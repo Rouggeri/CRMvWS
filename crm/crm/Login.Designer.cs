@@ -40,9 +40,9 @@
             // pb_hsc
             // 
             this.pb_hsc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pb_hsc.Location = new System.Drawing.Point(92, 41);
+            this.pb_hsc.Location = new System.Drawing.Point(69, 42);
             this.pb_hsc.Name = "pb_hsc";
-            this.pb_hsc.Size = new System.Drawing.Size(146, 140);
+            this.pb_hsc.Size = new System.Drawing.Size(179, 143);
             this.pb_hsc.TabIndex = 17;
             this.pb_hsc.TabStop = false;
             // 

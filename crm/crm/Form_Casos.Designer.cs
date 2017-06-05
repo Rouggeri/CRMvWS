@@ -69,7 +69,6 @@
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btn_nuevo);
             this.panel2.Controls.Add(this.btn_cancelar);
@@ -82,18 +81,20 @@
             this.panel2.Controls.Add(this.btn_editar);
             this.panel2.Controls.Add(this.btn_eliminar);
             this.panel2.Controls.Add(this.btn_siguiente);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // button2
             // 
-            resources.ApplyResources(this.button2, "button2");
             this.button2.BackgroundImage = global::crm.Properties.Resources.imprimir1;
+            resources.ApplyResources(this.button2, "button2");
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.button2.Name = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_nuevo
             // 
@@ -216,18 +217,6 @@
             // dgv_casos
             // 
             resources.ApplyResources(this.dgv_casos, "dgv_casos");
-            this.dgv_casos.EmbeddedNavigator.AccessibleDescription = resources.GetString("dgv_casos.EmbeddedNavigator.AccessibleDescription");
-            this.dgv_casos.EmbeddedNavigator.AccessibleName = resources.GetString("dgv_casos.EmbeddedNavigator.AccessibleName");
-            this.dgv_casos.EmbeddedNavigator.AllowHtmlTextInToolTip = ((DevExpress.Utils.DefaultBoolean)(resources.GetObject("dgv_casos.EmbeddedNavigator.AllowHtmlTextInToolTip")));
-            this.dgv_casos.EmbeddedNavigator.Anchor = ((System.Windows.Forms.AnchorStyles)(resources.GetObject("dgv_casos.EmbeddedNavigator.Anchor")));
-            this.dgv_casos.EmbeddedNavigator.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dgv_casos.EmbeddedNavigator.BackgroundImage")));
-            this.dgv_casos.EmbeddedNavigator.BackgroundImageLayout = ((System.Windows.Forms.ImageLayout)(resources.GetObject("dgv_casos.EmbeddedNavigator.BackgroundImageLayout")));
-            this.dgv_casos.EmbeddedNavigator.ImeMode = ((System.Windows.Forms.ImeMode)(resources.GetObject("dgv_casos.EmbeddedNavigator.ImeMode")));
-            this.dgv_casos.EmbeddedNavigator.MaximumSize = ((System.Drawing.Size)(resources.GetObject("dgv_casos.EmbeddedNavigator.MaximumSize")));
-            this.dgv_casos.EmbeddedNavigator.TextLocation = ((DevExpress.XtraEditors.NavigatorButtonsTextLocation)(resources.GetObject("dgv_casos.EmbeddedNavigator.TextLocation")));
-            this.dgv_casos.EmbeddedNavigator.ToolTip = resources.GetString("dgv_casos.EmbeddedNavigator.ToolTip");
-            this.dgv_casos.EmbeddedNavigator.ToolTipIconType = ((DevExpress.Utils.ToolTipIconType)(resources.GetObject("dgv_casos.EmbeddedNavigator.ToolTipIconType")));
-            this.dgv_casos.EmbeddedNavigator.ToolTipTitle = resources.GetString("dgv_casos.EmbeddedNavigator.ToolTipTitle");
             this.dgv_casos.MainView = this.gv_casos;
             this.dgv_casos.Name = "dgv_casos";
             this.dgv_casos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -239,13 +228,8 @@
             this.gv_casos.Appearance.ColumnFilterButton.BackColor = ((System.Drawing.Color)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.BackColor")));
             this.gv_casos.Appearance.ColumnFilterButton.BackColor2 = ((System.Drawing.Color)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.BackColor2")));
             this.gv_casos.Appearance.ColumnFilterButton.BorderColor = ((System.Drawing.Color)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.BorderColor")));
-            this.gv_casos.Appearance.ColumnFilterButton.FontSizeDelta = ((int)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.FontSizeDelta")));
-            this.gv_casos.Appearance.ColumnFilterButton.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.FontStyleDelta")));
-            this.gv_casos.Appearance.ColumnFilterButton.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.GradientMode")));
-            this.gv_casos.Appearance.ColumnFilterButton.Image = ((System.Drawing.Image)(resources.GetObject("gv_casos.Appearance.ColumnFilterButton.Image")));
             this.gv_casos.Appearance.ColumnFilterButton.Options.UseBackColor = true;
             this.gv_casos.Appearance.ColumnFilterButton.Options.UseBorderColor = true;
-            resources.ApplyResources(this.gv_casos, "gv_casos");
             this.gv_casos.GridControl = this.dgv_casos;
             this.gv_casos.Name = "gv_casos";
             this.gv_casos.OptionsView.RowAutoHeight = true;
@@ -253,33 +237,33 @@
             // 
             // ddb_clientes
             // 
-            resources.ApplyResources(this.ddb_clientes, "ddb_clientes");
             this.ddb_clientes.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
             this.ddb_clientes.DropDownControl = this.popupControlContainer1;
             this.ddb_clientes.Image = ((System.Drawing.Image)(resources.GetObject("ddb_clientes.Image")));
+            resources.ApplyResources(this.ddb_clientes, "ddb_clientes");
             this.ddb_clientes.MenuManager = this.barManager1;
             this.ddb_clientes.Name = "ddb_clientes";
             // 
             // popupControlContainer1
             // 
-            resources.ApplyResources(this.popupControlContainer1, "popupControlContainer1");
             this.popupControlContainer1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.popupControlContainer1.Controls.Add(this.btn_empresa);
             this.popupControlContainer1.Controls.Add(this.btn_clie);
+            resources.ApplyResources(this.popupControlContainer1, "popupControlContainer1");
             this.popupControlContainer1.Manager = this.barManager1;
             this.popupControlContainer1.Name = "popupControlContainer1";
             // 
             // btn_empresa
             // 
-            resources.ApplyResources(this.btn_empresa, "btn_empresa");
             this.btn_empresa.Image = ((System.Drawing.Image)(resources.GetObject("btn_empresa.Image")));
+            resources.ApplyResources(this.btn_empresa, "btn_empresa");
             this.btn_empresa.Name = "btn_empresa";
             this.btn_empresa.Click += new System.EventHandler(this.btn_empresa_Click);
             // 
             // btn_clie
             // 
-            resources.ApplyResources(this.btn_clie, "btn_clie");
             this.btn_clie.Image = ((System.Drawing.Image)(resources.GetObject("btn_clie.Image")));
+            resources.ApplyResources(this.btn_clie, "btn_clie");
             this.btn_clie.Name = "btn_clie";
             this.btn_clie.Click += new System.EventHandler(this.btn_clie_Click);
             // 
@@ -309,51 +293,35 @@
             // 
             // barDockControlTop
             // 
-            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
-            this.barDockControlTop.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlTop.Appearance.FontSizeDelta")));
-            this.barDockControlTop.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlTop.Appearance.FontStyleDelta")));
-            this.barDockControlTop.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlTop.Appearance.GradientMode")));
-            this.barDockControlTop.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlTop.Appearance.Image")));
             this.barDockControlTop.CausesValidation = false;
+            resources.ApplyResources(this.barDockControlTop, "barDockControlTop");
             // 
             // barDockControlBottom
             // 
-            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
-            this.barDockControlBottom.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlBottom.Appearance.FontSizeDelta")));
-            this.barDockControlBottom.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlBottom.Appearance.FontStyleDelta")));
-            this.barDockControlBottom.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlBottom.Appearance.GradientMode")));
-            this.barDockControlBottom.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlBottom.Appearance.Image")));
             this.barDockControlBottom.CausesValidation = false;
+            resources.ApplyResources(this.barDockControlBottom, "barDockControlBottom");
             // 
             // barDockControlLeft
             // 
-            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
-            this.barDockControlLeft.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlLeft.Appearance.FontSizeDelta")));
-            this.barDockControlLeft.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlLeft.Appearance.FontStyleDelta")));
-            this.barDockControlLeft.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlLeft.Appearance.GradientMode")));
-            this.barDockControlLeft.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlLeft.Appearance.Image")));
             this.barDockControlLeft.CausesValidation = false;
+            resources.ApplyResources(this.barDockControlLeft, "barDockControlLeft");
             // 
             // barDockControlRight
             // 
-            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
-            this.barDockControlRight.Appearance.FontSizeDelta = ((int)(resources.GetObject("barDockControlRight.Appearance.FontSizeDelta")));
-            this.barDockControlRight.Appearance.FontStyleDelta = ((System.Drawing.FontStyle)(resources.GetObject("barDockControlRight.Appearance.FontStyleDelta")));
-            this.barDockControlRight.Appearance.GradientMode = ((System.Drawing.Drawing2D.LinearGradientMode)(resources.GetObject("barDockControlRight.Appearance.GradientMode")));
-            this.barDockControlRight.Appearance.Image = ((System.Drawing.Image)(resources.GetObject("barDockControlRight.Appearance.Image")));
             this.barDockControlRight.CausesValidation = false;
+            resources.ApplyResources(this.barDockControlRight, "barDockControlRight");
             // 
             // btn_normal
             // 
-            resources.ApplyResources(this.btn_normal, "btn_normal");
             this.btn_normal.Image = ((System.Drawing.Image)(resources.GetObject("btn_normal.Image")));
+            resources.ApplyResources(this.btn_normal, "btn_normal");
             this.btn_normal.Name = "btn_normal";
             this.btn_normal.Click += new System.EventHandler(this.btn_normal_Click);
             // 
             // btn_cat
             // 
-            resources.ApplyResources(this.btn_cat, "btn_cat");
             this.btn_cat.Image = ((System.Drawing.Image)(resources.GetObject("btn_cat.Image")));
+            resources.ApplyResources(this.btn_cat, "btn_cat");
             this.btn_cat.Name = "btn_cat";
             this.btn_cat.Click += new System.EventHandler(this.btn_cat_Click);
             // 
@@ -364,8 +332,8 @@
             // 
             // btn_abiertos_cerrados
             // 
-            resources.ApplyResources(this.btn_abiertos_cerrados, "btn_abiertos_cerrados");
             this.btn_abiertos_cerrados.Image = ((System.Drawing.Image)(resources.GetObject("btn_abiertos_cerrados.Image")));
+            resources.ApplyResources(this.btn_abiertos_cerrados, "btn_abiertos_cerrados");
             this.btn_abiertos_cerrados.Name = "btn_abiertos_cerrados";
             this.btn_abiertos_cerrados.Click += new System.EventHandler(this.btn_abiertos_cerrados_Click);
             // 

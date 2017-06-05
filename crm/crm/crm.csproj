@@ -171,6 +171,16 @@
     <Compile Include="Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataSetReporteNegocios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Casos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="datos.cs" />
     <Compile Include="ds_estadistica.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -270,11 +280,25 @@
     <Compile Include="Form_inicio.Designer.cs">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Form_Reporte_caso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reporte_caso.Designer.cs">
+      <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Reporte_Negocios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Reporte_Negocios.Designer.cs">
+      <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
+=======
     <Compile Include="frmbuscexisbod.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmbuscexisbod.Designer.cs">
       <DependentUpon>frmbuscexisbod.cs</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </Compile>
     <Compile Include="frmbuscexistencia.cs">
       <SubType>Form</SubType>
@@ -520,6 +544,18 @@
     <Compile Include="prueba.Designer.cs">
       <DependentUpon>prueba.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCasos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteCasos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteNegocios.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReporteNegocios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -605,8 +641,16 @@
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Form_Reporte_caso.resx">
+      <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Reporte_Negocios.resx">
+      <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
+=======
     <EmbeddedResource Include="frmbuscexisbod.resx">
       <DependentUpon>frmbuscexisbod.cs</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexistencia.resx">
       <DependentUpon>frmbuscexistencia.cs</DependentUpon>
@@ -745,6 +789,14 @@
     <EmbeddedResource Include="prueba.resx">
       <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCasos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteCasos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteNegocios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReporteNegocios.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="BaseDatosCalendarioDataSet.xsc">
       <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>
     </None>
@@ -767,6 +819,29 @@
     <None Include="crmbdDataSet.xss">
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
+    <None Include="DataSetReporteNegocios.xsc">
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReporteNegocios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReporteNegocios.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReporteNegocios.xss">
+      <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Casos.xsc">
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Casos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Casos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Casos.xss">
+      <DependentUpon>DataSet_Casos.xsd</DependentUpon>
+=======
     <None Include="ds_estadistica.xsc">
       <DependentUpon>ds_estadistica.xsd</DependentUpon>
     </None>
@@ -788,6 +863,7 @@
     </None>
     <None Include="dt_estadistica_ventas.xss">
       <DependentUpon>dt_estadistica_ventas.xsd</DependentUpon>
+>>>>>>> 95e531627eb7fa95682c146ee85b166696baeed0
     </None>
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
