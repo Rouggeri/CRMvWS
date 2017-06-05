@@ -73,3 +73,4 @@ C:\CRMvWS\CRMvWS\crm\crm\obj\Debug\crm.frm_configurar_idioma.en.resources
 C:\CRMvWS\CRMvWS\crm\crm\obj\Debug\crm.frm_NuevoCaso.en.resources
 C:\CRMvWS\CRMvWS\crm\crm\obj\Debug\crm.csproj.GenerateResource.Cache
 C:\CRMvWS\CRMvWS\crm\crm\obj\Debug\crm.exe.licenses
+C:\CRMvWS\crm\crm\bin\Debug\crm.exe.config

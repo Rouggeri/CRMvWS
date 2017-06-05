@@ -42,21 +42,20 @@
             this.btn_editar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_siguiente = new System.Windows.Forms.Button();
-            this.btn_buscarCliente = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.dtpFechaT = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.dtpFechaI = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.Modificacion = new DevExpress.XtraEditors.GroupControl();
+            this.ModificacionControl = new DevExpress.XtraEditors.GroupControl();
             this.txt_codigoTemporal = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CotizacionVista)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Modificacion)).BeginInit();
-            this.Modificacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ModificacionControl)).BeginInit();
+            this.ModificacionControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgv_CotizacionVista
@@ -185,6 +184,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(58, 59);
             this.btn_buscar.TabIndex = 175;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_primero
             // 
@@ -268,16 +268,6 @@
             this.btn_siguiente.TabIndex = 179;
             this.btn_siguiente.UseVisualStyleBackColor = true;
             // 
-            // btn_buscarCliente
-            // 
-            this.btn_buscarCliente.Location = new System.Drawing.Point(27, 23);
-            this.btn_buscarCliente.Name = "btn_buscarCliente";
-            this.btn_buscarCliente.Size = new System.Drawing.Size(75, 23);
-            this.btn_buscarCliente.TabIndex = 212;
-            this.btn_buscarCliente.Text = "BUSCAR";
-            this.btn_buscarCliente.UseVisualStyleBackColor = true;
-            this.btn_buscarCliente.Click += new System.EventHandler(this.btn_buscarCliente_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -293,6 +283,7 @@
             this.txtCliente.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCliente.Location = new System.Drawing.Point(167, 26);
             this.txtCliente.Name = "txtCliente";
+            this.txtCliente.ReadOnly = true;
             this.txtCliente.Size = new System.Drawing.Size(163, 21);
             this.txtCliente.TabIndex = 207;
             // 
@@ -310,9 +301,9 @@
             this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(33, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(36, 13);
             this.label2.TabIndex = 205;
-            this.label2.Text = "Telefono";
+            this.label2.Text = "Total";
             // 
             // label9
             // 
@@ -324,13 +315,14 @@
             this.label9.TabIndex = 210;
             this.label9.Text = "Fecha Limite";
             // 
-            // txtTelefono
+            // txtTotal
             // 
-            this.txtTelefono.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(95, 50);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(163, 21);
-            this.txtTelefono.TabIndex = 208;
+            this.txtTotal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(95, 50);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(163, 21);
+            this.txtTotal.TabIndex = 208;
             // 
             // dtpFechaI
             // 
@@ -350,28 +342,27 @@
             this.label3.TabIndex = 206;
             this.label3.Text = "Fecha Cotizacion";
             // 
-            // Modificacion
+            // ModificacionControl
             // 
-            this.Modificacion.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Modificacion.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
-            this.Modificacion.AppearanceCaption.Options.UseFont = true;
-            this.Modificacion.AppearanceCaption.Options.UseForeColor = true;
-            this.Modificacion.CaptionImageUri.Uri = "AlignJustify";
-            this.Modificacion.Controls.Add(this.txt_codigoTemporal);
-            this.Modificacion.Controls.Add(this.dtpFechaI);
-            this.Modificacion.Controls.Add(this.btn_buscarCliente);
-            this.Modificacion.Controls.Add(this.label3);
-            this.Modificacion.Controls.Add(this.label1);
-            this.Modificacion.Controls.Add(this.txtTelefono);
-            this.Modificacion.Controls.Add(this.txtCliente);
-            this.Modificacion.Controls.Add(this.label9);
-            this.Modificacion.Controls.Add(this.dtpFechaT);
-            this.Modificacion.Controls.Add(this.label2);
-            this.Modificacion.Location = new System.Drawing.Point(61, 97);
-            this.Modificacion.Name = "Modificacion";
-            this.Modificacion.Size = new System.Drawing.Size(630, 82);
-            this.Modificacion.TabIndex = 213;
-            this.Modificacion.Text = "Modificacion";
+            this.ModificacionControl.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModificacionControl.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.ModificacionControl.AppearanceCaption.Options.UseFont = true;
+            this.ModificacionControl.AppearanceCaption.Options.UseForeColor = true;
+            this.ModificacionControl.CaptionImageUri.Uri = "AlignJustify";
+            this.ModificacionControl.Controls.Add(this.txt_codigoTemporal);
+            this.ModificacionControl.Controls.Add(this.dtpFechaI);
+            this.ModificacionControl.Controls.Add(this.label3);
+            this.ModificacionControl.Controls.Add(this.label1);
+            this.ModificacionControl.Controls.Add(this.txtTotal);
+            this.ModificacionControl.Controls.Add(this.txtCliente);
+            this.ModificacionControl.Controls.Add(this.label9);
+            this.ModificacionControl.Controls.Add(this.dtpFechaT);
+            this.ModificacionControl.Controls.Add(this.label2);
+            this.ModificacionControl.Location = new System.Drawing.Point(61, 97);
+            this.ModificacionControl.Name = "ModificacionControl";
+            this.ModificacionControl.Size = new System.Drawing.Size(630, 82);
+            this.ModificacionControl.TabIndex = 213;
+            this.ModificacionControl.Text = "Modificacion";
             // 
             // txt_codigoTemporal
             // 
@@ -386,16 +377,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(761, 489);
-            this.Controls.Add(this.Modificacion);
+            this.Controls.Add(this.ModificacionControl);
             this.Controls.Add(this.dgv_CotizacionVista);
             this.Controls.Add(this.panel2);
             this.Name = "CotizacionVista";
             this.Text = "CotizacionVista";
             ((System.ComponentModel.ISupportInitialize)(this.dgv_CotizacionVista)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Modificacion)).EndInit();
-            this.Modificacion.ResumeLayout(false);
-            this.Modificacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ModificacionControl)).EndInit();
+            this.ModificacionControl.ResumeLayout(false);
+            this.ModificacionControl.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -415,16 +406,15 @@
         private System.Windows.Forms.Button btn_editar;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Button btn_siguiente;
-        private System.Windows.Forms.Button btn_buscarCliente;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.DateTimePicker dtpFechaT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label9;
-        public System.Windows.Forms.TextBox txtTelefono;
+        public System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.DateTimePicker dtpFechaI;
         private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.GroupControl Modificacion;
+        private DevExpress.XtraEditors.GroupControl ModificacionControl;
         private System.Windows.Forms.TextBox txt_codigoTemporal;
     }
 }

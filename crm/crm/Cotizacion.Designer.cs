@@ -32,6 +32,8 @@
             this.dgvCotizacion = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +62,26 @@
             this.button1 = new System.Windows.Forms.Button();
             this.ClienteData = new DevExpress.XtraEditors.GroupControl();
             this.txt_tipo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.btn_buscarCliente = new System.Windows.Forms.Button();
+            this.lbl_codigoAuto = new System.Windows.Forms.Label();
+            this.ControlProducto = new DevExpress.XtraEditors.GroupControl();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmb_marca = new System.Windows.Forms.ComboBox();
+            this.txt_precioUnidad = new System.Windows.Forms.TextBox();
+            this.txt_existencia = new System.Windows.Forms.TextBox();
+            this.cmb_bodega = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_cantidad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmb_producto = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txt_codigo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCotizacion)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClienteData)).BeginInit();
             this.ClienteData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ControlProducto)).BeginInit();
+            this.ControlProducto.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCotizacion
@@ -76,12 +92,14 @@
             this.dgvCotizacion.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.descripcion,
+            this.IdMarca,
+            this.Marca,
             this.cantidad,
             this.Precio,
             this.Subtotal});
-            this.dgvCotizacion.Location = new System.Drawing.Point(22, 258);
+            this.dgvCotizacion.Location = new System.Drawing.Point(22, 304);
             this.dgvCotizacion.Name = "dgvCotizacion";
-            this.dgvCotizacion.Size = new System.Drawing.Size(630, 275);
+            this.dgvCotizacion.Size = new System.Drawing.Size(630, 229);
             this.dgvCotizacion.TabIndex = 0;
             this.dgvCotizacion.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCotizacion_CellMouseDoubleClick);
             // 
@@ -94,6 +112,16 @@
             // 
             this.descripcion.HeaderText = "descripcion";
             this.descripcion.Name = "descripcion";
+            // 
+            // IdMarca
+            // 
+            this.IdMarca.HeaderText = "IdMarca";
+            this.IdMarca.Name = "IdMarca";
+            // 
+            // Marca
+            // 
+            this.Marca.HeaderText = "Marca";
+            this.Marca.Name = "Marca";
             // 
             // cantidad
             // 
@@ -168,7 +196,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(388, 113);
+            this.label8.Location = new System.Drawing.Point(513, 56);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 13);
             this.label8.TabIndex = 16;
@@ -177,7 +205,7 @@
             // txt_total
             // 
             this.txt_total.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_total.Location = new System.Drawing.Point(468, 105);
+            this.txt_total.Location = new System.Drawing.Point(478, 76);
             this.txt_total.Name = "txt_total";
             this.txt_total.ReadOnly = true;
             this.txt_total.Size = new System.Drawing.Size(134, 21);
@@ -187,7 +215,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(269, 59);
+            this.label9.Location = new System.Drawing.Point(255, 58);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 19;
@@ -196,7 +224,7 @@
             // dtpFechaT
             // 
             this.dtpFechaT.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaT.Location = new System.Drawing.Point(350, 55);
+            this.dtpFechaT.Location = new System.Drawing.Point(334, 55);
             this.dtpFechaT.Name = "dtpFechaT";
             this.dtpFechaT.Size = new System.Drawing.Size(163, 21);
             this.dtpFechaT.TabIndex = 20;
@@ -235,6 +263,7 @@
             this.btn_nuevo.Size = new System.Drawing.Size(58, 59);
             this.btn_nuevo.TabIndex = 4;
             this.btn_nuevo.UseVisualStyleBackColor = true;
+            this.btn_nuevo.Click += new System.EventHandler(this.btn_nuevo_Click);
             // 
             // btn_cancelar
             // 
@@ -318,6 +347,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(58, 59);
             this.btn_buscar.TabIndex = 175;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // btn_primero
             // 
@@ -404,9 +434,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(149, 99);
+            this.button1.Location = new System.Drawing.Point(316, 74);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 27);
+            this.button1.Size = new System.Drawing.Size(40, 23);
             this.button1.TabIndex = 192;
             this.button1.Text = "ADD";
             this.button1.UseVisualStyleBackColor = true;
@@ -420,43 +450,29 @@
             this.ClienteData.AppearanceCaption.Options.UseForeColor = true;
             this.ClienteData.CaptionImageUri.Uri = "AlignJustify";
             this.ClienteData.Controls.Add(this.txt_tipo);
-            this.ClienteData.Controls.Add(this.label4);
             this.ClienteData.Controls.Add(this.btn_buscarCliente);
             this.ClienteData.Controls.Add(this.label1);
-            this.ClienteData.Controls.Add(this.button1);
             this.ClienteData.Controls.Add(this.txtCliente);
-            this.ClienteData.Controls.Add(this.label8);
-            this.ClienteData.Controls.Add(this.txt_total);
             this.ClienteData.Controls.Add(this.dtpFechaT);
             this.ClienteData.Controls.Add(this.label2);
             this.ClienteData.Controls.Add(this.label9);
             this.ClienteData.Controls.Add(this.txtTelefono);
             this.ClienteData.Controls.Add(this.dtpFechaI);
             this.ClienteData.Controls.Add(this.label3);
-            this.ClienteData.Location = new System.Drawing.Point(22, 113);
+            this.ClienteData.Location = new System.Drawing.Point(22, 97);
             this.ClienteData.Name = "ClienteData";
-            this.ClienteData.Size = new System.Drawing.Size(630, 139);
+            this.ClienteData.Size = new System.Drawing.Size(630, 89);
             this.ClienteData.TabIndex = 193;
-            this.ClienteData.Text = "Client Data";
+            this.ClienteData.Text = "Cliente";
             this.ClienteData.Paint += new System.Windows.Forms.PaintEventHandler(this.ClienteData_Paint);
             // 
             // txt_tipo
             // 
-            this.txt_tipo.Location = new System.Drawing.Point(519, 55);
+            this.txt_tipo.Location = new System.Drawing.Point(503, 55);
             this.txt_tipo.Name = "txt_tipo";
             this.txt_tipo.Size = new System.Drawing.Size(21, 21);
             this.txt_tipo.TabIndex = 205;
             this.txt_tipo.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(26, 113);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
-            this.label4.TabIndex = 204;
-            this.label4.Text = "Buscar Producto";
             // 
             // btn_buscarCliente
             // 
@@ -466,7 +482,140 @@
             this.btn_buscarCliente.TabIndex = 203;
             this.btn_buscarCliente.Text = "BUSCAR";
             this.btn_buscarCliente.UseVisualStyleBackColor = true;
+            this.btn_buscarCliente.Visible = false;
             this.btn_buscarCliente.Click += new System.EventHandler(this.btn_buscarCliente_Click);
+            // 
+            // lbl_codigoAuto
+            // 
+            this.lbl_codigoAuto.AutoSize = true;
+            this.lbl_codigoAuto.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_codigoAuto.Location = new System.Drawing.Point(554, 31);
+            this.lbl_codigoAuto.Name = "lbl_codigoAuto";
+            this.lbl_codigoAuto.Size = new System.Drawing.Size(22, 13);
+            this.lbl_codigoAuto.TabIndex = 232;
+            this.lbl_codigoAuto.Text = "::...";
+            // 
+            // ControlProducto
+            // 
+            this.ControlProducto.AppearanceCaption.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ControlProducto.AppearanceCaption.ForeColor = System.Drawing.Color.Blue;
+            this.ControlProducto.AppearanceCaption.Options.UseFont = true;
+            this.ControlProducto.AppearanceCaption.Options.UseForeColor = true;
+            this.ControlProducto.CaptionImageUri.Uri = "AlignJustify";
+            this.ControlProducto.Controls.Add(this.lbl_codigoAuto);
+            this.ControlProducto.Controls.Add(this.label4);
+            this.ControlProducto.Controls.Add(this.cmb_marca);
+            this.ControlProducto.Controls.Add(this.txt_precioUnidad);
+            this.ControlProducto.Controls.Add(this.txt_existencia);
+            this.ControlProducto.Controls.Add(this.cmb_bodega);
+            this.ControlProducto.Controls.Add(this.button1);
+            this.ControlProducto.Controls.Add(this.label5);
+            this.ControlProducto.Controls.Add(this.txt_cantidad);
+            this.ControlProducto.Controls.Add(this.label8);
+            this.ControlProducto.Controls.Add(this.label7);
+            this.ControlProducto.Controls.Add(this.txt_total);
+            this.ControlProducto.Controls.Add(this.cmb_producto);
+            this.ControlProducto.Controls.Add(this.label6);
+            this.ControlProducto.Controls.Add(this.txt_codigo);
+            this.ControlProducto.Location = new System.Drawing.Point(22, 192);
+            this.ControlProducto.Name = "ControlProducto";
+            this.ControlProducto.Size = new System.Drawing.Size(630, 106);
+            this.ControlProducto.TabIndex = 206;
+            this.ControlProducto.Text = "Producto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(462, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 232;
+            this.label4.Text = "Cotizacion NO:";
+            // 
+            // cmb_marca
+            // 
+            this.cmb_marca.FormattingEnabled = true;
+            this.cmb_marca.Location = new System.Drawing.Point(198, 74);
+            this.cmb_marca.Name = "cmb_marca";
+            this.cmb_marca.Size = new System.Drawing.Size(65, 21);
+            this.cmb_marca.TabIndex = 231;
+            // 
+            // txt_precioUnidad
+            // 
+            this.txt_precioUnidad.Location = new System.Drawing.Point(252, 31);
+            this.txt_precioUnidad.Name = "txt_precioUnidad";
+            this.txt_precioUnidad.ReadOnly = true;
+            this.txt_precioUnidad.Size = new System.Drawing.Size(54, 21);
+            this.txt_precioUnidad.TabIndex = 230;
+            // 
+            // txt_existencia
+            // 
+            this.txt_existencia.Location = new System.Drawing.Point(202, 31);
+            this.txt_existencia.Name = "txt_existencia";
+            this.txt_existencia.ReadOnly = true;
+            this.txt_existencia.Size = new System.Drawing.Size(44, 21);
+            this.txt_existencia.TabIndex = 229;
+            // 
+            // cmb_bodega
+            // 
+            this.cmb_bodega.FormattingEnabled = true;
+            this.cmb_bodega.Location = new System.Drawing.Point(73, 31);
+            this.cmb_bodega.Name = "cmb_bodega";
+            this.cmb_bodega.Size = new System.Drawing.Size(121, 21);
+            this.cmb_bodega.TabIndex = 228;
+            this.cmb_bodega.SelectedIndexChanged += new System.EventHandler(this.cmb_bodega_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 13);
+            this.label5.TabIndex = 227;
+            this.label5.Text = "Bodega";
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.Location = new System.Drawing.Point(269, 74);
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(41, 21);
+            this.txt_cantidad.TabIndex = 226;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(109, 58);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 13);
+            this.label7.TabIndex = 225;
+            this.label7.Text = "Producto";
+            // 
+            // cmb_producto
+            // 
+            this.cmb_producto.FormattingEnabled = true;
+            this.cmb_producto.Location = new System.Drawing.Point(74, 74);
+            this.cmb_producto.Name = "cmb_producto";
+            this.cmb_producto.Size = new System.Drawing.Size(121, 21);
+            this.cmb_producto.TabIndex = 224;
+            this.cmb_producto.SelectedIndexChanged += new System.EventHandler(this.cmb_producto_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(27, 59);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 221;
+            this.label6.Text = "Codigo";
+            // 
+            // txt_codigo
+            // 
+            this.txt_codigo.Location = new System.Drawing.Point(26, 74);
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.ReadOnly = true;
+            this.txt_codigo.Size = new System.Drawing.Size(43, 21);
+            this.txt_codigo.TabIndex = 223;
             // 
             // Cotizacion
             // 
@@ -474,6 +623,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
             this.ClientSize = new System.Drawing.Size(684, 543);
+            this.Controls.Add(this.ControlProducto);
             this.Controls.Add(this.ClienteData);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvCotizacion);
@@ -485,6 +635,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ClienteData)).EndInit();
             this.ClienteData.ResumeLayout(false);
             this.ClienteData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ControlProducto)).EndInit();
+            this.ControlProducto.ResumeLayout(false);
+            this.ControlProducto.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -516,12 +669,26 @@
         public System.Windows.Forms.TextBox txtCliente;
         public System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.Button btn_buscarCliente;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_tipo;
+        private DevExpress.XtraEditors.GroupControl ControlProducto;
+        private System.Windows.Forms.ComboBox cmb_marca;
+        private System.Windows.Forms.TextBox txt_precioUnidad;
+        private System.Windows.Forms.TextBox txt_existencia;
+        private System.Windows.Forms.ComboBox cmb_bodega;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_cantidad;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmb_producto;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txt_codigo;
+        private System.Windows.Forms.Label lbl_codigoAuto;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marca;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
+        private System.Windows.Forms.Label label4;
     }
 }
