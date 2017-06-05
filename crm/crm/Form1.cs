@@ -892,5 +892,11 @@ namespace crm
             frm_proveedor fp = new frm_proveedor();
             fp.Show();
         }
+
+        private void traspasoBodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_traspasobod tr = new frm_traspasobod();
+            tr.Show();
+        }
     }
 }

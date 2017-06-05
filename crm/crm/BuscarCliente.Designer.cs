@@ -31,8 +31,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_buscarCliente = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             this.txt_buscar = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_buscarCliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,6 +65,14 @@
             this.dgv_buscarCliente.TabIndex = 3;
             this.dgv_buscarCliente.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_buscarCliente_CellMouseDoubleClick_1);
             // 
+            // txt_buscar
+            // 
+            this.txt_buscar.Location = new System.Drawing.Point(84, 55);
+            this.txt_buscar.Name = "txt_buscar";
+            this.txt_buscar.Size = new System.Drawing.Size(235, 20);
+            this.txt_buscar.TabIndex = 5;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(119, 442);
@@ -74,14 +82,6 @@
             this.button1.Text = "Crear Cliente";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.Location = new System.Drawing.Point(84, 55);
-            this.txt_buscar.Name = "txt_buscar";
-            this.txt_buscar.Size = new System.Drawing.Size(235, 20);
-            this.txt_buscar.TabIndex = 5;
-            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             // 
             // BuscarCliente
             // 
@@ -105,8 +105,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_buscar;
         public System.Windows.Forms.DataGridView dgv_buscarCliente;
+        private System.Windows.Forms.Button button1;
     }
 }

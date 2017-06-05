@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FuncionesNavegador;
+using System.Data.Odbc;
 
 namespace crm
 {
@@ -78,6 +79,10 @@ namespace crm
             habilitar();
         }
 
+        public Int32 codbodega;
+        public Int32 codproducto;
+        public Int32 codmarca;
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             try
@@ -87,11 +92,45 @@ namespace crm
                 producto.nombre = txt_nombre.Text; //Llenamos el objeto persona con la informacion de los cuadros de texto/
                 producto.descripcion = txt_descripcion.Text;
                 producto.marca = Convert.ToInt32(cbo_marca.SelectedIndex + 1);
+                codmarca = Convert.ToInt32(cbo_marca.SelectedIndex + 1);
                 producto.precio = Convert.ToDouble(txt_precio.Text);
                 producto.categoria = Convert.ToInt32(cbo_cat.SelectedIndex + 1);
                 producto.porcentaje = Convert.ToInt32(txt_comision.Text);
                 cnegocio.InsertarProducto(producto);                                    //Llamamos a la funcion Ninsertar a traves del objeto de la capa de negocio y le enviamos como parametro nuestro objeto persona
-            }catch { MessageBox.Show("Debe llenar todos los campos"); }
+
+                string scad1 = "SELECT max(id_producto) from producto";
+                OdbcCommand mcd1 = new OdbcCommand(scad1, Conexion.ObtenerConexion());
+                OdbcDataReader mdr1 = mcd1.ExecuteReader();
+                while (mdr1.Read())
+                {
+                    codproducto = mdr1.GetInt32(0);
+                }
+
+                string scad3 = "SELECT id_bodega from bodega";
+                OdbcCommand mcd3 = new OdbcCommand(scad3, Conexion.ObtenerConexion());
+                OdbcDataReader mdr3 = mcd3.ExecuteReader();
+
+                while (mdr3.Read())
+                {
+                    codbodega = mdr3.GetInt32(0);
+
+                    try
+                    {
+                        OdbcCommand mySqlComando = new OdbcCommand(
+                        string.Format("INSERT INTO existencia_bodega (id_producto, id_marca, id_bodega, cantidad) values ('{0}','{1}','{2}','0')", codproducto, codmarca, codbodega),
+                        seguridad.Conexion.ObtenerConexionODBC()
+                        );
+                        mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
+                        MessageBox.Show("Insertado existencia");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error de insercion");          //si el try-catch encontro algun error indica mensaje de fracaso
+                    }
+
+                }
+
+            } catch { MessageBox.Show("Debe llenar todos los campos"); }
                 limpiar();
             deshabilitar();
 

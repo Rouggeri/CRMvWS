@@ -14,8 +14,7 @@ namespace Cobros
 {
     public partial class frm_morosos : Form
     {
-        private OdbcDataAdapter OdbcDataAdapter;
-        private OdbcCommand OdbcCommand;
+        private OdbcDataAdapter mySqlDAdAdaptador;
         int conti;
 
         public frm_morosos()
@@ -32,18 +31,18 @@ namespace Cobros
             //MessageBox.Show(nombres);
             try
             {
-                OdbcCommand = new OdbcCommand(
-                     string.Format("SELECT id_cliente, nombres, apellidos, telefono, estado, incidencia FROM tbl_cliente WHERE nombres ='{0}'", nombres),
-                     seguridad.Conexion.ObtenerConexionODBC()
+                OdbcCommand mySqlComando = new OdbcCommand(
+                     string.Format("SELECT id_cliente, nombres, apellidos, telefono, estado, incidencia FROM tbl_cliente WHERE nombres ='" + nombres + "'"),
+                     crm.Conexion.ObtenerConexion()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
-                OdbcDataAdapter = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
-                OdbcDataAdapter.SelectCommand = OdbcCommand;      //ejecutamos el query de consulta
-                OdbcDataAdapter.Fill(fill);                 //poblamos el sqlDataAdaptor con el resultado del query
+                mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                mySqlDAdAdaptador.Fill(fill);                 //poblamos el sqlDataAdaptor con el resultado del query
 
             }
-            catch (Exception Ex)
+            catch (OdbcException Ex)
             {
-                MessageBox.Show("No es posible obtener el cliente", "Error al Realizar la Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(Convert.ToString(Ex));
             }
             dataGridView1.DataSource = fill;
             DataRow dt1 = fill.Rows[0];
@@ -63,6 +62,8 @@ namespace Cobros
         {
             int id_cliente;
             int incidencia;
+            string conepto = "";
+            conepto = textBox4.Text;
             
 
             if (conti == 0)
@@ -77,14 +78,15 @@ namespace Cobros
                 try
                 {
                 
-                    OdbcCommand = new OdbcCommand(
+                    OdbcCommand mySqlComando = new OdbcCommand(
                          string.Format("UPDATE tbl_cliente SET incidencia = '"+incidencia+"' WHERE id_cliente  ='{0}'", id_cliente),
-                         seguridad.Conexion.ObtenerConexionODBC()
+                         crm.Conexion.ObtenerConexion()
                      );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
-                    OdbcDataAdapter = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
-                    OdbcDataAdapter.SelectCommand = OdbcCommand;      //ejecutamos el query de consulta
-                    OdbcDataAdapter.Fill(agrega);                 //poblamos el sqlDataAdaptor con el resultado del query
+                    mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                    mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                    mySqlDAdAdaptador.Fill(agrega);                 //poblamos el sqlDataAdaptor con el resultado del query
                     conti++;
+                    textBox4.Clear();
 
 
                 }
@@ -97,13 +99,13 @@ namespace Cobros
                 {
                     dataGridView1.ClearSelection();
                     DataTable refresca = new DataTable();
-                    OdbcCommand = new OdbcCommand(
+                    OdbcCommand mySqlComando = new OdbcCommand(
                          string.Format("SELECT id_cliente, nombres, apellidos, telefono, estado, incidencia FROM tbl_cliente WHERE id_cliente ='{0}'", id_cliente),
-                         seguridad.Conexion.ObtenerConexionODBC()
+                         crm.Conexion.ObtenerConexion()
                      );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
-                    OdbcDataAdapter = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
-                    OdbcDataAdapter.SelectCommand = OdbcCommand;      //ejecutamos el query de consulta
-                    OdbcDataAdapter.Fill(refresca);                 //poblamos el sqlDataAdaptor con el resultado del query
+                    mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                    mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                    mySqlDAdAdaptador.Fill(refresca);                 //poblamos el sqlDataAdaptor con el resultado del query
                     conti++;
                     dataGridView1.DataSource = refresca;
                 }
@@ -130,13 +132,13 @@ namespace Cobros
             try
             {
 
-                OdbcCommand  = new OdbcCommand(
+                OdbcCommand mySqlComando = new OdbcCommand(
                      string.Format("UPDATE tbl_cliente SET incidencia = '" + resta + "' WHERE id_cliente  ='{0}'", id_cliente),
-                     seguridad.Conexion.ObtenerConexionODBC()
+                     crm.Conexion.ObtenerConexion()
                  );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
-                    OdbcDataAdapter = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
-                    OdbcDataAdapter.SelectCommand = OdbcCommand;      //ejecutamos el query de consulta
-                    OdbcDataAdapter.Fill(agrega);                 //poblamos el sqlDataAdaptor con el resultado del query
+                mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                mySqlDAdAdaptador.Fill(agrega);                 //poblamos el sqlDataAdaptor con el resultado del query
                     conti++;
 
 
@@ -149,17 +151,53 @@ namespace Cobros
                 {
                     dataGridView1.ClearSelection();
                     DataTable refresca = new DataTable();
-                    OdbcCommand  = new OdbcCommand(
+                    OdbcCommand mySqlComando = new OdbcCommand(
                          string.Format("SELECT id_cliente, nombres, apellidos, telefono, estado, incidencia FROM tbl_cliente WHERE id_cliente ='{0}'", id_cliente),
-                         seguridad.Conexion.ObtenerConexionODBC()
+                         crm.Conexion.ObtenerConexion()
                      );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
-                    OdbcDataAdapter = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
-                    OdbcDataAdapter.SelectCommand = OdbcCommand;      //ejecutamos el query de consulta
-                    OdbcDataAdapter.Fill(refresca);                 //poblamos el sqlDataAdaptor con el resultado del query
+                    mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                    mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                    mySqlDAdAdaptador.Fill(refresca);                 //poblamos el sqlDataAdaptor con el resultado del query
                     conti++;
                     dataGridView1.DataSource = refresca;
                 }
           }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string nombres = "";
+            int cont = 0;
+            nombres = textBox1.Text;
+            DataTable fill = new DataTable();
+            //MessageBox.Show(nombres);
+            try
+            {
+                OdbcCommand mySqlComando = new OdbcCommand(
+                     string.Format("SELECT id_cliente, nombres, apellidos, telefono, estado, incidencia FROM tbl_cliente WHERE nombres ='" + nombres + "'"),
+                     crm.Conexion.ObtenerConexion()
+                 );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
+                mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
+                mySqlDAdAdaptador.Fill(fill);                 //poblamos el sqlDataAdaptor con el resultado del query
+
+            }
+            catch (OdbcException Ex)
+            {
+                MessageBox.Show(Convert.ToString(Ex));
+            }
+            dataGridView1.DataSource = fill;
+            DataRow dt1 = fill.Rows[0];
+            //DataColumn dt2 = fill.Columns[5];
+            string incidencia = fill.Rows[0][5].ToString();
+            string id_cliente = Convert.ToString(dt1[0]);
+            textBox2.Text = Convert.ToString(dt1[0]);
+            textBox3.Text = Convert.ToString(incidencia);
+            //MessageBox.Show(Convert.ToString(dt1[0]));
+            //MessageBox.Show(Convert.ToString(incidencia));
+
+            // MessageBox.Show(Convert.ToString(dt2));
+
         }
     }
 }

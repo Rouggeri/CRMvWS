@@ -10,22 +10,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
 
-namespace crm
+namespace Cobros
 {
-    public partial class BALANCE : Form
+    public partial class frm_balance : Form
     {
-        public BALANCE()
+        public frm_balance()
         {
             InitializeComponent();
         }
         public crm.entidades.factura FacturaActual { get; set; }
         private static OdbcCommand mySqlComando;
         private static OdbcDataAdapter mySqlDAdAdaptador;
-        string id_form = "122";
+        public int conti = 0;
+        public int saldof = 0;
+        public int cliente = 0;
+        public int totales = 0;
 
-        private void btn_buscar_Click(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
-            crm.frm_buscarfct BuscarFactura = new crm.frm_buscarfct();
+            /*frm_buscarfct BuscarFactura = new frm_buscarfct();
             BuscarFactura.ShowDialog();
             int result = 0;
             string abono = "";
@@ -48,13 +52,13 @@ namespace crm
                     try
                     {
                         mySqlComando = new OdbcCommand(
-                             string.Format("SELECT SUM(abonos.abono) AS Suma FROM abonos WHERE abonos.id_factura ='"+textBox1.Text+"'"),
+                             string.Format("SELECT SUM(abonos.abono) AS Suma FROM abonos WHERE abonos.id_factura ='" + textBox1.Text + "'"),
                              seguridad.Conexion.ObtenerConexionODBC()
                          );                                                  //se realiza el query para la consulta de todos los registros de la tabla persona           
                         mySqlDAdAdaptador = new OdbcDataAdapter();          //se crea un sqlDataAdaptor 
                         mySqlDAdAdaptador.SelectCommand = mySqlComando;      //ejecutamos el query de consulta
                         mySqlDAdAdaptador.Fill(dtAbono);                 //poblamos el sqlDataAdaptor con el resultado del query
-                        
+
 
                     }
                     catch (Exception Ex)
@@ -89,13 +93,113 @@ namespace crm
                         }
                     }
                 }
+            }*/
+
+
+            if (textBox2.Text != null)
+            {
+                if (conti == 0)
+                {
+                    string cte = "";
+                    cte = textBox2.Text;
+                    int identificador = 0;
+                    DataTable id = new DataTable();
+                    try
+                    {
+                        OdbcCommand mySqlComando = new OdbcCommand(
+                                    string.Format("SELECT id_cliente FROM tbl_cliente WHERE nombres = '" + cte + "'")
+                                    , crm.Conexion.ObtenerConexion()
+                            );
+
+                        mySqlDAdAdaptador = new OdbcDataAdapter();
+                        mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                        mySqlDAdAdaptador.Fill(id);
+                        //dataGridView1.DataSource = id;
+                        DataRow dt1 = id.Rows[0];
+                        identificador = Convert.ToInt32(dt1[0]);
+                        cliente = identificador;
+                        conti++;
+
+                    }
+                    catch (OdbcException exception)
+                    {
+                        MessageBox.Show(Convert.ToString(exception));
+                    }
+                    if (conti != 0)
+                    {
+                        int cta = 0;
+                        DataTable cuenta = new DataTable();
+                        try
+                        {
+                            OdbcCommand mySqlComando = new OdbcCommand(
+                                        string.Format("SELECT SUM(factura_encabezado.total) AS Suma FROM factura_encabezado WHERE id_cliente ='" + identificador + "'")
+                                        , crm.Conexion.ObtenerConexion()
+                                );
+
+                            mySqlDAdAdaptador = new OdbcDataAdapter();
+                            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                            mySqlDAdAdaptador.Fill(cuenta);
+                            //dataGridView1.DataSource = cuenta;
+                            DataRow dt2 = cuenta.Rows[0];
+                            cta = Convert.ToInt32(dt2[0]);
+                            saldof = cta;
+                            textBox3.Text = Convert.ToString(cta);
+                            conti++;
+                        }
+                        catch (OdbcException exception)
+                        {
+                            MessageBox.Show(Convert.ToString(exception));
+                        }
+                    }
+                    if (conti > 1)
+                    {
+                        int abonos = 0;
+                        DataTable abono = new DataTable();
+                        try
+                        {
+                            OdbcCommand mySqlComando = new OdbcCommand(
+                                        string.Format("SELECT SUM(abonos.abono) AS Suma FROM abonos WHERE id_cliente = '" + identificador + "'")
+                                        , crm.Conexion.ObtenerConexion()
+                                );
+
+                            mySqlDAdAdaptador = new OdbcDataAdapter();
+                            mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                            mySqlDAdAdaptador.Fill(abono);
+                            //dataGridView1.DataSource = cuenta;
+                            DataRow dt2 = abono.Rows[0];
+                            abonos = Convert.ToInt32(dt2[0]);
+                            textBox4.Text = Convert.ToString(abonos);
+                            conti++;
+                            
+                            totales = saldof - abonos;
+                            textBox5.Text = Convert.ToString(totales);
+
+                            //textBox4.Text = Convert.ToString(saldof);
+                        }
+                        catch (OdbcException exception)
+                        {
+                            MessageBox.Show(Convert.ToString(exception));
+                        }
+                    }if (totales == 0)
+                    {
+                        textBox6.Text = "Cancelada";
+                    }
+                    else
+                    {
+                        if (totales != 0)
+                        {
+                            textBox6.Text = "Pendiente";
+                        }
+                    }
+                }
             }
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {        }
-
         private void frm_balance_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }

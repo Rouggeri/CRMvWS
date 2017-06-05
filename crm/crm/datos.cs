@@ -232,6 +232,51 @@ namespace crm
             return dtCategoria;
         }
 
+        public static DataTable ObtenerBod1(Int32 producto, Int32 marca)
+        {
+            DataTable dtBod1 = new DataTable();
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                    string.Format("select existencia_bodega.id_bodega, bodega.nombre_bodega from existencia_bodega inner join bodega where id_producto = '{0}' and id_marca = '{1}' and cantidad > '0' and bodega.id_bodega = existencia_bodega.id_bodega",producto, marca),      //query de consultas de categoria
+                    Conexion.ObtenerConexion()              //llamada a clase conexion
+                    );
+                //-------------------------------------------------------------------------//
+                mySqlDAdAdaptador = new OdbcDataAdapter();         //Llenando DataTable Categoria
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                mySqlDAdAdaptador.Fill(dtBod1);
+                //------------------------------------------------------------------------//
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible acceder a los registros en categoria producto");
+            }
+            return dtBod1;
+        }
+
+
+        public static DataTable ObtenerCant1(Int32 producto, Int32 marca, Int32 bod)
+        {
+            DataTable dtCant1 = new DataTable();
+            try
+            {
+                mySqlComando = new OdbcCommand(
+                    string.Format("select cantidad from existencia_bodega where id_producto = '{0}' and id_marca = '{1}' and id_bodega = '{2}'", producto, marca, bod),      //query de consultas de categoria
+                    Conexion.ObtenerConexion()              //llamada a clase conexion
+                    );
+                //-------------------------------------------------------------------------//
+                mySqlDAdAdaptador = new OdbcDataAdapter();         //Llenando DataTable Categoria
+                mySqlDAdAdaptador.SelectCommand = mySqlComando;
+                mySqlDAdAdaptador.Fill(dtCant1);
+                //------------------------------------------------------------------------//
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No es posible acceder a los registros en categoria producto");
+            }
+            return dtCant1;
+        }
+
         public static DataTable ObtenerBod()
         {
             DataTable dtBodega = new DataTable();

@@ -411,6 +411,12 @@
   <data name="ingresoProveedorToolStripMenuItem.Text" xml:space="preserve">
     <value>Ingreso Proveedor</value>
   </data>
+  <data name="traspasoBodegaToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 22</value>
+  </data>
+  <data name="traspasoBodegaToolStripMenuItem.Text" xml:space="preserve">
+    <value>Traspaso Bodega</value>
+  </data>
   <data name="productosToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAABfRJREFUeF7t
@@ -1317,6 +1323,12 @@
   <data name="&gt;&gt;comprasToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;ingresoProveedorToolStripMenuItem.Name" xml:space="preserve">
+    <value>ingresoProveedorToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;ingresoProveedorToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;mantenimientosToolStripMenuItem.Name" xml:space="preserve">
     <value>mantenimientosToolStripMenuItem</value>
   </data>
@@ -1431,10 +1443,10 @@
   <data name="&gt;&gt;empleadoToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ingresoProveedorToolStripMenuItem.Name" xml:space="preserve">
-    <value>ingresoProveedorToolStripMenuItem</value>
+  <data name="&gt;&gt;traspasoBodegaToolStripMenuItem.Name" xml:space="preserve">
+    <value>traspasoBodegaToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;ingresoProveedorToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;traspasoBodegaToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

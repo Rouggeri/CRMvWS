@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Windows.Forms;
 using System.Data;
+using System.Configuration;
 
 
 namespace proyectoUOne
@@ -13,7 +14,7 @@ namespace proyectoUOne
     class CapaDatos
     {
         //-------------------SELVIN TINIGUAR RODRI - 0901 - 13 - 8887 ------------------------
-
+        // ---------------------------- COTIZACIONES -------------------------
         //Insertar Encabezado Cotizacion a base de datos
         public void InsertarCotizacion(string fechaIniciosP, string fechaTerminasP, double totalP, string idClienteP)
         {
@@ -26,11 +27,11 @@ namespace proyectoUOne
         }
 
         //Insertar Detalle Cotizacion a base de datos
-        public void insertar_detalle_cotizacion(int cod_cotizacionP, int cod_productoP, int cantidadP, double precioP, double subtotalP)
+        public void insertar_detalle_cotizacion(int cod_cotizacionP, int cod_productoP, int idMArca, int cantidadP, double precioP, double subtotalP)
         {
             try
             {
-                String query = "insert into cotizacion_detalle(id_cotizacion, id_producto, cantidad, precioUnidad, subtotal, estado) values(" + cod_cotizacionP + "," + cod_productoP + ", " + cantidadP + ","+precioP+"," + subtotalP + ",'ACTIVO')";
+                String query = "insert into cotizacion_detalle(id_detalleCotizacion,id_cotizacion, id_producto, id_marca, cantidad, precioUnidad, subtotal, estado) values(null, " + cod_cotizacionP + "," + cod_productoP + ","+idMArca+" ," + cantidadP + ","+precioP+"," + subtotalP + ",'ACTIVO')";
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcCommand cmd = new OdbcCommand(query, con);
                 cmd.ExecuteNonQuery();
@@ -39,14 +40,16 @@ namespace proyectoUOne
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
         }
+        // ------------------------------------ TERMINA COTIZACIONES -------------------------------------
+        // -------------------------------- FACTURACION -----------------------------------------
 
         ///Insertar Encabezado Factura a base de datos
-        public int GuardarFacturaEncabezado(string fechaP, string formaPagoP, double totalP, int codigoClienteP, string id_empleadoP)
+        public int GuardarFacturaEncabezado(string fechaP, string formaPagoP, double totalP, int codigoClienteP, string id_empleadoP, string IDBodega)
         {
             try
             {
                 int devolver = 0;
-                String cadena = "insert into factura_encabezado(id_factura, fecha, forma_pago, tipo_documento, marca, total, estado, id_cliente, id_empleado_pk) values(null,'"+ fechaP+"','"+formaPagoP+"','FACTURA','X',"+totalP+",'ACTIVO',"+codigoClienteP+", '"+id_empleadoP+"')";
+                String cadena = "insert into factura_encabezado(id_factura, fecha, forma_pago, tipo_documento, marca, total, estado, id_cliente, id_empleado_pk, id_bodega) values(null,'"+ fechaP+"','"+formaPagoP+"','FACTURA','X',"+totalP+",'ACTIVO',"+codigoClienteP+", '"+id_empleadoP+"','"+IDBodega+"')";
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcCommand cmd = new OdbcCommand(cadena, con);
                 devolver = cmd.ExecuteNonQuery();
@@ -58,12 +61,12 @@ namespace proyectoUOne
         }
 
         //Insertar Detalle Factura a base de datos
-        public int insertar_detalle_factura(int codigoFacturaP, int codigoProductoP, int cantidadP, double precioP, double subtotalP)
+        public int insertar_detalle_factura(int codigoFacturaP, int codigoProductoP, int CodigoMarca, int cantidadP, double precioP, double subtotalP)
         {
             try
             {
                 int devolver = 0;
-                String cadena = "insert into detalle_factura(id_factura, id_producto, cantidad, precioUnidad, subtotal, estado) values("+codigoFacturaP+","+codigoProductoP+","+cantidadP+",'"+precioP+"',"+subtotalP+",'ACTIVO')";
+                String cadena = "insert into detalle_factura(id_detalleFactura, id_factura, id_producto, id_marca, cantidad, precioUnidad, subtotal, estado) values(null, "+codigoFacturaP+","+codigoProductoP+","+CodigoMarca+","+cantidadP+",'"+precioP+"',"+subtotalP+",'ACTIVO')";
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 OdbcCommand cmd = new OdbcCommand(cadena, con);
                 devolver = cmd.ExecuteNonQuery();
@@ -73,6 +76,7 @@ namespace proyectoUOne
             catch { return 0; }
 
         }
+        // ------------------------------------------ TERMINA FACTURACION --------------------------------------------
 
        
         //Insertar Cliente a base de datos
@@ -123,43 +127,43 @@ namespace proyectoUOne
         //Consulta Producto TextChanged (Buscar Producto)
         public static DataTable CargaProducto(int constaP, string letraP)
         {
-            /*try
-            {*/
+            try
+            {
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
                 string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca, pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo='" + constaP+"' and p.id_producto like '%"+letraP+"%' or pr.id_tipo='"+constaP+"' and p.nombre like '%"+letraP+"%'";
                 OdbcCommand comando = new OdbcCommand(query, con);
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(dt);
                 con.Close();
                 return dt;
-            /*}
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
-            }*/
+            }
         }
 
         //Consulta Producto cargar Inicio (Buscar Producto)
         public static DataTable CargaProducto2(string constaP)
         {
-            /*try
-            {*/
+            try
+            {
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-            DataTable dt = new DataTable();
-                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca, pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo = '" + constaP+"' ORDER BY p.nombre ASC";
+                DataTable dt = new DataTable();
+                string query = "select p.id_producto, p.nombre, pr.precio, pr.id_bien, pr.id_tipo, pr.id_marca, pe.id_compra FROM producto p INNER JOIN precio pr ON p.id_producto = pr.id_bien INNER JOIN existencia pe ON p.id_producto = pe.id_producto WHERE pr.id_tipo = '"+ constaP+"' ORDER BY p.nombre ASC";
                 OdbcCommand comando = new OdbcCommand(query, con);
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(dt);
                 con.Close();
                 return dt;
-            /*}
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
-            }*/
+            }
         }
 
         //Consulta Codigo y Nombre de Cliente
@@ -300,6 +304,8 @@ namespace proyectoUOne
             }
         }
 
+
+        // ----------------------------- CARGAR COTIZACION ---------------------
         //Consulta Cotizacion_Encabezado Combobox
         public DataTable CargarCotizacion()
         {
@@ -329,7 +335,7 @@ namespace proyectoUOne
             {
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 DataTable dtd = new DataTable();
-                string queryd = "SELECT id_producto, cantidad, precioUnidad, subtotal FROM cotizacion_detalle WHERE id_cotizacion = '"+busquedaP+"'";
+                string queryd = "SELECT d.id_producto, p.nombre, p.id_marca, m.nombre_marca, d.cantidad, d.precioUnidad, d.subtotal FROM cotizacion_detalle d INNER JOIN producto p ON d.id_producto=p.id_producto INNER JOIN marca m ON p.id_marca=m.id_marca WHERE id_cotizacion = '"+busquedaP+"'";
                 OdbcCommand cmdd = new OdbcCommand(queryd, con);
                 OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
                 adapd.Fill(dtd);
@@ -342,7 +348,32 @@ namespace proyectoUOne
                 return null;
             }
         }
+        
+        //consulta de total para factura de cotizacion
+        public static Double ConsultaTotal(string codigoCotiza)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                string queryd = "SELECT total FROM cotizacion_encabezado where id_cotizacion='"+codigoCotiza+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter red = new OdbcDataAdapter(cmdd);
+                DataTable tot = new DataTable();
+                red.Fill(tot);
+                DataRow rows = tot.Rows[0];
+                double codigoObtenido = Convert.ToInt32(rows[0]);
+                con.Close();
+                return codigoObtenido;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error de novato");
+                return 0;
+            }
+        }
+        // --------------------------- TERMINA CARGAR COTIZACION ----------------
 
+            // ---------------------------- CONSULTAR AUTOINCREMENT ---------------
         //Consulta Auto Increment Siguiente Factura
         public static Int32 ConsultaUatoIncrementFactura()
         {
@@ -356,6 +387,7 @@ namespace proyectoUOne
                 red.Fill(tot);
                 DataRow rows = tot.Rows[0];
                 int codigoObtenido = Convert.ToInt32(rows[0]);
+                con.Close();
                 return codigoObtenido;
             }
             catch (System.Exception ex)
@@ -371,13 +403,14 @@ namespace proyectoUOne
             try
             {
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-                string queryd = "select AUTO_INCREMENT from information_schema.TABLES where TABLE_SCHEMA='crmbd' and TABLE_NAME='cotizacion_encabezado';";
+                string queryd = "select AUTO_INCREMENT from information_schema.TABLES where TABLE_SCHEMA='crmb' and TABLE_NAME='cotizacion_encabezado';";
                 OdbcCommand cmdd = new OdbcCommand(queryd, con);
                 OdbcDataAdapter red = new OdbcDataAdapter(cmdd);
                 DataTable tot = new DataTable();
                 red.Fill(tot);
                 DataRow rows = tot.Rows[0];
                 int codigoObtenido = Convert.ToInt32(rows[0]);
+                con.Close();
                 return codigoObtenido;
             }
             catch (System.Exception ex)
@@ -386,28 +419,9 @@ namespace proyectoUOne
                 return 0;
             }
         }
+          //------------------------------ TERMINA CONSULTA AUTOINCREMENT
 
-        //consulta de total para factura de cotizacion
-        public static Double ConsultaTotal(string codigoCotiza)
-        {
-            try
-            {
-                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-                string queryd = "SELECT total FROM cotizacion_encabezado where id_cotizacion='"+codigoCotiza+"'";
-                OdbcCommand cmdd = new OdbcCommand(queryd, con);
-                OdbcDataAdapter red = new OdbcDataAdapter(cmdd);
-                DataTable tot = new DataTable();
-                red.Fill(tot);
-                DataRow rows = tot.Rows[0];
-                double codigoObtenido = Convert.ToInt32(rows[0]);
-                return codigoObtenido;
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error de novato");
-                return 0;
-            }
-        }
+        
 
         //Consutla codigoCliente de Cotizacion
         public static Int32 ConsultacodigoClienteCotizacion(string codigoCotiza)
@@ -422,6 +436,7 @@ namespace proyectoUOne
                 red.Fill(tot);
                 DataRow rows = tot.Rows[0];
                 int codigoObtenido = Convert.ToInt32(rows[0]);
+                con.Close();
                 return codigoObtenido;
             }
             catch (System.Exception ex)
@@ -453,14 +468,60 @@ namespace proyectoUOne
             }
         }
 
-        //Consulta Existencia Combobox
-        public static DataTable Existencia(string idProductoIN, string idMarcaIN)
+
+        //---------------------------- ACTUALIZA EXISTENCIA -------------------------------
+        ///Actualizar Existencia de productos
+        public void ActualziarExistencia(int cantidadNueva,int idProductoP, int idMarcaP, int IdBodegaP)
+        {
+
+            String cadena = "update existencia_bodega set cantidad='"+cantidadNueva+"' where id_producto='"+idProductoP+"' and id_marca='"+idMarcaP+"' and id_bodega='"+IdBodegaP+"';";
+            OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+            OdbcCommand cmd = new OdbcCommand(cadena, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+        // ----------------------- TERMINA ACTUALIZA EXISTENCIA ----------------------
+
+        // ------------------------------ AUTO COMPLETE PRODUCTOS ------------------
+
+            //metodo para cargar los datos de la bd
+            public DataTable Datos(string BodegaG)
+            {
+                DataTable dt = new DataTable();
+
+                OdbcConnection conexion = seguridad.Conexion.ObtenerConexionODBC();//cadena conexion
+                string consulta = "SELECT eb.id_producto, p.nombre FROM existencia_bodega eb INNER JOIN producto p ON eb.id_producto=p.id_producto WHERE eb.id_bodega='"+BodegaG+"'"; //consulta a la tabla productos
+                OdbcCommand comando = new OdbcCommand(consulta, conexion);
+                OdbcDataAdapter adap = new OdbcDataAdapter(comando);
+                adap.Fill(dt);
+                conexion.Close();
+                return dt;
+            }
+
+            //metodo para cargar la coleccion de datos para el autocomplete
+            public AutoCompleteStringCollection Autocomplete()
+            {
+            CapaDatos nu = new CapaDatos();
+            DataTable dt2 = new DataTable();
+                AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+                //recorrer y cargar los items para el autocompletado
+                foreach (DataRow row in dt2.Rows)
+                {
+                    coleccion.Add(Convert.ToString(row["nombre"]));
+                }
+                return coleccion;
+            }
+
+        // ---------------------- AGREGAR PRODUCTO ------------------------
+        // CARGAR TABLA BODEGA
+        //Consulta Empleados Combobox
+        public DataTable CargarBodegas()
         {
             try
             {
                 OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
                 DataTable dt = new DataTable();
-                string consulta = "select cantidad FROM existencia WHERE id_producto='"+idProductoIN+"' and id_marca='"+idMarcaIN+"';";
+                string consulta = "select id_bodega, nombre_bodega FROM bodega;";
                 OdbcCommand comando = new OdbcCommand(consulta, con);
                 OdbcDataAdapter adaptador = new OdbcDataAdapter(comando);
                 adaptador.Fill(dt);
@@ -474,15 +535,235 @@ namespace proyectoUOne
             }
         }
 
-        ///Actualizar Existencia de productos
-        public void ActualziarExistencia(int cantidadExiste,string idProductoP, string idMarcaP, string IdCompraP)
+        // CONSULTAR CODIGO Y NOMBRE DE PRODUCTO --> DEPENDIENDO BODEGA
+        public static DataTable ConsultarCodigoNombreProducto(string IdBodegaP)
         {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT eb.id_producto, p.nombre FROM existencia_bodega eb INNER JOIN producto p ON eb.id_producto=p.id_producto WHERE id_bodega='"+IdBodegaP+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                con.Close();
+                return dtd;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
 
-            String cadena = "update existencia set cantidad='"+cantidadExiste+"' where id_producto='"+idProductoP+"' and id_marca='"+idMarcaP+"' and id_compra='"+IdCompraP+"'";
-            OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
-            OdbcCommand cmd = new OdbcCommand(cadena, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
+        // CONSULTA EXISTENCIA DE PRODUCTO
+        public static Int32 ConsultaExistenciav1(string ProductoID, string bodegasID)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT cantidad FROM existencia_bodega WHERE id_producto='"+ProductoID+"' and id_bodega='"+bodegasID+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                int cantidadExistencia = Convert.ToInt32(rows[0]);
+                con.Close();
+                return cantidadExistencia;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+
+        // CONSULTA ID_MARCA Y NOMBRE MARCA -- DEPENDIENDO PRODUCTO
+        public static DataTable ConsultarMarca(string productoIDD)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT p.id_marca, m.nombre_marca FROM producto p INNER JOIN marca m ON p.id_marca = m.id_marca WHERE p.id_producto='"+productoIDD+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                con.Close();
+                return dtd;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        // CONSULTA PRECIO UNIDAD DEPENDIENDO DE TIPO CLIENTE
+        public static Double ConsultATipoPrecio(string TipoCliente, string IdProductoS)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT precio FROM precio WHERE id_bien='"+IdProductoS+"' and id_tipo='"+TipoCliente+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                double precioUnidad = Convert.ToDouble(rows[0]);
+                con.Close();
+                return precioUnidad;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+
+        // ---------------------------- TERMINA QUERYS DE AGREGAR PRODUCTO ---------------------------------
+        // ------------------------QUERIS DE NOMBRES ---------------------
+        public static String DescripcionP( string IdProducto)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT nombre FROM producto WHERE id_producto='"+IdProducto+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                string NombreProducto = Convert.ToString(rows[0]);
+                con.Close();
+                return NombreProducto;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        public static String NombreMarka(string IdMarka)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT nombre_marca FROM marca WHERE id_marca='"+IdMarka+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                string NombreMarks = Convert.ToString(rows[0]);
+                con.Close();
+                return NombreMarks;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+        // -------------------- TERMINA QUERIS DE NOMBRES ----------------------
+        //------------------------- CONSULTA INSIDENCIA ---------------------
+        public static Int32 ConsultaInsidencia(string IDClienteD)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT incidencia FROM tbl_cliente WHERE id_cliente='"+IDClienteD+"'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                string incidenciass = Convert.ToString(rows[0]);
+                int returnIncidencia = Convert.ToInt32(incidenciass);
+                con.Close();
+                return returnIncidencia;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+
+        //Consulta Detalle cotizacion de exitentes
+        public static DataTable CargarDetalleFactura(string busquedaP)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT d.id_producto, p.nombre, p.id_marca, m.nombre_marca, d.cantidad, d.precioUnidad, d.subtotal FROM detalle_factura d INNER JOIN producto p ON d.id_producto=p.id_producto INNER JOIN marca m ON p.id_marca=m.id_marca WHERE id_factura = '" + busquedaP + "'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                con.Close();
+                return dtd;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+        // ----------------------------
+        /*public static String EmpleadoNombre(string IdEmpleado)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT nombres FROM tbl_empleado WHERE id_empleado='" + IdEmpleado + "'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                string Nombreempleado = Convert.ToString(rows[0]);
+                con.Close();
+                return Nombreempleado;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+        */
+        public static String ClienteNombre(string IdCliente)
+        {
+            try
+            {
+                OdbcConnection con = seguridad.Conexion.ObtenerConexionODBC();
+                DataTable dtd = new DataTable();
+                string queryd = "SELECT nombres FROM tbl_cliente WHERE id_cliente='" + IdCliente + "'";
+                OdbcCommand cmdd = new OdbcCommand(queryd, con);
+                OdbcDataAdapter adapd = new OdbcDataAdapter(cmdd);
+                adapd.Fill(dtd);
+                DataRow rows = dtd.Rows[0];
+                string Nombrecliente = Convert.ToString(rows[0]);
+                con.Close();
+                return Nombrecliente;
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
         }
 
     }
