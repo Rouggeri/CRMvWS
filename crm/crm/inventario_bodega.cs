@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FuncionesNavegador;
+using System.Data.Odbc;
 
 namespace crm
 {
@@ -48,6 +49,7 @@ namespace crm
                 MessageBox.Show("Debe seleccionar una fila");
             }
         }
+        public Int32 codbodega;
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
@@ -58,6 +60,43 @@ namespace crm
             cnegocio.InsertarBodega(bodega);                                    //Llamamos a la funcion Ninsertar a traves del objeto de la capa de negocio y le enviamos como parametro nuestro objeto persona
             limpiar();
             deshabilitar();
+
+            Int32 codproducto;
+            Int32 codmarca;
+            //Int32 codbodega;
+
+            string scad1 = "SELECT max(id_bodega) from bodega";
+            OdbcCommand mcd1 = new OdbcCommand(scad1, Conexion.ObtenerConexion());
+            OdbcDataReader mdr1 = mcd1.ExecuteReader();
+            while (mdr1.Read())
+            {
+                codbodega = mdr1.GetInt32(0);
+            }
+
+            string scad3 = "SELECT id_producto, id_marca from producto";
+            OdbcCommand mcd3 = new OdbcCommand(scad3, Conexion.ObtenerConexion());
+            OdbcDataReader mdr3 = mcd3.ExecuteReader();
+
+            while (mdr3.Read())
+            {
+                codproducto = mdr3.GetInt32(0);
+                codmarca = mdr3.GetInt32(1);
+
+                try
+                {
+                    OdbcCommand mySqlComando = new OdbcCommand(
+                    string.Format("INSERT INTO existencia_bodega (id_producto, id_marca, id_bodega, cantidad) values ('{0}','{1}','{2}','0')", codproducto, codmarca, codbodega),
+                    seguridad.Conexion.ObtenerConexionODBC()
+                    );
+                    mySqlComando.ExecuteNonQuery();                 //se ejecuta el query
+                   
+                }
+                catch 
+                {
+                    MessageBox.Show("Error de insercion");          //si el try-catch encontro algun error indica mensaje de fracaso
+                }
+            }
+
         }
 
         void limpiar()
