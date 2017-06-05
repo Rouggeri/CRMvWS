@@ -27,8 +27,7 @@ namespace proyectoUOne
 
         private void button1_Click(object sender, EventArgs e)
         {
-            InsertarCliente abrir = new InsertarCliente();
-            abrir.Show();
+
         }
 
         public void dgv_buscarCliente_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)

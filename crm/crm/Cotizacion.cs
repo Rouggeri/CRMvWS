@@ -18,8 +18,28 @@ namespace proyectoUOne
         {
             InitializeComponent();
             //llenarComboDescrpicion();
+            Bodega();
+            //LlenarProducto();
         }
-        
+
+        CapaDatos capa = new CapaDatos();
+        public void Bodega()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = capa.CargarBodegas();
+                cmb_bodega.DataSource = dt;
+                cmb_bodega.DisplayMember = "nombre_bodega";
+                cmb_bodega.ValueMember = "id_bodega";
+            }
+            catch
+            {
+                MessageBox.Show("");
+            }
+        }
+
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
             try
@@ -45,12 +65,14 @@ namespace proyectoUOne
                 {
                     int codigo_cotizacionN = codigoAutoIncremente - 1;
                     int codigo_productoN = Convert.ToInt32(row.Cells[0].Value);
-                    int cantidadN = Convert.ToInt32(row.Cells[2].Value);
-                    double precio = Convert.ToDouble(row.Cells[3].Value);
-                    double subttotalN = Convert.ToDouble(row.Cells[4].Value);
-                    v.insertar_detalle_cotizacion(codigo_cotizacionN, codigo_productoN, cantidadN, precio, subttotalN);
+                    int CodigoMarca = Convert.ToInt32(row.Cells[2].Value);
+                    int cantidadN = Convert.ToInt32(row.Cells[4].Value);
+                    double precio = Convert.ToDouble(row.Cells[5].Value);
+                    double subttotalN = Convert.ToDouble(row.Cells[6].Value);
+                    v.insertar_detalle_cotizacion(codigo_cotizacionN, codigo_productoN, CodigoMarca, cantidadN, precio, subttotalN);
                 }
-
+                MessageBox.Show("Cotizacion Guardada Exitosamente :) ");
+                this.Close();
             }
             catch {
                 MessageBox.Show("Error al guardar datos de insercion");
@@ -62,65 +84,90 @@ namespace proyectoUOne
         {
             try
             {
-                BuscarProducto abir = new BuscarProducto();
-                string temporales = txt_tipo.Text;         
-                abir.txt_ratos.Text = temporales;   //Enviar datos a formulario buscar producto
-                abir.ShowDialog(); //abrir formulario BuscarProducto
-
-                Factura fac = new Factura();
-                CapaDatos nuev = new CapaDatos();
-                string codigoP = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
-                string decripcionP = abir.dgv_productosVista.CurrentRow.Cells[1].Value.ToString();
-                string precioUP = abir.dgv_productosVista.CurrentRow.Cells[2].Value.ToString();
-
-                double precios = Convert.ToDouble(precioUP);
-                double temporal1 = Convert.ToDouble(abir.txt_cantidad.Text);
-                double subtot = temporal1 * precios;
-                string SubtotalP = Convert.ToString(subtot);
-
-                if (!String.IsNullOrEmpty(codigoP) && !String.IsNullOrEmpty(decripcionP) && !String.IsNullOrEmpty(precioUP) &&
-                                               !String.IsNullOrEmpty(SubtotalP))
+                int ProductoID = Convert.ToInt32(txt_codigo.Text);
+                string Nombre = CapaDatos.DescripcionP(cmb_producto.SelectedValue.ToString());
+                int MarcaID = Convert.ToInt32(cmb_marca.SelectedValue.ToString());
+                string NombreMark = CapaDatos.NombreMarka(cmb_marca.SelectedValue.ToString());
+                if (!String.IsNullOrEmpty(txt_cantidad.Text))
                 {
-                    string cantidadD = Convert.ToString(abir.cmb_existencia.SelectedValue.ToString());
-                    int cantidadOri = Convert.ToInt32(cantidadD);
-                    int cantidadPuesta = Convert.ToInt32(abir.txt_cantidad.Text);
-                    if (cantidadOri < cantidadPuesta)
+                    int cantidad = Convert.ToInt32(txt_cantidad.Text);
+
+                    double PrecioUnidad1 = Convert.ToDouble(txt_precioUnidad.Text);
+                    double SubTotal = cantidad * PrecioUnidad1;
+
+                    int ExistenciaF = Convert.ToInt32(txt_existencia.Text);
+
+                    if (cantidad > ExistenciaF)
                     {
                         MessageBox.Show("Existencia Baja");
                     }
-                    if (cantidadPuesta <= cantidadOri)
+                    if (cantidad <= ExistenciaF)
                     {
-                    dgvCotizacion.Rows.Add(codigoP, decripcionP, abir.txt_cantidad.Text, precioUP, SubtotalP);
-                    //dgv_facturaDetalle.Rows.Insert(0, cmb_codigo.SelectedValue.ToString(), cmb_descripcion.SelectedValue.ToString(), txt_cantidad.Text, cmb_prueba.SelectedValue.ToString(), subtotall);
-
-                    int suma = 0;
-                    foreach (DataGridViewRow row in dgvCotizacion.Rows)
-                    {
-                        suma += Convert.ToInt32(row.Cells["subtotal"].Value);
-                        //suma += (int)row.Cells["Subtotal"].Value;
+                        dgvCotizacion.Rows.Add(ProductoID, Nombre, MarcaID, NombreMark, cantidad, PrecioUnidad1, SubTotal);
+                        //dgv_facturaDetalle.Rows.Insert(0, cmb_codigo.SelectedValue.ToString(), cmb_descripcion.SelectedValue.ToString(), txt_cantidad.Text, cmb_prueba.SelectedValue.ToString(), subtotall);
+                        int suma = 0;
+                        foreach (DataGridViewRow row in dgvCotizacion.Rows)
+                        {
+                            suma += Convert.ToInt32(row.Cells["subtotal"].Value);
+                            //suma += (int)row.Cells["Subtotal"].Value;
+                        }
+                        txt_total.Text = Convert.ToString(suma);
+                        txt_cantidad.Text = "";
                     }
-                    txt_total.Text = Convert.ToString(suma);
-                    abir.txt_cantidad.Text = "";
-                    }
-                    
-
-                     
-                    //this.Close();
                 }
-                //this.Show();
+                else { MessageBox.Show("Agrege Cantidad de Producto"); }
+          
             }
             catch
             {
                 MessageBox.Show("No se agrego ningun producto");
             }       
         }
+        public AutoCompleteStringCollection AutocompleteV2()
+        {
+            string BodegaF = cmb_bodega.SelectedValue.ToString();
+            CapaDatos nu = new CapaDatos();
+            DataTable dt2 = nu.Datos(BodegaF);
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            //recorrer y cargar los items para el autocompletado
+            foreach (DataRow row in dt2.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["nombre"]));
+            }
+            return coleccion;
+        }
+
+        public void LlenarProducto()
+        {
+            //cargar los datos para el autocomplete del textbox
+            CapaDatos capa = new CapaDatos();
+            /*txt_codigo.AutoCompleteCustomSource = capa.Autocomplete();
+            txt_codigo.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txt_codigo.AutoCompleteSource = AutoCompleteSource.CustomSource;*/
+
+            string bodegaSS = cmb_bodega.SelectedValue.ToString();
+            // Cargo los datos que tendra el combobox
+            cmb_producto.DataSource = capa.Datos(bodegaSS);
+            cmb_producto.DisplayMember = "nombre";
+            cmb_producto.ValueMember = "id_producto";
+
+
+            // cargo la lista de items para el autocomplete dle combobox
+            cmb_producto.AutoCompleteCustomSource = AutocompleteV2();
+            cmb_producto.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmb_producto.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+        }
+
 
         private void Cotizacion_Load(object sender, EventArgs e)
         {
-
+            ControlProducto.Enabled = false;
+            ClienteData.Enabled = false;
             CapaDatos cap = new CapaDatos();
             //cap.llenar_id_pro(cmbCodigo);
-            
+            int codigoAutoIncremente = CapaDatos.ConsultaUatoIncrementCotizacion();
+            lbl_codigoAuto.Text = Convert.ToString(codigoAutoIncremente);
         }
 
         private void btn_actualizar_Click(object sender, EventArgs e)
@@ -146,9 +193,9 @@ namespace proyectoUOne
         }
 
 
-        public string temporalNumeroAdquirido;
         private void btn_buscarCliente_Click(object sender, EventArgs e)
         {
+            /*
             try
             {
                 BuscarCliente abir = new BuscarCliente();
@@ -163,12 +210,14 @@ namespace proyectoUOne
                     txtTelefono.Text = abir.apellidoC;
                     txt_tipo.Text = abir.tipo;
                     this.Show();
+                    ControlProducto.Enabled = true;
+                    LlenarProducto();
                 }
             }
             catch
             {
                 MessageBox.Show("Error al cargar formulario");
-            }
+            }*/
         }
 
         private void btn_eliminar_Click(object sender, EventArgs e)
@@ -211,6 +260,70 @@ namespace proyectoUOne
         private void btn_editar_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmb_producto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_codigo.Text = Convert.ToString(cmb_producto.SelectedValue.ToString());
+
+
+                DataTable dt = new DataTable();
+                dt = CapaDatos.ConsultarMarca(cmb_producto.SelectedValue.ToString());
+                cmb_marca.DataSource = dt;
+                cmb_marca.DisplayMember = "nombre_marca";
+                cmb_marca.ValueMember = "id_marca";
+                string productoPP = Convert.ToString(cmb_producto.SelectedValue.ToString());
+
+                double precioUN = CapaDatos.ConsultATipoPrecio(txt_tipo.Text, productoPP);
+                string precioPP = Convert.ToString(precioUN);
+                txt_precioUnidad.Text = precioPP;
+
+                string bodegasP = Convert.ToString(cmb_bodega.SelectedValue.ToString());
+                string recibeExistencia = Convert.ToString(CapaDatos.ConsultaExistenciav1(productoPP, bodegasP));
+                txt_existencia.Text = recibeExistencia;
+            }
+            catch { MessageBox.Show("Error de text changed de cmb_prodcuto"); }
+
+        }
+
+        private void cmb_bodega_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarProducto();
+        }
+
+        private void btn_nuevo_Click(object sender, EventArgs e)
+        {
+            ClienteData.Enabled = true;
+
+        }
+
+        public string temporalNumeroAdquirido;
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BuscarCliente abir = new BuscarCliente();
+                this.Hide();
+                abir.ShowDialog();
+
+                if (!String.IsNullOrEmpty(abir.codigoC) && !String.IsNullOrEmpty(abir.nitC) && !String.IsNullOrEmpty(abir.nombreC) &&
+                            !String.IsNullOrEmpty(abir.apellidoC) && !String.IsNullOrEmpty(abir.direccionC) && !String.IsNullOrEmpty(abir.telefonoC))
+                {
+                    temporalNumeroAdquirido = abir.codigoC;
+                    txtCliente.Text = abir.nombreC;
+                    txtTelefono.Text = abir.apellidoC;
+                    txt_tipo.Text = abir.tipo;
+                    this.Show();
+                    ControlProducto.Enabled = true;
+                    LlenarProducto();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar formulario");
+            }
         }
     }
 }

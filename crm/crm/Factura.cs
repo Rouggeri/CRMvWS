@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using System.Configuration;
 
 namespace proyectoUOne
 {
@@ -22,6 +23,7 @@ namespace proyectoUOne
             try
             {
                 InitializeComponent();
+                //Bodega();
                 llenarCotizacion();
                 cmb_cotizaciones.Enabled = false;
                 llenarTipoPago();
@@ -39,13 +41,12 @@ namespace proyectoUOne
         private void llenarEmpleado() {
             try
             {
-                /*
-                DataTable eMpleaDo = new DataTable();
-                eMpleaDo = capa.CargarEmpleados();
-                cmb_empleado.DataSource = eMpleaDo;
+                /*DataTable emp = new DataTable();
+                emp = capa.CargarEmpleados();
+                cmb_empleado.DataSource = emp;
                 cmb_empleado.ValueMember = "id_empleado";
                 cmb_empleado.DisplayMember = "nombres";*/
-                
+
                 crm.ServiceReference1.Service1Client srv = new crm.ServiceReference1.Service1Client();
                 DataSet ds = srv.ObtenerEmpleados();
                 DataTable dt_empleados = ds.Tables[0];
@@ -103,17 +104,17 @@ namespace proyectoUOne
         //Cargar datagridview a traves del codigo cotizacion
         public void cargardetalle()
         {
-            try
-            {   
+            /*try
+            {*/   
             string tempo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
             DataTable dt = CapaDatos.CargarDetalleCotiza(tempo);
             dgv_facturaDetalle.DataSource = dt;
 
-            }
+            /*}
             catch
             {
                 MessageBox.Show("No hay Cotizacion en base de datos");
-            }
+            }*/
 
         }
 
@@ -122,6 +123,9 @@ namespace proyectoUOne
         {
             try
             {
+           
+                Factura fac = new Factura();
+                CapaDatos nuev = new CapaDatos();
                 //formato para los datatimepicker   
                 dtp_fecha.Format = DateTimePickerFormat.Custom;
                 dtp_fecha.CustomFormat = "yyyy-MM-dd";
@@ -135,58 +139,53 @@ namespace proyectoUOne
                     double sumaTotal = Convert.ToDouble(txt_total.Text.Trim());
                     int IdCliente = Convert.ToInt32(txt_temporal.Text.Trim());
                     string empleados = Convert.ToString(cmb_empleado.SelectedValue.ToString());
-                    db.GuardarFacturaEncabezado(dtp_fecha.Text.Trim(), formaPago, sumaTotal, IdCliente, empleados);
+                    string BodegaID = Convert.ToString(cmb_bodega.SelectedValue.ToString());
+                    db.GuardarFacturaEncabezado(dtp_fecha.Text.Trim(), formaPago, sumaTotal, IdCliente, empleados, BodegaID);
 
                     int codigoAutoIncrement = CapaDatos.ConsultaUatoIncrementFactura();
                     CapaDatos v = new CapaDatos();
                     /*DataTable dt1 = CapaDatos.CargarGridAutoIncrement("select AUTO_INCREMENT from information_schema.TABLES where TABLE_SCHEMA='prueba' and TABLE_NAME='factura_encabezado';");
                     DataRow rows = dt1.Rows[0];
                     int codigoObtenido = Convert.ToInt32(rows[0]);*/
-
+                    int MiBodega2 = Convert.ToInt32(BodegaID);
                     foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
                     {
                         int codigo_facturaM = codigoAutoIncrement - 1;
                         int codigo_productoM = Convert.ToInt32(row.Cells[0].Value);
-                        int cantidadM = Convert.ToInt32(row.Cells[2].Value);
-                        double precioM = Convert.ToDouble(row.Cells[3].Value);
-                        double subtotalM = Convert.ToDouble(row.Cells[4].Value);
-                        v.insertar_detalle_factura(codigo_facturaM, codigo_productoM, cantidadM, precioM, subtotalM);
-                    } //termina mi foreach      
+                        int idMarca = Convert.ToInt32(row.Cells[2].Value);
+                        int Existencia2 = Convert.ToInt32(CapaDatos.ConsultaExistenciav1(Convert.ToString(codigo_productoM), BodegaID));
+                        int cantidadM = Convert.ToInt32(row.Cells[4].Value);
+                        int existenciaNueva = Existencia2 - cantidadM;
+                        double precioM = Convert.ToDouble(row.Cells[5].Value);
+                        double subtotalM = Convert.ToDouble(row.Cells[6].Value);
+                        v.ActualziarExistencia(existenciaNueva, codigo_productoM, idMarca, MiBodega2);
+                        v.insertar_detalle_factura(codigo_facturaM, codigo_productoM, idMarca, cantidadM, precioM, subtotalM);
+                    } //termina mi foreach
+                    MessageBox.Show("Se Actualizo Existencia");     
                 }
+                
                 if (chb_habilita.Checked) {
                         CapaDatos nuevo = new CapaDatos();
                         string temporales = cmb_cotizaciones.SelectedValue.ToString();
                         nuevo.ActualizaEstadoPedidoCotizacion(temporales);
                     }
-                /*
-                BuscarProducto abir = new BuscarProducto();              
-                Factura fac = new Factura();
-                CapaDatos nuev = new CapaDatos();
-                string IdProducto = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
-                string IdMarca = abir.dgv_productosVista.CurrentRow.Cells[5].Value.ToString();
-                string IdCompra = abir.dgv_productosVista.CurrentRow.Cells[6].Value.ToString();
-                string ExistenciaVieja = Convert.ToString(abir.cmb_existencia.SelectedValue.ToString());
-                string Venta = Convert.ToString(abir.txt_cantidad.Text);
-                int ventaF = Convert.ToInt32(Venta);
-                int Existencia = Convert.ToInt32(ExistenciaVieja);
-                int existenciaNueva = Existencia - ventaF;
-                nuev.ActualziarExistencia(existenciaNueva, IdProducto, IdMarca, IdCompra);*/
-                MessageBox.Show("Se Inserto Correctamente");
+                MessageBox.Show(" Se Guardo Factura Exitosamente ");
+                this.Close();
             }
             catch
             {
                 MessageBox.Show("Error al Guardar datos de insercion");
             }
         }
-
-        private void btn_buscarCliente_Click(object sender, EventArgs e)
+        public int IncidenciaFinal;
+        public void BuscarCliente()
         {
             try
             {
                 BuscarCliente abir = new BuscarCliente();
                 //this.Hide();
                 abir.ShowDialog();
-                
+
                 if (!String.IsNullOrEmpty(abir.codigoC) && !String.IsNullOrEmpty(abir.nitC) && !String.IsNullOrEmpty(abir.nombreC) &&
                             !String.IsNullOrEmpty(abir.apellidoC))
                 {
@@ -197,6 +196,11 @@ namespace proyectoUOne
                     txt_tipo.Text = abir.tipo;
                     //this.Close();
                     //this.Show();
+                    ProductoControl.Enabled = true;
+                    TextLLeno();
+                    int incidenciaParcial = CapaDatos.ConsultaInsidencia(txt_temporal.Text);
+                    IncidenciaFinal = incidenciaParcial;
+                    
                 }
             }
             catch
@@ -205,9 +209,18 @@ namespace proyectoUOne
             }
         }
 
+        private void btn_buscarCliente_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btn_nuevo_Click(object sender, EventArgs e)
         {
-
+            cmb_marca.Enabled = false;
+            ClienteControl.Enabled = true;
+            //ProductoControl.Enabled = true;
+            Bodega();
+            //TextLLeno();
         }
 
         //Llenar data
@@ -281,19 +294,23 @@ namespace proyectoUOne
                 Factura non = new Factura();
                 if (chb_habilita.Checked)
                 {
-                eliminarCOlumndas();
+                    ProductoControl.Enabled = false;
+                    controlCotizacion.Enabled = true;
+                    eliminarCOlumndas();
                     //llenarCotizacion();
                     cmb_cotizaciones.Enabled = true;
                     //cargardetalle();
                     LLamado();
-                    //ClientesCotizacion();
+                    ClientesCotizacion();
                     btn_agregarProducto.Enabled = false;
                     non.Refresh();
                 }
                 if (!chb_habilita.Checked)
                 {
+                    //cmb_cotizaciones.Items.Clear();
+                    //ProductoControl.Enabled = true;
                     eliminarCOlumndas();
-                    //LimpiarCliente();
+                    LimpiarCliente();
                     dgv_facturaDetalle.DataSource = null;
                     cmb_cotizaciones.Enabled = false;
                     columnas();
@@ -307,14 +324,63 @@ namespace proyectoUOne
             }
         }
         public void FuncionCodigo() {
+            try
+            {
                 string enviaCodigo = Convert.ToString(cmb_cotizaciones.SelectedValue.ToString());
                 int codigoRecibe = CapaDatos.ConsultacodigoClienteCotizacion(enviaCodigo);
                 globalCodigo = Convert.ToString(codigoRecibe);
+            }
+            catch { MessageBox.Show("No hay Cotizaciones"); }
         }
+
+        //metodo para cargar la coleccion de datos para el autocomplete
+        public AutoCompleteStringCollection AutocompleteV2()
+        {
+            string BodegaF = cmb_bodega.SelectedValue.ToString();
+            CapaDatos nu = new CapaDatos();
+            DataTable dt2 = nu.Datos(BodegaF);
+            AutoCompleteStringCollection coleccion = new AutoCompleteStringCollection();
+            //recorrer y cargar los items para el autocompletado
+            foreach (DataRow row in dt2.Rows)
+            {
+                coleccion.Add(Convert.ToString(row["nombre"]));
+            }
+            return coleccion;
+        }
+
+        public void TextLLeno()
+        {
+            //cargar los datos para el autocomplete del textbox
+            CapaDatos capa = new CapaDatos();
+            /*txt_codigo.AutoCompleteCustomSource = capa.Autocomplete();
+            txt_codigo.AutoCompleteMode = AutoCompleteMode.Suggest;
+            txt_codigo.AutoCompleteSource = AutoCompleteSource.CustomSource;*/
+
+            string bodegaSS = cmb_bodega.SelectedValue.ToString();
+            // Cargo los datos que tendra el combobox
+            cmb_producto.DataSource = capa.Datos(bodegaSS);
+            cmb_producto.DisplayMember = "nombre";
+            cmb_producto.ValueMember = "id_producto";
+            
+
+            // cargo la lista de items para el autocomplete dle combobox
+            cmb_producto.AutoCompleteCustomSource = AutocompleteV2();
+            cmb_producto.AutoCompleteMode = AutoCompleteMode.Suggest;
+            cmb_producto.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+        }
+
+
 
         public void Factura_Load(object sender, EventArgs e)
         {
-            //FuncionCodigo();
+            int IDFACtura = CapaDatos.ConsultaUatoIncrementFactura();
+            txt_motrarID.Text = Convert.ToString(IDFACtura);
+            ProductoControl.Enabled = false;
+            controlCotizacion.Enabled = false;
+            ClienteControl.Enabled = false;
+            //TextLLeno();
+            FuncionCodigo();
             dgv_facturaDetalle.DataSource = null;
         }
 
@@ -323,7 +389,7 @@ namespace proyectoUOne
         {
             try
             {
-                dgv_facturaDetalle.ColumnCount = 5;
+                dgv_facturaDetalle.ColumnCount = 7;
                 dgv_facturaDetalle.ColumnHeadersVisible = true;
 
                 // Set the column header style.
@@ -336,9 +402,11 @@ namespace proyectoUOne
                 // Set the column header names.
                 dgv_facturaDetalle.Columns[0].Name = "codigo";
                 dgv_facturaDetalle.Columns[1].Name = "descripcion";
-                dgv_facturaDetalle.Columns[2].Name = "cantidad";
-                dgv_facturaDetalle.Columns[3].Name = "precioU";
-                dgv_facturaDetalle.Columns[4].Name = "subtotal";
+                dgv_facturaDetalle.Columns[2].Name = "Id Marca";
+                dgv_facturaDetalle.Columns[3].Name = "Marca";
+                dgv_facturaDetalle.Columns[4].Name = "Cantidad";
+                dgv_facturaDetalle.Columns[5].Name = "PrecioUnidad";
+                dgv_facturaDetalle.Columns[6].Name = "subtotal";
             }
             catch
             {
@@ -382,8 +450,11 @@ namespace proyectoUOne
         {
             try
             {
+             
                 cmb_pago.Items.Add("Contado");
                 cmb_pago.Items.Add("Credito");
+
+
             }
             catch
             {
@@ -404,7 +475,6 @@ namespace proyectoUOne
         {
             try
             {
-                llenarEmpleado();   
                 if (chb_habilita.Checked)
                 {
                     eliminarCOlumndas();
@@ -447,53 +517,64 @@ namespace proyectoUOne
             this.Close();
         }
 
+
+        public void Productos()
+        {
+
+
+        }
+
+        public void Bodega() {
+            try
+            {
+                DataTable dt = new DataTable();
+                dt = capa.CargarBodegas();
+                cmb_bodega.DataSource = dt;
+                cmb_bodega.DisplayMember = "nombre_bodega";
+                cmb_bodega.ValueMember = "id_bodega";
+            }
+            catch {
+                MessageBox.Show("");
+            }
+        }
+
         public void btn_agregarProducto_Click(object sender, EventArgs e)
         {
             try
             {
-                BuscarProducto abir = new BuscarProducto();
-                string temporales = txt_tipo.Text; //ORDER BY nombre ASC               
-                abir.txt_ratos.Text = temporales;
-                //this.Hide();
-                abir.ShowDialog();
+                int ProductoID = Convert.ToInt32(txt_codigo.Text);
+                string Nombre = CapaDatos.DescripcionP(cmb_producto.SelectedValue.ToString());
+                int MarcaID = Convert.ToInt32(cmb_marca.SelectedValue.ToString());
+                string NombreMark = CapaDatos.NombreMarka(cmb_marca.SelectedValue.ToString());
+                if (!String.IsNullOrEmpty(txt_cantidad.Text))
+                {
+                    int cantidad = Convert.ToInt32(txt_cantidad.Text);
 
-                Factura fac = new Factura();
-                CapaDatos nuev = new CapaDatos();
-                string codigoP = abir.dgv_productosVista.CurrentRow.Cells[0].Value.ToString();
-                string decripcionP = abir.dgv_productosVista.CurrentRow.Cells[1].Value.ToString();
-                string precioUP = abir.dgv_productosVista.CurrentRow.Cells[2].Value.ToString();
-                double cantidadP = Convert.ToDouble(abir.txt_cantidad.Text);
-                double PrecioPP = Convert.ToDouble(precioUP);            
-                double subtot = PrecioPP * cantidadP;
-                string SubtotalP = Convert.ToString(subtot);
+                    double PrecioUnidad1 = Convert.ToDouble(txt_precioUnidad.Text);
+                    double SubTotal = cantidad * PrecioUnidad1;
 
-                if (!String.IsNullOrEmpty(codigoP) && !String.IsNullOrEmpty(decripcionP) && !String.IsNullOrEmpty(precioUP) &&
-                                                !String.IsNullOrEmpty(SubtotalP))
-                {
-                string cantidadD = Convert.ToString(abir.cmb_existencia.SelectedValue.ToString());
-                int cantidadOri = Convert.ToInt32(cantidadD);
-                int cantidadPuesta = Convert.ToInt32(abir.txt_cantidad.Text);
-                if(cantidadOri < cantidadPuesta)
-                {
-                    MessageBox.Show("Existencia Baja");
-                }if (cantidadPuesta <= cantidadOri)
-                {
-                    dgv_facturaDetalle.Rows.Add(codigoP, decripcionP,  abir.txt_cantidad.Text, precioUP, SubtotalP);
-                    //dgv_facturaDetalle.Rows.Insert(0, cmb_codigo.SelectedValue.ToString(), cmb_descripcion.SelectedValue.ToString(), txt_cantidad.Text, cmb_prueba.SelectedValue.ToString(), subtotall);
-                    int suma = 0;
-                    foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
+                    int ExistenciaF = Convert.ToInt32(txt_existencia.Text);
+
+                    if (cantidad > ExistenciaF)
                     {
-                        suma += Convert.ToInt32(row.Cells["subtotal"].Value);
-                        //suma += (int)row.Cells["Subtotal"].Value;
+                        MessageBox.Show("Existencia Baja");
                     }
-                    txt_total.Text = Convert.ToString(suma);
-                    abir.txt_cantidad.Text = "";
+                    if (cantidad <= ExistenciaF)
+                    {
+                        dgv_facturaDetalle.Rows.Add(ProductoID, Nombre, MarcaID, NombreMark, cantidad, PrecioUnidad1, SubTotal);
+                        //dgv_facturaDetalle.Rows.Insert(0, cmb_codigo.SelectedValue.ToString(), cmb_descripcion.SelectedValue.ToString(), txt_cantidad.Text, cmb_prueba.SelectedValue.ToString(), subtotall);
+                        int suma = 0;
+                        foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
+                        {
+                            suma += Convert.ToInt32(row.Cells["subtotal"].Value);
+                            //suma += (int)row.Cells["Subtotal"].Value;
+                        }
+                        txt_total.Text = Convert.ToString(suma);
+                        txt_cantidad.Text = "";
+                    }
                 }
-                    
-                    //this.Close();
-                }
-                //this.Show();
-            }
+                else { MessageBox.Show("Agrege Cantidad de Producto"); }
+        }
             catch {
                 MessageBox.Show("No se agrego ningun producto");
             }
@@ -523,6 +604,70 @@ namespace proyectoUOne
         private void button1_Click(object sender, EventArgs e)
         {
             ClientesCotizacion();
+        }
+
+        private void ClienteData_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            BuscarCliente();
+        }
+
+        private void cmb_producto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_codigo.Text = Convert.ToString(cmb_producto.SelectedValue.ToString());
+
+
+                DataTable dt = new DataTable();
+                dt = CapaDatos.ConsultarMarca(cmb_producto.SelectedValue.ToString());
+                cmb_marca.DataSource = dt;
+                cmb_marca.DisplayMember = "nombre_marca";
+                cmb_marca.ValueMember = "id_marca";
+                string productoPP = Convert.ToString(cmb_producto.SelectedValue.ToString());
+
+                double precioUN = CapaDatos.ConsultATipoPrecio(txt_tipo.Text, productoPP);
+                string precioPP = Convert.ToString(precioUN);
+                txt_precioUnidad.Text = precioPP;
+
+                string bodegasP = Convert.ToString(cmb_bodega.SelectedValue.ToString());
+                string recibeExistencia = Convert.ToString(CapaDatos.ConsultaExistenciav1(productoPP, bodegasP));
+                txt_existencia.Text = recibeExistencia;
+            }
+            catch { MessageBox.Show("Error de text changed de cmb_producto"); }
+
+
+        }
+
+        private void cmb_bodega_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!chb_habilita.Checked)
+                    {
+                    TextLLeno();
+            }
+
+        }
+
+        private void btn_verifica_Click(object sender, EventArgs e)
+        {
+            btn_guardar.Enabled = true;
+            cargardetalle();
+            string BodegaID1 = Convert.ToString(cmb_bodega.SelectedValue.ToString());
+            foreach (DataGridViewRow row in dgv_facturaDetalle.Rows)
+            {
+                string ProductoID1 = Convert.ToString(dgv_facturaDetalle.CurrentRow.Cells[0].Value.ToString());              
+                int cantidad1 = Convert.ToInt32(dgv_facturaDetalle.CurrentRow.Cells[4].Value.ToString());
+                int existencia1 = Convert.ToInt32(CapaDatos.ConsultaExistenciav1(ProductoID1, BodegaID1));
+                if (cantidad1 > existencia1)
+                {
+                    dgv_facturaDetalle.CurrentRow.DefaultCellStyle.BackColor = Color.Yellow;
+                    btn_guardar.Enabled = false;
+                }
+            }
         }
     }
 }
