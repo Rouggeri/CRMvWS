@@ -80,7 +80,7 @@
     <Reference Include="DevExpress.XtraVerticalGrid.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="FuncionesNavegador">
-      <HintPath>..\..\dll-navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
+      <HintPath>..\..\..\Users\salaz\Desktop\is\proyecto-ventas\Objeto_Comun\Navegador\DLL Navegador\FuncionesNavegador\bin\Debug\FuncionesNavegador.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=6.3.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -291,7 +291,7 @@
     </Compile>
     <Compile Include="Form_Reporte_Negocios.Designer.cs">
       <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
-      </Compile>
+    </Compile>
     <Compile Include="frmbuscexisbod.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -490,6 +490,12 @@
     <Compile Include="frm_tprecio.Designer.cs">
       <DependentUpon>frm_tprecio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_traspasobod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_traspasobod.Designer.cs">
+      <DependentUpon>frm_traspasobod.cs</DependentUpon>
+    </Compile>
     <Compile Include="InsertarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -639,16 +645,14 @@
     <EmbeddedResource Include="Form_inicio.resx">
       <DependentUpon>Form_inicio.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="Form_Reporte_caso.resx">
       <DependentUpon>Form_Reporte_caso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Reporte_Negocios.resx">
       <DependentUpon>Form_Reporte_Negocios.cs</DependentUpon>
-</EmbeddedResource>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexisbod.resx">
       <DependentUpon>frmbuscexisbod.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="frmbuscexistencia.resx">
       <DependentUpon>frmbuscexistencia.cs</DependentUpon>
@@ -752,6 +756,9 @@
     <EmbeddedResource Include="frm_tprecio.resx">
       <DependentUpon>frm_tprecio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_traspasobod.resx">
+      <DependentUpon>frm_traspasobod.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InsertarCliente.resx">
       <DependentUpon>InsertarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -817,7 +824,6 @@
     <None Include="crmbdDataSet.xss">
       <DependentUpon>crmbdDataSet.xsd</DependentUpon>
     </None>
-
     <None Include="DataSetReporteNegocios.xsc">
       <DependentUpon>DataSetReporteNegocios.xsd</DependentUpon>
     </None>
@@ -839,7 +845,7 @@
     </None>
     <None Include="DataSet_Casos.xss">
       <DependentUpon>DataSet_Casos.xsd</DependentUpon>
-</None>
+    </None>
     <None Include="ds_estadistica.xsc">
       <DependentUpon>ds_estadistica.xsd</DependentUpon>
     </None>
