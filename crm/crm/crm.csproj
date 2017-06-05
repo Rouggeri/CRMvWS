@@ -418,6 +418,12 @@
     <Compile Include="frm_existencia.Designer.cs">
       <DependentUpon>frm_existencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_informeinv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_informeinv.Designer.cs">
+      <DependentUpon>frm_informeinv.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_informe_estadistico_proyeccion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -564,6 +570,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Utilidad.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="BuscarCliente.resx">
       <DependentUpon>BuscarCliente.cs</DependentUpon>
@@ -717,6 +729,9 @@
     <EmbeddedResource Include="frm_existencia.resx">
       <DependentUpon>frm_existencia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_informeinv.resx">
+      <DependentUpon>frm_informeinv.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_informe_estadistico_proyeccion.resx">
       <DependentUpon>frm_informe_estadistico_proyeccion.cs</DependentUpon>
     </EmbeddedResource>
@@ -801,6 +816,10 @@
     <EmbeddedResource Include="ReporteNegocios.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>ReporteNegocios.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilidad.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Utilidad.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="BaseDatosCalendarioDataSet.xsc">
       <DependentUpon>BaseDatosCalendarioDataSet.xsd</DependentUpon>

@@ -290,6 +290,15 @@ namespace crm
             return datos.ObtenerExistenciaBod();              //se llama la funcion ObtenerCat
         }
 
+        public System.Data.DataTable consultabod1(Int32 producto, Int32 marca)
+        {
+            return datos.ObtenerBod1(producto, marca);
+        }
+
+        public System.Data.DataTable consultacant1(Int32 producto, Int32 marca, Int32 bod)
+        {
+            return datos.ObtenerCant1(producto, marca, bod);
+        }
 
         public void InsertarAbono(Abono abono)
         {
