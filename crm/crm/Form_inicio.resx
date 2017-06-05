@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="tile.AppearanceItem.Hovered.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8.25pt, style=Bold</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tile.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Grupo1.Text" xml:space="preserve">
+    <value>grupo1</value>
+  </data>
+  <data name="tile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 634</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tile.Text" xml:space="preserve">
+    <value>tileControl1</value>
+  </data>
+  <data name="&gt;&gt;tile.Name" xml:space="preserve">
+    <value>tile</value>
+  </data>
+  <data name="&gt;&gt;tile.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileControl, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tile.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tile.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="item_negocios.AppearanceItem.Hovered.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>0, 192, 192</value>
+  </data>
+  <data name="item_negocios.AppearanceItem.Hovered.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>0, 192, 192</value>
+  </data>
+  <data name="item_negocios.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Teal</value>
+  </data>
+  <data name="item_negocios.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Teal</value>
+  </data>
+  <data name="item_negocios.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement13.Text" xml:space="preserve">
+    <value>Negocios</value>
+  </data>
+  <data name="item_contactos.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Yellow</value>
+  </data>
+  <data name="item_contactos.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Yellow</value>
+  </data>
+  <data name="item_contactos.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement14.Text" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
+  <data name="item_calendario.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Peru</value>
+  </data>
+  <data name="item_calendario.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Peru</value>
+  </data>
+  <data name="item_calendario.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement15.Text" xml:space="preserve">
+    <value>Calendario</value>
+  </data>
+  <data name="itemcasos.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>64, 0, 64</value>
+  </data>
+  <data name="itemcasos.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>64, 0, 64</value>
+  </data>
+  <data name="itemcasos.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement16.Text" xml:space="preserve">
+    <value>Casos</value>
+  </data>
+  <data name="item_clientes.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="item_clientes.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>DarkOrchid</value>
+  </data>
+  <data name="item_clientes.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement17.Text" xml:space="preserve">
+    <value>Clientes</value>
+  </data>
+  <data name="item_personal.AppearanceItem.Hovered.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="item_personal.AppearanceItem.Hovered.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="item_personal.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gray</value>
+  </data>
+  <data name="item_personal.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Gray</value>
+  </data>
+  <data name="item_personal.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement18.Text" xml:space="preserve">
+    <value>Personal</value>
+  </data>
+  <data name="item_pronosticos.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>OrangeRed</value>
+  </data>
+  <data name="item_pronosticos.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>OrangeRed</value>
+  </data>
+  <data name="item_pronosticos.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement19.Text" xml:space="preserve">
+    <value>Pronósticos</value>
+  </data>
+  <data name="item_productos.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="item_productos.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Red</value>
+  </data>
+  <data name="item_productos.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement20.Text" xml:space="preserve">
+    <value>Productos</value>
+  </data>
+  <data name="item_ventas.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Turquoise</value>
+  </data>
+  <data name="item_ventas.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>Turquoise</value>
+  </data>
+  <data name="item_ventas.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement21.Text" xml:space="preserve">
+    <value>Facturación</value>
+  </data>
+  <data name="item_cobros.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement22.Text" xml:space="preserve">
+    <value>Abonos</value>
+  </data>
+  <data name="item_cotizacion.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="item_cotizacion.AppearanceItem.Normal.BorderColor" type="System.Drawing.Color, System.Drawing">
+    <value>SteelBlue</value>
+  </data>
+  <data name="item_cotizacion.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement23.Text" xml:space="preserve">
+    <value>Cotizaciones</value>
+  </data>
+  <data name="item_balance.AppearanceItem.Normal.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>HotPink</value>
+  </data>
+  <data name="item_balance.AppearanceItem.Normal.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 10.5pt, style=Bold</value>
+  </data>
+  <data name="tileItemElement24.Text" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>160, 48</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 25</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>CRM</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt, style=Bold</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>451, 48</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>128, 25</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Estadisticas</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 15pt, style=Bold</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>794, 48</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 25</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1033, 634</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="&gt;&gt;Grupo1.Name" xml:space="preserve">
+    <value>Grupo1</value>
+  </data>
+  <data name="&gt;&gt;Grupo1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileGroup, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_negocios.Name" xml:space="preserve">
+    <value>item_negocios</value>
+  </data>
+  <data name="&gt;&gt;item_negocios.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_contactos.Name" xml:space="preserve">
+    <value>item_contactos</value>
+  </data>
+  <data name="&gt;&gt;item_contactos.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_calendario.Name" xml:space="preserve">
+    <value>item_calendario</value>
+  </data>
+  <data name="&gt;&gt;item_calendario.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;itemcasos.Name" xml:space="preserve">
+    <value>itemcasos</value>
+  </data>
+  <data name="&gt;&gt;itemcasos.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tileGroup2.Name" xml:space="preserve">
+    <value>tileGroup2</value>
+  </data>
+  <data name="&gt;&gt;tileGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileGroup, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_clientes.Name" xml:space="preserve">
+    <value>item_clientes</value>
+  </data>
+  <data name="&gt;&gt;item_clientes.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_personal.Name" xml:space="preserve">
+    <value>item_personal</value>
+  </data>
+  <data name="&gt;&gt;item_personal.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_pronosticos.Name" xml:space="preserve">
+    <value>item_pronosticos</value>
+  </data>
+  <data name="&gt;&gt;item_pronosticos.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tileGroup3.Name" xml:space="preserve">
+    <value>tileGroup3</value>
+  </data>
+  <data name="&gt;&gt;tileGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileGroup, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_productos.Name" xml:space="preserve">
+    <value>item_productos</value>
+  </data>
+  <data name="&gt;&gt;item_productos.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_ventas.Name" xml:space="preserve">
+    <value>item_ventas</value>
+  </data>
+  <data name="&gt;&gt;item_ventas.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_cobros.Name" xml:space="preserve">
+    <value>item_cobros</value>
+  </data>
+  <data name="&gt;&gt;item_cobros.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_cotizacion.Name" xml:space="preserve">
+    <value>item_cotizacion</value>
+  </data>
+  <data name="&gt;&gt;item_cotizacion.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;item_balance.Name" xml:space="preserve">
+    <value>item_balance</value>
+  </data>
+  <data name="&gt;&gt;item_balance.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.TileItem, DevExpress.XtraEditors.v15.2, Version=15.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Form_inicio</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
